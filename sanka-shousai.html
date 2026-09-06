@@ -8,7 +8,44 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:64px;font-size:16px}
-@media(max-width:767px){ html{font-size:18px} }
+@media(max-width:767px){
+  html{font-size:19px}
+  .wrap{padding:0 18px}
+  .pad{padding:52px 0}
+  .shead{margin-bottom:26px}
+  .shead h2{font-size:1.45rem;line-height:1.7;letter-spacing:.04em}
+  .shead p{font-size:.88rem;line-height:1.95}
+  h3.sub{font-size:1.08rem;margin:30px 0 12px}
+  .card{padding:18px 17px 20px}
+  .card h4{font-size:.95rem}
+  .card li,.card p{font-size:.88rem;line-height:1.95}
+  .tl li{font-size:.88rem;line-height:1.85}
+  .tl .t{flex:0 0 82px;font-size:.82rem}
+  .day-d{font-size:1.4rem}
+  .day-t{font-size:.86rem}
+  .meals span{font-size:.76rem}
+  .spec div,.linkbox dl div{font-size:.87rem}
+  .spec dt{flex:0 0 96px;font-size:.8rem}
+  .linkbox dt{flex:0 0 88px;font-size:.8rem}
+  .ly li{font-size:.88rem;line-height:1.95}
+  .pk li{font-size:.89rem}
+  .pk li small{font-size:.79rem}
+  .tbl{font-size:.88rem}
+  .tbl th,.tbl td{padding:13px 12px}
+  .inc-box li{font-size:.88rem;line-height:1.95}
+  .cx-row{font-size:.89rem}
+  .cx-case p{font-size:.88rem;line-height:1.95}
+  .cx-case h4{font-size:.95rem}
+  p.txt{font-size:.9rem;line-height:2}
+  .mapkey li{font-size:.88rem}
+  .mini figcaption{font-size:.86rem}
+  .toc a{font-size:.8rem;padding:8px 15px}
+  .tab{font-size:.78rem;padding:13px 10px}
+  .tab b{font-size:.92rem}
+  .contact h2{font-size:1.35rem}
+  .contact p{font-size:.9rem}
+  .sch-note{font-size:.86rem;line-height:1.95}
+}
 
 :root{
   --abyss:#03121f;--deep:#062a44;--ocean:#0d4f74;--mid:#1a7fa8;--light:#7fd4ee;
@@ -347,6 +384,122 @@ footer .fl{font-family:var(--serif);font-size:.88rem;color:#fff;letter-spacing:.
 .linkbox dt{flex:0 0 96px;color:var(--ocean);font-weight:700;font-size:.8rem;line-height:1.95}
 .linkbox dd{flex:1;color:var(--ink-soft);line-height:1.95}
 .linkbox a{color:var(--ocean);border-bottom:1px solid var(--mid)}
+
+/* ═══════════ サニファニのブランドカラーに合わせた配色 ═══════════ */
+:root{
+  --turq:#13B0C4; --turq-d:#0E8C9C; --turq-pale:#E8F6F5;
+  --orange:#F37F11; --orange-d:#D96A00; --orange-pale:#FDF0E0;
+  --cream:#F5F6EF; --lemon:#F4F5E1;
+  --ink:#1C2B33; --ink-soft:#5A6B75; --line:rgba(28,43,51,.13);
+}
+body{color:var(--ink);background:#fff}
+.cream{background:var(--cream)}
+.mint{background:var(--turq-pale)}
+.lemon{background:var(--lemon)}
+.alt{background:var(--cream)}
+.blue{background:var(--turq-pale)}
+
+/* 見出し */
+.shead .no{color:var(--turq);font-weight:700}
+.shead h2{color:var(--ink)}
+.shead h2::after{background:var(--orange);height:3px;width:44px;border-radius:2px}
+h3.sub{color:var(--ink);border-left:4px solid var(--orange);border-radius:2px}
+.kari{background:var(--orange);color:#fff}
+
+/* 目次 */
+.toc{background:var(--turq)}
+.toc a{color:#fff;border-color:rgba(255,255,255,.55);font-weight:600}
+.toc a:hover{background:rgba(255,255,255,.18)}
+
+/* タブ：便ごとに色を分ける */
+.tab{border:2px solid var(--line);border-radius:12px;background:#fff}
+.tab.t1.on{background:var(--orange);border-color:var(--orange);color:rgba(255,255,255,.9)}
+.tab.t2.on{background:var(--turq);border-color:var(--turq);color:rgba(255,255,255,.9)}
+.tab.on b{color:#fff}
+
+/* 日付カード：色を付けて日ごとの区切りを強く */
+.day{border:none;border-radius:14px;box-shadow:0 3px 14px rgba(28,43,51,.09);margin-bottom:18px;background:#fff}
+.day-h{border-bottom:none;padding:15px 18px;align-items:center}
+.bin1 .day-h{background:linear-gradient(100deg,#FFF3E4,#FDE7CD)}
+.bin2 .day-h{background:linear-gradient(100deg,#E4F7F9,#CFEFF3)}
+.day-d{font-family:var(--sans);font-weight:800;font-size:1.32rem;letter-spacing:0}
+.bin1 .day-d{color:var(--orange-d)}
+.bin2 .day-d{color:var(--turq-d)}
+.day-d small{font-size:.68em;font-weight:700;margin-left:2px}
+.day-t{font-size:.84rem;font-weight:700;color:var(--ink);opacity:.82;line-height:1.6}
+.tl .t{font-weight:800}
+.bin1 .tl .t{color:var(--orange-d)}
+.bin2 .tl .t{color:var(--turq-d)}
+.tl li{border-bottom:1px solid rgba(28,43,51,.08)}
+.meals{border-top:1px dashed var(--line)}
+.meals span{background:var(--cream);color:var(--ink-soft);border-radius:60px;padding:6px 13px}
+.meals span.stay-tag{background:var(--orange-pale);color:var(--orange-d);font-weight:700}
+.bin2 .meals span.stay-tag{background:var(--turq-pale);color:var(--turq-d)}
+.sch-note{background:#fff;border-left:4px solid var(--orange);border-radius:0 10px 10px 0;
+  box-shadow:0 2px 10px rgba(28,43,51,.06)}
+.bin2 .sch-note{border-left-color:var(--turq)}
+
+/* カード全般：角丸＋影で「白い平面」感をなくす */
+.card,.ly,.pk,.mini figure,.linkbox,.inc-box,.cx,.spec,.tbl,.tbd{
+  border:none;border-radius:14px;box-shadow:0 3px 14px rgba(28,43,51,.09);overflow:hidden}
+.card{background:#fff;padding:20px 20px 22px}
+.card h4{color:var(--turq-d)}
+.card li::marker{color:var(--turq)}
+.card li strong,.card p strong{color:var(--orange-d)}
+.card.warn{background:#FFF8F0;box-shadow:0 3px 14px rgba(243,127,17,.16)}
+.card.warn h4{color:var(--orange-d)}
+.card.ok{background:#F0FAF7;box-shadow:0 3px 14px rgba(19,176,196,.16)}
+.card.ok h4{color:#12876B}
+
+/* 番号つきステップ */
+.ly{background:#fff;padding:18px 20px}
+.ly-n{background:var(--orange);font-size:.8rem}
+.ly li::marker{color:var(--turq);font-weight:800}
+.ly-h h4{color:var(--ink)}
+
+/* 表 */
+.spec dt,.linkbox dt{background:var(--turq-pale);color:var(--turq-d)}
+.spec div,.linkbox dl div{border-bottom:1px solid var(--line)}
+.tbl thead th{background:var(--turq)}
+.tbl td:last-child{color:var(--orange-d)}
+.tbl tbody tr:nth-child(even){background:var(--cream)}
+
+/* 持ち物リスト */
+.pk h4{background:var(--turq)}
+.pk.must h4{background:var(--orange)}
+.pk li::before{border-color:var(--turq)}
+.pk li.done::before{background:var(--turq);box-shadow:inset 0 0 0 2px #fff,inset 0 0 0 3px var(--turq)}
+.pk-reset{border:2px solid var(--line);border-radius:60px;color:var(--ink-soft);font-weight:700}
+
+/* 含まれるもの／含まれないもの */
+.inc-box{background:#fff;padding:20px}
+.inc-box.yes h4{color:#12876B}
+.inc-box.no h4{color:var(--orange-d)}
+.inc-box.yes li::before{color:#12876B}
+.inc-box.no li::before{color:var(--orange-d)}
+
+/* キャンセル規定 */
+.cx-row.hd{background:var(--turq)}
+.cx-row .free{color:#12876B}
+.cx-row .charge{color:var(--orange-d)}
+.cx-case{border:none;border-left:5px solid var(--turq);border-radius:0 12px 12px 0;
+  box-shadow:0 3px 12px rgba(28,43,51,.08);background:#fff}
+.cx-case h4{color:var(--ink)}
+.cx-case .res.g{background:#E3F5EE;color:#12876B}
+.cx-case .res.y{background:#FDF0E0;color:var(--orange-d)}
+.cx-case .res.r{background:#FDE8E2;color:#C4502A}
+
+/* 宿・地図 */
+.tbd{background:#fff;border:2px dashed rgba(19,176,196,.45)}
+.tbd h4{color:var(--turq-d)}
+.mapkey li{background:#fff;border:none;box-shadow:0 2px 10px rgba(28,43,51,.08);border-radius:12px}
+.mapkey b{color:var(--ink)}
+.mini figcaption b{color:var(--turq-d)}
+.linkbox{background:#fff;border-left:5px solid var(--orange)}
+.linkbox h4{color:var(--orange-d)}
+a{color:var(--turq-d)}
+.card a,.txt a,.qa .a a{color:var(--turq-d);border-bottom-color:var(--turq)}
+.backtop{background:var(--orange);border:none;box-shadow:0 4px 14px rgba(243,127,17,.4)}
 </style>
 </head>
 <body>
@@ -417,12 +570,12 @@ footer .fl{font-family:var(--serif);font-size:.88rem;color:#fff;letter-spacing:.
     </div>
 
     <div class="tabs" id="tabs">
-      <button class="tab on" data-p="p1"><b>第 1 便</b>1/26(火)〜1/28(木)・2泊3日<br />クジラ 1日コース</button>
-      <button class="tab" data-p="p2"><b>第 2 便</b>1/29(金)〜2/1(月)・3泊4日<br />クジラ 半日コース×2</button>
+      <button class="tab t1 on" data-p="p1"><b>第 1 便</b>1/26(火)〜1/28(木)・2泊3日<br />クジラ 1日コース</button>
+      <button class="tab t2" data-p="p2"><b>第 2 便</b>1/29(金)〜2/1(月)・3泊4日<br />クジラ 半日コース×2</button>
     </div>
 
     <!-- 第1便 -->
-    <div class="panel on" id="p1">
+    <div class="panel bin1 on" id="p1">
       <div class="day">
         <div class="day-h"><span class="day-d">1/26<small>(火)</small></span><span class="day-t">到着日 ／ 奄美入り</span></div>
         <div class="day-b">
@@ -470,7 +623,7 @@ footer .fl{font-family:var(--serif);font-size:.88rem;color:#fff;letter-spacing:.
     </div>
 
     <!-- 第2便 -->
-    <div class="panel" id="p2">
+    <div class="panel bin2" id="p2">
       <div class="day">
         <div class="day-h"><span class="day-d">1/29<small>(金)</small></span><span class="day-t">到着日 ／ 奄美入り</span></div>
         <div class="day-b">
@@ -555,7 +708,7 @@ footer .fl{font-family:var(--serif);font-size:.88rem;color:#fff;letter-spacing:.
 </section>
 
 <!-- 02 集合・解散 -->
-<section class="pad alt" id="meet">
+<section class="pad cream" id="meet">
   <div class="wrap">
     <div class="shead">
       <span class="no">02 ／ ACCESS</span>
@@ -664,7 +817,7 @@ footer .fl{font-family:var(--serif);font-size:.88rem;color:#fff;letter-spacing:.
 </section>
 
 <!-- 03 宿 -->
-<section class="pad" id="stay">
+<section class="pad mint" id="stay">
   <div class="wrap">
     <div class="shead">
       <span class="no">03 ／ ACCOMMODATION</span>
@@ -797,7 +950,7 @@ footer .fl{font-family:var(--serif);font-size:.88rem;color:#fff;letter-spacing:.
 </section>
 
 <!-- 04 島でめぐる場所 -->
-<section class="pad blue" id="island">
+<section class="pad lemon" id="island">
   <div class="wrap">
     <div class="shead">
       <span class="no">04 ／ ON THE ISLAND</span>
@@ -845,7 +998,7 @@ footer .fl{font-family:var(--serif);font-size:.88rem;color:#fff;letter-spacing:.
 </section>
 
 <!-- 05 当日の流れ -->
-<section class="pad" id="flow">
+<section class="pad cream" id="flow">
   <div class="wrap">
     <div class="shead">
       <span class="no">05 ／ THE DAY</span>
@@ -928,7 +1081,7 @@ footer .fl{font-family:var(--serif);font-size:.88rem;color:#fff;letter-spacing:.
 </section>
 
 <!-- 06 ルール -->
-<section class="pad alt" id="rules">
+<section class="pad mint" id="rules">
   <div class="wrap">
     <div class="shead">
       <span class="no">06 ／ RULES</span>
@@ -1101,7 +1254,7 @@ footer .fl{font-family:var(--serif);font-size:.88rem;color:#fff;letter-spacing:.
 </section>
 
 <!-- 08 持ち物 -->
-<section class="pad alt" id="packing">
+<section class="pad lemon" id="packing">
   <div class="wrap">
     <div class="shead">
       <span class="no">08 ／ PACKING LIST</span>
@@ -1176,7 +1329,7 @@ footer .fl{font-family:var(--serif);font-size:.88rem;color:#fff;letter-spacing:.
 </section>
 
 <!-- 09 レンタル -->
-<section class="pad blue" id="rental">
+<section class="pad cream" id="rental">
   <div class="wrap">
     <div class="shead">
       <span class="no">09 ／ RENTAL</span>
@@ -1208,7 +1361,7 @@ footer .fl{font-family:var(--serif);font-size:.88rem;color:#fff;letter-spacing:.
 </section>
 
 <!-- 10 参加費 -->
-<section class="pad" id="fee">
+<section class="pad mint" id="fee">
   <div class="wrap">
     <div class="shead">
       <span class="no">10 ／ WHAT'S INCLUDED</span>
@@ -1263,7 +1416,7 @@ footer .fl{font-family:var(--serif);font-size:.88rem;color:#fff;letter-spacing:.
 </section>
 
 <!-- 11 キャンセル -->
-<section class="pad alt" id="cancel">
+<section class="pad cream" id="cancel">
   <div class="wrap">
     <div class="shead">
       <span class="no">11 ／ CANCELLATION</span>
