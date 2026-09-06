@@ -88,12 +88,23 @@ header{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:
 .phero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
   transform:scale(1.05)}
 .phero .veil{position:absolute;inset:0;z-index:1;
-  background:linear-gradient(180deg,rgba(3,18,31,.82),rgba(3,18,31,.6) 50%,rgba(3,18,31,.92))}
+  background:linear-gradient(180deg,rgba(3,18,31,.66),rgba(3,18,31,.34) 46%,rgba(3,18,31,.88))}
+
+/* 泡のエフェクト */
+.bubbles{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+.bubbles i{position:absolute;bottom:-40px;display:block;border-radius:50%;
+  background:radial-gradient(circle at 32% 30%,rgba(255,255,255,.85),rgba(255,255,255,.08) 62%,transparent 70%);
+  animation:riseHero linear infinite}
+@keyframes riseHero{0%{transform:translateY(0) translateX(0);opacity:0}
+  14%{opacity:.75}78%{opacity:.4}100%{transform:translateY(-64svh) translateX(22px);opacity:0}}
+@media(prefers-reduced-motion:reduce){.bubbles{display:none}}
 .phero .inner{position:relative;z-index:3}
 .phero .eyebrow{font-size:.56rem;letter-spacing:.38em;color:var(--light);margin-bottom:18px}
 .phero h1{font-family:var(--serif);font-weight:500;color:#fff;font-size:1.3rem;line-height:1.95;
   letter-spacing:.15em;text-shadow:0 2px 24px rgba(0,0,0,.7)}
-.phero .sub{margin-top:16px;font-size:.74rem;letter-spacing:.14em;color:rgba(223,242,250,.78)}
+.phero .sub{margin-top:16px;font-size:.74rem;letter-spacing:.14em;color:rgba(232,246,253,.92);
+  text-shadow:0 2px 14px rgba(0,0,0,.75)}
+.phero .eyebrow{text-shadow:0 2px 12px rgba(0,0,0,.8)}
 
 /* toc */
 .toc{background:var(--deep);padding:20px 0 26px}
@@ -285,8 +296,11 @@ p.txt{font-size:.88rem;line-height:2.2;letter-spacing:.04em;color:var(--ink-soft
 
 footer{background:#020c15;color:rgba(223,242,250,.48);text-align:center;padding:38px 24px;
   font-size:.66rem;letter-spacing:.12em;line-height:2.2}
-footer .fl{font-family:var(--serif);font-size:.88rem;color:#fff;letter-spacing:.2em;
+footer .fl{font-family:var(--serif);font-size:.92rem;color:#fff;letter-spacing:.2em;
   display:block;margin-bottom:6px}
+.foot-links{display:flex;justify-content:center;gap:20px;margin:20px 0 24px;flex-wrap:wrap}
+.foot-links a{font-size:.78rem;letter-spacing:.1em;color:var(--light);opacity:.85}
+.foot-links a:hover{opacity:1}
 
 .backtop{position:fixed;right:16px;bottom:16px;z-index:150;width:44px;height:44px;border-radius:50%;
   background:rgba(3,18,31,.82);color:#fff;display:grid;place-items:center;font-size:.8rem;
@@ -384,6 +398,80 @@ footer .fl{font-family:var(--serif);font-size:.88rem;color:#fff;letter-spacing:.
 .linkbox dt{flex:0 0 96px;color:var(--ocean);font-weight:700;font-size:.8rem;line-height:1.95}
 .linkbox dd{flex:1;color:var(--ink-soft);line-height:1.95}
 .linkbox a{color:var(--ocean);border-bottom:1px solid var(--mid)}
+
+/* 航空便 */
+.fl-note{background:var(--orange-pale);border:1px solid rgba(243,127,17,.34);border-radius:14px;
+  padding:15px 18px;font-size:.78rem;line-height:2.05;letter-spacing:.02em;color:var(--ink-soft);
+  margin-bottom:16px}
+.fl-note b{display:block;font-size:.8rem;color:var(--orange-d);letter-spacing:.08em;margin-bottom:5px}
+.flacc details{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:10px;
+  box-shadow:0 2px 10px rgba(28,43,51,.05);overflow:hidden}
+.flacc summary{list-style:none;cursor:pointer;padding:15px 38px 15px 16px;position:relative;
+  font-size:.86rem;font-weight:700;letter-spacing:.04em;color:var(--ink);line-height:1.7;
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.flacc summary::-webkit-details-marker{display:none}
+.flacc summary::after{content:"";position:absolute;right:17px;top:22px;width:8px;height:8px;
+  border-right:2px solid var(--turq);border-bottom:2px solid var(--turq);transform:rotate(45deg);
+  transition:transform .25s}
+.flacc details[open] summary::after{transform:rotate(-135deg)}
+.flacc details[open] summary{border-bottom:1px solid var(--line)}
+.fl-t{display:inline-block;background:var(--turq);color:#fff;font-size:.62rem;font-weight:700;
+  letter-spacing:.1em;padding:4px 9px;border-radius:60px;flex:0 0 auto}
+.fl-t.o{background:var(--orange)}
+.fl-b{padding:16px 16px 20px}
+.fl-b>p{font-size:.78rem;line-height:2.05;letter-spacing:.02em;color:var(--ink-soft)}
+.fl-b h5{font-size:.78rem;font-weight:700;letter-spacing:.06em;color:var(--turq-d);
+  margin:16px 0 6px;padding-left:9px;border-left:3px solid var(--turq);border-radius:2px}
+.fl-b h5:first-child{margin-top:0}
+.fl-b .tbl{font-size:.8rem}
+.fl-b .tbl td:last-child{text-align:left;font-weight:400;color:var(--ink-soft);white-space:normal}
+.fl-b .tbl td.t{text-align:right;font-weight:700;color:var(--ink);white-space:nowrap;
+  font-variant-numeric:tabular-nums}
+.fl-b ul{margin-top:4px}
+.fl-b li{position:relative;padding-left:16px;font-size:.78rem;line-height:2.05;
+  letter-spacing:.02em;color:var(--ink-soft);margin-bottom:3px}
+.fl-b li::before{content:"";position:absolute;left:2px;top:.85em;width:5px;height:5px;
+  border-radius:50%;background:var(--orange)}
+.fl-b .memo{margin-top:12px;font-size:.74rem;line-height:2;color:var(--ink-soft);
+  border-top:1px dashed var(--line);padding-top:11px}
+.fl-links{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+.fl-links a{display:inline-flex;align-items:center;gap:6px;background:#fff;border:2px solid var(--turq);
+  color:var(--turq-d);font-size:.76rem;font-weight:700;letter-spacing:.04em;
+  padding:10px 16px;border-radius:60px;border-bottom:2px solid var(--turq)}
+.fl-links a:hover{background:var(--turq);color:#fff}
+.fl-b .tbl{table-layout:fixed;width:100%}
+.fl-b .tbl th,.fl-b .tbl td{word-break:break-word}
+.fl-b .tbl.t3 th:nth-child(1),.fl-b .tbl.t3 td:nth-child(1){width:34%}
+.fl-b .tbl.t3 th:nth-child(2),.fl-b .tbl.t3 td:nth-child(2){width:32%}
+.fl-b .tbl.t3 th:nth-child(3),.fl-b .tbl.t3 td:nth-child(3){width:34%}
+.fl-b .tbl.t3b th:nth-child(1),.fl-b .tbl.t3b td:nth-child(1){width:22%}
+.fl-b .tbl.t3b th:nth-child(2),.fl-b .tbl.t3b td:nth-child(2){width:36%}
+.fl-b .tbl.t3b th:nth-child(3),.fl-b .tbl.t3b td:nth-child(3){width:42%}
+.fl-b .tbl.t3b td.t{white-space:normal;text-align:left}
+@media(min-width:768px){.fl-b .tbl br.mo{display:none}}
+.fl-b .tbl.t2 th:nth-child(1),.fl-b .tbl.t2 td:nth-child(1){width:56%}
+.fl-b .tbl.t2 th:nth-child(2),.fl-b .tbl.t2 td:nth-child(2){width:44%}
+.fl-b .tbl.t2 td:last-child{text-align:right;font-weight:700;color:var(--ink);
+  white-space:nowrap;font-variant-numeric:tabular-nums}
+
+/* 乗り継ぎ例カード */
+.conn{display:grid;gap:9px;margin-top:6px}
+.cc{position:relative;background:var(--turq-pale);border:1px solid rgba(19,176,196,.28);
+  border-radius:12px;padding:13px 14px 12px 42px}
+.cc.o{background:var(--orange-pale);border-color:rgba(243,127,17,.28)}
+.cl{position:absolute;left:11px;top:12px;width:22px;height:22px;border-radius:50%;
+  background:var(--turq);color:#fff;font-size:.66rem;font-weight:700;
+  display:grid;place-items:center;letter-spacing:0}
+.cc.o .cl{background:var(--orange)}
+.legs{display:grid;gap:5px}
+.leg{display:flex;gap:9px;align-items:baseline;flex-wrap:wrap;font-size:.76rem;line-height:1.8}
+.leg b{flex:0 0 auto;font-weight:700;color:var(--ink);letter-spacing:.02em;
+  font-variant-numeric:tabular-nums}
+.leg span{color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.arr{margin-top:8px;padding-top:8px;border-top:1px dashed rgba(28,43,51,.18);
+  font-size:.74rem;letter-spacing:.06em;color:var(--ink-soft);text-align:right}
+.arr b{font-size:.88rem;color:var(--turq-d);font-variant-numeric:tabular-nums}
+.cc.o .arr b{color:var(--orange-d)}
 
 /* ═══════════ サニファニのブランドカラーに合わせた配色 ═══════════ */
 :root{
@@ -500,6 +588,28 @@ h3.sub{color:var(--ink);border-left:4px solid var(--orange);border-radius:2px}
 a{color:var(--turq-d)}
 .card a,.txt a,.qa .a a{color:var(--turq-d);border-bottom-color:var(--turq)}
 .backtop{background:var(--orange);border:none;box-shadow:0 4px 14px rgba(243,127,17,.4)}
+
+/* 航空便セクション：スマホ調整 */
+@media(max-width:767px){
+  .fl-note{font-size:.86rem;line-height:1.95;padding:14px 15px}
+  .fl-note b{font-size:.88rem}
+  .flacc summary{font-size:.94rem;padding:15px 36px 15px 14px;gap:8px}
+  .fl-t{font-size:.68rem;padding:4px 9px}
+  .fl-b{padding:14px 13px 18px}
+  .fl-b>p,.fl-b li{font-size:.86rem;line-height:1.95}
+  .fl-b h5{font-size:.86rem}
+  .fl-b .tbl{font-size:.84rem}
+  .fl-b .tbl th,.fl-b .tbl td{padding:10px 11px}
+  .fl-b .memo{font-size:.8rem;line-height:1.9}
+  .fl-links a{font-size:.84rem;padding:11px 16px}
+  .fl-b .tbl th,.fl-b .tbl td{padding:9px 8px}
+  .fl-b .tbl.t3 th:nth-child(1),.fl-b .tbl.t3 td:nth-child(1){width:36%}
+  .fl-b .tbl.t3 th:nth-child(2),.fl-b .tbl.t3 td:nth-child(2){width:30%}
+  .fl-b .tbl.t3 th:nth-child(3),.fl-b .tbl.t3 td:nth-child(3){width:34%}
+  .leg{font-size:.84rem}
+  .arr{font-size:.82rem}.arr b{font-size:.94rem}
+  .foot-links a{font-size:.86rem}
+}
 </style>
 </head>
 <body>
@@ -508,6 +618,7 @@ a{color:var(--turq-d)}
   <a href="#top" class="logo">参加者向け詳細<small>AMAMI WHALE RETREAT 2027</small></a>
   <nav class="nav-pc">
     <a href="#schedule">スケジュール</a>
+    <a href="#flights">航空便</a>
     <a href="#stay">宿</a>
     <a href="#flow">当日の流れ</a>
     <a href="#packing">持ち物</a>
@@ -522,21 +633,23 @@ a{color:var(--turq-d)}
 <div class="drawer" id="dw">
   <a href="#schedule">01 ｜ 日程別スケジュール</a>
   <a href="#meet">02 ｜ 集合・解散とアクセス</a>
-  <a href="#stay">03 ｜ 宿について</a>
-  <a href="#island">04 ｜ 島でめぐる場所</a>
-  <a href="#flow">05 ｜ ホエールスイム当日の流れ</a>
-  <a href="#rules">06 ｜ ルールと注意事項</a>
-  <a href="#clothes">07 ｜ 船上の服装・防寒</a>
-  <a href="#packing">08 ｜ 持ち物リスト</a>
-  <a href="#rental">09 ｜ 器材レンタル料金</a>
-  <a href="#fee">10 ｜ 参加費に含まれるもの</a>
-  <a href="#cancel">11 ｜ キャンセル規定</a>
+  <a href="#flights">03 ｜ 奄美へのフライト</a>
+  <a href="#stay">04 ｜ 宿について</a>
+  <a href="#island">05 ｜ 島でめぐる場所</a>
+  <a href="#flow">06 ｜ ホエールスイム当日の流れ</a>
+  <a href="#rules">07 ｜ ルールと注意事項</a>
+  <a href="#clothes">08 ｜ 船上の服装・防寒</a>
+  <a href="#packing">09 ｜ 持ち物リスト</a>
+  <a href="#rental">10 ｜ 器材レンタル料金</a>
+  <a href="#fee">11 ｜ 参加費に含まれるもの</a>
+  <a href="#cancel">12 ｜ キャンセル規定</a>
   <a href="ホエールスイムリトリート2027.html" class="d-back">募集ページへ戻る</a>
 </div>
 
 <section class="phero" id="top">
-  <img src="img/8c81a58598ab.jpg" alt="" loading="lazy" decoding="async" />
+  <img src="img/8799ae54cb11.jpg" alt="" loading="lazy" decoding="async" />
   <div class="veil"></div>
+  <div class="bubbles" id="bub" aria-hidden="true"></div>
   <div class="inner">
     <p class="eyebrow">Information for Participants</p>
     <h1>奄美大島<br />ホエールスイムリトリート<br />参加者向け詳細</h1>
@@ -548,6 +661,7 @@ a{color:var(--turq-d)}
   <div class="wrap">
     <a href="#schedule">スケジュール</a>
     <a href="#meet">集合・アクセス</a>
+    <a href="#flights">航空便</a>
     <a href="#stay">宿</a>
     <a href="#island">めぐる場所</a>
     <a href="#flow">当日の流れ</a>
@@ -816,11 +930,221 @@ a{color:var(--turq-d)}
   </div>
 </section>
 
-<!-- 03 宿 -->
+<!-- 03 航空便 -->
+<section class="pad mint" id="flights">
+  <div class="wrap">
+    <div class="shead">
+      <span class="no">03 ／ FLIGHTS</span>
+      <h2>奄美へのフライト<span class="kari">参考</span></h2>
+      <p>航空券は<strong>ご自身での手配・お支払い</strong>になります（参加費には含まれません）。「どんな便があるのか」を知っていただくための参考リストです。ご予約が決まりましたら、往路・復路の便名・日付・時刻をお知らせください。</p>
+    </div>
+
+    <div class="fl-note">
+      <b>ご予約の前に</b>
+      2027年1月〜2月のダイヤは、各社から<strong>2026年11月下旬ごろ</strong>に発表されます。下記は現在のダイヤをもとにした目安ですので、実際にお取りになる際は必ず各社の最新の時刻表・空席状況をご確認ください。
+    </div>
+
+    <div class="flacc">
+
+      <details open>
+        <summary><span class="fl-t o">直行便</span>東京（羽田・成田）↔ 奄美</summary>
+        <div class="fl-b">
+          <p>東京から奄美への直行便は<strong>1日1〜2便</strong>です。羽田からは午前発・午後戻りの1往復のみ、成田からはピーチが飛んでいます。</p>
+          <h5>往路（東京 → 奄美）</h5>
+          <table class="tbl t3">
+            <thead><tr><th>便名</th><th>時刻</th><th>運航</th></tr></thead>
+            <tbody>
+              <tr><td>JAL 659<small>羽田 → 奄美</small></td><td class="t">11:25<br class="mo" />→ 13:40</td><td>毎日1便</td></tr>
+              <tr><td>Peach MM545<small>成田 → 奄美</small></td><td class="t">07:15<br class="mo" />→ 09:40</td><td>冬期は週5日程度<br class="mo" />運休日あり</td></tr>
+            </tbody>
+          </table>
+          <h5>復路（奄美 → 東京）</h5>
+          <table class="tbl t3">
+            <thead><tr><th>便名</th><th>時刻</th><th>運航</th></tr></thead>
+            <tbody>
+              <tr><td>JAL 658<small>奄美 → 羽田</small></td><td class="t">14:30<br class="mo" />→ 16:30</td><td>毎日1便</td></tr>
+              <tr><td>Peach MM546<small>奄美 → 成田</small></td><td class="t">10:30<br class="mo" />→ 12:45</td><td>冬期は週5日程度<br class="mo" />運休日あり</td></tr>
+            </tbody>
+          </table>
+          <p class="memo">※ このほか大阪（伊丹・関西）・福岡・沖縄（那覇）からも直行便があります。<br />
+          ※ ピーチは冬ダイヤで曜日運休が入ることがあります（2024年冬は火・水曜が運休でした）。日程の曜日にご注意ください。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="fl-t">乗り継ぎ</span>鹿児島で乗り継ぐ場合</summary>
+        <div class="fl-b">
+          <p>直行便が取れないときは<strong>鹿児島経由</strong>が便利です。鹿児島〜奄美は1日9便前後あり、時間帯を選べます。所要は約1時間です。</p>
+          <h5>鹿児島 → 奄美</h5>
+            <table class="tbl t3 t3b">
+              <thead><tr><th>便名</th><th>時刻</th><th>めやす</th></tr></thead>
+              <tbody>
+                <tr><td>JL3721</td><td class="t">07:40&nbsp;→<wbr /> 08:55</td><td>朝いちばん</td></tr>
+                <tr><td>JL3727</td><td class="t">10:15&nbsp;→<wbr /> 11:10</td><td>羽田06:25発から乗り継ぎ可</td></tr>
+                <tr><td>BC381</td><td class="t">10:20&nbsp;→<wbr /> 11:20</td><td>羽田06:35発から乗り継ぎ可</td></tr>
+                <tr><td>JL3729</td><td class="t">11:55&nbsp;→<wbr /> 12:50</td><td>羽田08:05発から乗り継ぎ可</td></tr>
+                <tr><td>JL3731</td><td class="t">13:10&nbsp;→<wbr /> 14:05</td><td>羽田10:05発から乗り継ぎ可</td></tr>
+                <tr><td>JL3735</td><td class="t">16:55&nbsp;→<wbr /> 17:50</td><td>夕方着</td></tr>
+                <tr><td>BC387</td><td class="t">17:10&nbsp;→<wbr /> 18:10</td><td>夕方着</td></tr>
+                <tr><td>JL3737</td><td class="t">17:15&nbsp;→<wbr /> 18:30</td><td>羽田13:55発から乗り継ぎ可</td></tr>
+              </tbody>
+            </table>
+          <h5>奄美 → 鹿児島</h5>
+            <table class="tbl t3 t3b">
+              <thead><tr><th>便名</th><th>時刻</th><th>めやす</th></tr></thead>
+              <tbody>
+                <tr><td>JL3722</td><td class="t">08:45&nbsp;→<wbr /> 09:35</td><td>朝いちばん</td></tr>
+                <tr><td>JL3726</td><td class="t">11:45&nbsp;→<wbr /> 12:35</td><td>羽田14:05発に接続可</td></tr>
+                <tr><td>BC382</td><td class="t">12:00&nbsp;→<wbr /> 12:55</td><td>昼</td></tr>
+                <tr><td>JL3728</td><td class="t">13:20&nbsp;→<wbr /> 14:15</td><td>羽田16:25発に接続可</td></tr>
+                <tr><td>JL3730</td><td class="t">14:35&nbsp;→<wbr /> 15:30</td><td>午後</td></tr>
+                <tr><td>JL3734</td><td class="t">17:25&nbsp;→<wbr /> 18:30</td><td>羽田20:30発に接続可</td></tr>
+                <tr><td>BC388</td><td class="t">18:50&nbsp;→<wbr /> 19:40</td><td>夕方</td></tr>
+                <tr><td>JL3738</td><td class="t">19:00&nbsp;→<wbr /> 20:05</td><td>当日中の羽田行きには接続できません</td></tr>
+              </tbody>
+            </table>
+          <p class="memo">※ JL便は日本航空（日本エアコミューター運航）、BC便はスカイマークの便名です。<br />
+          ※ 奄美発の最終便（JL3738）で鹿児島に着くと、その日のうちに東京へは戻れません。復路は<strong>お昼〜夕方の便</strong>をおすすめします。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="fl-t">乗り継ぎ例</span>鹿児島経由の組み合わせ</summary>
+        <div class="fl-b">
+          <h5>往路（東京 → 鹿児島 → 奄美）</h5>
+          <div class="conn">
+            <div class="cc"><span class="cl">A</span>
+              <div class="legs">
+                <div class="leg"><b>JL641</b><span>羽田 06:25 → 鹿児島 08:05</span></div>
+                <div class="leg"><b>JL3727</b><span>鹿児島 10:15 → 奄美 11:10</span></div>
+              </div>
+              <div class="arr">奄美着 <b>11:10</b></div>
+            </div>
+            <div class="cc"><span class="cl">B</span>
+              <div class="legs">
+                <div class="leg"><b>BC301</b><span>羽田 06:35 → 鹿児島 08:25</span></div>
+                <div class="leg"><b>BC381</b><span>鹿児島 10:20 → 奄美 11:20</span></div>
+              </div>
+              <div class="arr">奄美着 <b>11:20</b></div>
+            </div>
+            <div class="cc"><span class="cl">C</span>
+              <div class="legs">
+                <div class="leg"><b>JL643</b><span>羽田 08:05 → 鹿児島 09:50</span></div>
+                <div class="leg"><b>JL3729</b><span>鹿児島 11:55 → 奄美 12:50</span></div>
+              </div>
+              <div class="arr">奄美着 <b>12:50</b></div>
+            </div>
+            <div class="cc"><span class="cl">D</span>
+              <div class="legs">
+                <div class="leg"><b>JL645</b><span>羽田 10:05 → 鹿児島 11:50</span></div>
+                <div class="leg"><b>JL3731</b><span>鹿児島 13:10 → 奄美 14:05</span></div>
+              </div>
+              <div class="arr">奄美着 <b>14:05</b></div>
+            </div>
+            <div class="cc"><span class="cl">E</span>
+              <div class="legs">
+                <div class="leg"><b>NH625</b><span>羽田 13:55 → 鹿児島 15:40</span></div>
+                <div class="leg"><b>JL3737</b><span>鹿児島 17:15 → 奄美 18:30</span></div>
+              </div>
+              <div class="arr">奄美着 <b>18:30</b></div>
+            </div>
+          </div>
+
+          <h5>復路（奄美 → 鹿児島 → 東京）</h5>
+          <div class="conn">
+            <div class="cc o"><span class="cl">F</span>
+              <div class="legs">
+                <div class="leg"><b>JL3726</b><span>奄美 11:45 → 鹿児島 12:35</span></div>
+                <div class="leg"><b>NH626</b><span>鹿児島 14:05 → 羽田 16:00</span></div>
+              </div>
+              <div class="arr">羽田着 <b>16:00</b></div>
+            </div>
+            <div class="cc o"><span class="cl">G</span>
+              <div class="legs">
+                <div class="leg"><b>JL3728</b><span>奄美 13:20 → 鹿児島 14:15</span></div>
+                <div class="leg"><b>NH628</b><span>鹿児島 16:25 → 羽田 18:25</span></div>
+              </div>
+              <div class="arr">羽田着 <b>18:25</b></div>
+            </div>
+            <div class="cc o"><span class="cl">H</span>
+              <div class="legs">
+                <div class="leg"><b>JL3734</b><span>奄美 17:25 → 鹿児島 18:30</span></div>
+                <div class="leg"><b>NH2480／SNA80</b><span>鹿児島 20:30 → 羽田 22:15</span></div>
+              </div>
+              <div class="arr">羽田着 <b>22:15</b></div>
+            </div>
+          </div>
+          <p class="memo">※ あくまで組み合わせの例です。乗り継ぎ時間は1時間30分〜2時間ほど見ています。<br />
+          ※ 別々に予約すると、前の便が遅れても後の便は補償されません。可能であれば<strong>1つの予約でまとめて</strong>お取りください。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="fl-t o">運賃</span>だいたいの価格</summary>
+        <div class="fl-b">
+            <table class="tbl t2">
+              <thead><tr><th>ルート・運賃タイプ</th><th>片道のめやす</th></tr></thead>
+              <tbody>
+                <tr><td>羽田 ↔ 奄美（JAL）最安の先得系</td><td class="t">約 19,920円〜</td></tr>
+                <tr><td>羽田 ↔ 奄美（JAL）普通席</td><td class="t">約 31,710円</td></tr>
+                <tr><td>羽田 ↔ 奄美（JAL）変更可の運賃</td><td class="t">約 36,165円</td></tr>
+                <tr><td>羽田 ↔ 奄美（JAL）クラスJ・直前</td><td class="t">約 80,550円</td></tr>
+                <tr><td>成田 ↔ 奄美（ピーチ）2月の相場</td><td class="t">約 5,624円〜</td></tr>
+                <tr><td>成田 ↔ 奄美（ピーチ）最安クラス</td><td class="t">約 11,180円</td></tr>
+                <tr><td>鹿児島乗り継ぎ（合計）</td><td class="t">約 28,000円</td></tr>
+              </tbody>
+            </table>
+          <p class="memo">往復の総額は<strong>平日で23,000円台〜、週末は40,000円前後</strong>が目安です。1月下旬〜2月上旬は繁忙期ではないため、早めに取れば比較的お安く見つかります。<br />
+          ※ ピーチは受託手荷物が別料金です。器材を持参される方は手荷物料金も含めてご検討ください。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="fl-t">日程に合わせて</span>便を選ぶときのポイント</summary>
+        <div class="fl-b">
+          <h5>初日（集合日）</h5>
+          <ul>
+            <li>宿のチェックインは<strong>14:00以降</strong>です。到着が夕方・夜になる便でも大丈夫です</li>
+            <li>羽田直行便（JAL659・奄美13:40着）が、いちばんゆとりのある到着です</li>
+            <li>到着時刻をお知らせいただければ、できるだけ奄美空港までお迎えにあがります</li>
+          </ul>
+          <h5>最終日（解散日）</h5>
+          <ul>
+            <li>解散は奄美空港です。<strong>お昼すぎ〜夕方の便</strong>を目安にお取りください</li>
+            <li>羽田直行便（JAL658・奄美14:30発）が、そのままお帰りになるのに便利です</li>
+            <li>鹿児島経由の場合は、当日中に東京まで戻れる組み合わせかどうかをご確認ください</li>
+          </ul>
+          <h5>そのほか</h5>
+          <ul>
+            <li>便数が少ないため、<strong>日程が決まったらお早めのご予約</strong>をおすすめします</li>
+            <li>前泊・後泊をされる方は、その旨もあわせてお知らせください</li>
+            <li>ホエールスイムは海況によって日程を入れ替えることがあります。<strong>変更可能な運賃</strong>だと安心です</li>
+            <li>鹿児島からはフェリーでも行けます（約11時間・夜行）</li>
+          </ul>
+        </div>
+      </details>
+
+    </div>
+
+    <div class="fl-links">
+      <a href="https://www.jal.co.jp/jp/ja/dom/" target="_blank" rel="noopener">JAL 国内線 ↗</a>
+      <a href="https://www.flypeach.com/jp/" target="_blank" rel="noopener">Peach ↗</a>
+      <a href="https://www.skymark.co.jp/" target="_blank" rel="noopener">スカイマーク ↗</a>
+      <a href="https://www.jac.co.jp/" target="_blank" rel="noopener">日本エアコミューター ↗</a>
+    </div>
+
+    <p class="txt" style="margin-top:14px">
+      ※ 便名・時刻・運賃はいずれも<strong>作成時点の参考値</strong>です。予約・変更・キャンセルはすべてお客様ご自身での手続きとなります。<br />
+      ※ どの便にすればよいか迷われたときは、遠慮なくご相談ください。日程に合う便を一緒に探します。
+    </p>
+  </div>
+</section>
+
+<!-- 04 宿 -->
 <section class="pad mint" id="stay">
   <div class="wrap">
     <div class="shead">
-      <span class="no">03 ／ ACCOMMODATION</span>
+      <span class="no">04 ／ ACCOMMODATION</span>
       <h2>宿について</h2>
       <p>全泊、島の北部・龍郷町の「アマミアンスタイル ペンション グリーンヒル」に滞在します。手広海岸まで歩いて3分、奄美空港から車で約15分の立地です。</p>
     </div>
@@ -949,11 +1273,11 @@ a{color:var(--turq-d)}
   </div>
 </section>
 
-<!-- 04 島でめぐる場所 -->
+<!-- 05 島でめぐる場所 -->
 <section class="pad lemon" id="island">
   <div class="wrap">
     <div class="shead">
-      <span class="no">04 ／ ON THE ISLAND</span>
+      <span class="no">05 ／ ON THE ISLAND</span>
       <h2>島でめぐる場所</h2>
       <p>第2便はホエールスイムが午前中に終わるので午後がまるまる島の時間、第1便は初日の午後と最終日の午前が島の時間になります。世界自然遺産の島の内側へ。その日の天候・海況・みなさまの体調に合わせて最適にアレンジします。下記のすべてをめぐるわけではありませんので、ご了承ください。</p>
     </div>
@@ -997,11 +1321,11 @@ a{color:var(--turq-d)}
   </div>
 </section>
 
-<!-- 05 当日の流れ -->
+<!-- 06 当日の流れ -->
 <section class="pad cream" id="flow">
   <div class="wrap">
     <div class="shead">
-      <span class="no">05 ／ THE DAY</span>
+      <span class="no">06 ／ THE DAY</span>
       <h2>ホエールスイム 当日の流れ</h2>
       <p>マリンスポーツ奄美さんの船を利用します。<strong>第1便は1日コース（9:00〜16:00ごろ・約6時間）</strong>、<strong>第2便は半日コース（9:00〜12:00・約3時間）を2日間</strong>。船にはクジラの位置がわかるソナーが載っていて、「9時の方向、距離35m」のようにアナウンスが入ります。クジラ次第でタイミングは読めないので、いつでも入れる準備をしておくのがコツです。</p>
     </div>
@@ -1080,11 +1404,11 @@ a{color:var(--turq-d)}
   </div>
 </section>
 
-<!-- 06 ルール -->
+<!-- 07 ルール -->
 <section class="pad mint" id="rules">
   <div class="wrap">
     <div class="shead">
-      <span class="no">06 ／ RULES</span>
+      <span class="no">07 ／ RULES</span>
       <h2>ホエールスイムのルールと注意事項</h2>
       <p>ホエールスイムは、追いかけたり潜ったりはできません。クジラを驚かさないよう、水面から静かに観察します。以下は<strong>マリンスポーツ奄美さんおよびホエール協会の決まり</strong>です。ひとりが守れないと参加者全員に影響します。必ずお読みください。</p>
     </div>
@@ -1183,11 +1507,11 @@ a{color:var(--turq-d)}
   </div>
 </section>
 
-<!-- 07 服装 -->
+<!-- 08 服装 -->
 <section class="pad" id="clothes">
   <div class="wrap">
     <div class="shead">
-      <span class="no">07 ／ WHAT TO WEAR</span>
+      <span class="no">08 ／ WHAT TO WEAR</span>
       <h2>船上の服装と防寒</h2>
       <p>1月末〜2月初めの奄美は平年で最高17〜18℃・最低12℃前後、水温は20℃前後。ただし冬は曇りがちで北風が強く、船上の体感温度はぐっと下がります。<strong>濡れたまま船上で待つ時間</strong>がいちばん寒く感じます。「肌に密着する暖かいもの → 保温するもの → 風を通さないもの」の3層で考えてください。</p>
     </div>
@@ -1253,11 +1577,11 @@ a{color:var(--turq-d)}
   </div>
 </section>
 
-<!-- 08 持ち物 -->
+<!-- 09 持ち物 -->
 <section class="pad lemon" id="packing">
   <div class="wrap">
     <div class="shead">
-      <span class="no">08 ／ PACKING LIST</span>
+      <span class="no">09 ／ PACKING LIST</span>
       <h2>持ち物リスト</h2>
       <p>タップするとチェックできます（このブラウザに保存されるので、荷造りのときにお使いください）。</p>
     </div>
@@ -1328,11 +1652,11 @@ a{color:var(--turq-d)}
   </div>
 </section>
 
-<!-- 09 レンタル -->
+<!-- 10 レンタル -->
 <section class="pad cream" id="rental">
   <div class="wrap">
     <div class="shead">
-      <span class="no">09 ／ RENTAL</span>
+      <span class="no">10 ／ RENTAL</span>
       <h2>器材レンタル料金<span class="kari">仮</span></h2>
       <p>ご自身の器材をお持ちでない方はレンタルをご利用いただけます。ご予約の際に、身長・体重・足のサイズ・ウエイト重量をお知らせください。料金は1回のリトリートあたりの金額です。</p>
     </div>
@@ -1360,11 +1684,11 @@ a{color:var(--turq-d)}
   </div>
 </section>
 
-<!-- 10 参加費 -->
+<!-- 11 参加費 -->
 <section class="pad mint" id="fee">
   <div class="wrap">
     <div class="shead">
-      <span class="no">10 ／ WHAT'S INCLUDED</span>
+      <span class="no">11 ／ WHAT'S INCLUDED</span>
       <h2>参加費に含まれるもの<span class="kari">仮</span></h2>
       <p>参加費：第1便（2泊3日・クジラ1日コース）¥110,000 ／ 第2便（3泊4日・クジラ半日コース×2）¥143,000（いずれもお一人さま・<strong>仮の金額</strong>です）。各便とも定員4名、インストラクター1名が同行します。</p>
     </div>
@@ -1415,11 +1739,11 @@ a{color:var(--turq-d)}
   </div>
 </section>
 
-<!-- 11 キャンセル -->
+<!-- 12 キャンセル -->
 <section class="pad cream" id="cancel">
   <div class="wrap">
     <div class="shead">
-      <span class="no">11 ／ CANCELLATION</span>
+      <span class="no">12 ／ CANCELLATION</span>
       <h2>キャンセル規定<span class="kari">仮</span></h2>
       <p>お申し込み後のキャンセルは再募集が難しく、宿・船にもキャンセル料が発生します。事情をご考慮のうえ、キャンセルなきようご協力をお願いいたします。体調をしっかり整えて、最高のリトリートにしましょう。</p>
     </div>
@@ -1481,7 +1805,7 @@ a{color:var(--turq-d)}
 
 <!-- contact -->
 <section class="contact">
-  <img class="bg" src="img/8799ae54cb11.jpg" alt="" loading="lazy" decoding="async" />
+  <img class="bg" src="img/8c81a58598ab.jpg" alt="" loading="lazy" decoding="async" />
   <div class="veil"></div>
   <div class="in">
     <h2>ご不明な点は<br />いつでもご連絡ください</h2>
@@ -1501,7 +1825,13 @@ a{color:var(--turq-d)}
 
 <footer>
   <span class="fl">Sunny Funny Days</span>
-  奄美大島 ホエールスイムリトリート 2027 ／ 参加者向け詳細<br />
+  奄美大島 ホエールスイムリトリート 2027 ／ 参加者向け詳細
+  <div class="foot-links">
+    <a href="#schedule">スケジュール</a>
+    <a href="#flights">航空便</a>
+    <a href="#packing">持ち物</a>
+    <a href="ホエールスイムリトリート2027.html">募集ページ</a>
+  </div>
   © 2027 Sunny Funny Days. All rights reserved.
 </footer>
 
@@ -1566,6 +1896,19 @@ a{color:var(--turq-d)}
     saved={};
     try{ localStorage.removeItem(KEY); }catch(e){}
   });
+
+  var b=document.getElementById('bub');
+  if(b && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    for(var i=0;i<18;i++){
+      var sz=Math.random()*9+3, e=document.createElement('i');
+      e.style.width=e.style.height=sz+'px';
+      e.style.left=(Math.random()*100)+'%';
+      e.style.animationDuration=(Math.random()*14+11)+'s';
+      e.style.animationDelay=(-Math.random()*20)+'s';
+      e.style.opacity=(Math.random()*0.4+0.2);
+      b.appendChild(e);
+    }
+  }
 
   var bt=document.getElementById('bt');
   window.addEventListener('scroll',function(){
