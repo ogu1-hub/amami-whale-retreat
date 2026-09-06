@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>奄美大島 ホエールスイムリトリート 2027 | Sunny Funny Days</title>
+<meta name="description" content="2027年1月26日〜2月1日、世界自然遺産の島・奄美大島へ。ザトウクジラと同じ海に浮かび、金作原の原生林とマングローブを歩く2泊3日／3泊4日のリトリート。宿はペンショングリーンヒル。" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+:root{
+  --abyss:#03121f;
+  --deep:#062a44;
+  --ocean:#0d4f74;
+  --mid:#1a7fa8;
+  --light:#7fd4ee;
+  --pale:#dff2fa;
+  --sand:#f7f3ec;
+  --ink:#14303e;
+  --ink-soft:#436374;
+  --gold:#e8b878;
+  --serif:'Hiragino Mincho ProN','Yu Mincho','YuMincho','Noto Serif JP',serif;
+  --sans:'Hiragino Kaku Gothic ProN','Hiragino Sans',Meiryo,sans-serif;
+}
+body{font-family:var(--sans);color:var(--ink);background:var(--abyss);line-height:1.9;
+  -webkit-text-size-adjust:100%;overflow-x:hidden;font-feature-settings:"palt"}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--light);color:var(--abyss)}
+
+/* ---------- header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px 20px;transition:background .5s,padding .5s,box-shadow .5s;}
+header.solid{background:rgba(3,18,31,.9);backdrop-filter:blur(14px);padding:11px 20px;
+  box-shadow:0 1px 24px rgba(0,0,0,.4)}
+.logo{font-size:.92rem;font-weight:700;letter-spacing:.14em;color:#fff;line-height:1.35;
+  text-shadow:0 1px 12px rgba(0,0,0,.5)}
+.logo small{display:block;font-size:.54rem;font-weight:400;letter-spacing:.26em;
+  color:rgba(255,255,255,.62);margin-top:2px}
+.nav-pc{display:none}
+.menu-toggle{background:none;border:none;cursor:pointer;display:flex;flex-direction:column;
+  gap:5px;padding:6px;z-index:210}
+.menu-toggle span{display:block;width:24px;height:1.5px;background:#fff;border-radius:2px;
+  transition:all .35s}
+.menu-toggle.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.menu-toggle.open span:nth-child(2){opacity:0}
+.menu-toggle.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.drawer{position:fixed;inset:0;z-index:195;background:rgba(3,18,31,.97);
+  backdrop-filter:blur(18px);display:flex;flex-direction:column;justify-content:center;
+  padding:0 34px;opacity:0;pointer-events:none;transition:opacity .45s}
+.drawer.open{opacity:1;pointer-events:auto}
+.drawer a{display:block;padding:15px 0;font-size:1.02rem;color:rgba(255,255,255,.9);
+  border-bottom:1px solid rgba(127,212,238,.16);letter-spacing:.08em}
+.drawer a small{display:block;font-size:.56rem;letter-spacing:.24em;color:var(--light);
+  opacity:.65;margin-top:2px}
+.drawer .d-cta{margin-top:26px;background:var(--gold);color:var(--abyss);border:none;
+  border-radius:60px;text-align:center;padding:15px;font-weight:700;letter-spacing:.1em}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;padding:96px 20px 110px;
+  overflow:hidden;background:var(--abyss)}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  animation:kenburns 26s ease-in-out infinite alternate;z-index:0}
+@keyframes kenburns{from{transform:scale(1.06) translateY(0)}to{transform:scale(1.2) translateY(-14px)}}
+.hero-veil{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(3,18,31,.72) 0%,rgba(3,18,31,.34) 34%,rgba(3,18,31,.5) 66%,rgba(3,18,31,.94) 100%)}
+.rays{position:absolute;inset:0;z-index:2;pointer-events:none;mix-blend-mode:screen;opacity:.5;
+  background:
+   linear-gradient(168deg,rgba(190,240,255,.22) 0 4%,transparent 4% 13%),
+   linear-gradient(190deg,rgba(190,240,255,.15) 0 3%,transparent 3% 16%),
+   linear-gradient(155deg,rgba(190,240,255,.12) 0 5%,transparent 5% 22%);
+  animation:sway 14s ease-in-out infinite alternate}
+@keyframes sway{from{transform:translateX(-3%) skewX(0deg)}to{transform:translateX(3%) skewX(1.5deg)}}
+.bubbles{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+.bubbles i{position:absolute;bottom:-40px;display:block;border-radius:50%;
+  background:radial-gradient(circle at 32% 30%,rgba(255,255,255,.85),rgba(255,255,255,.08) 62%,transparent 70%);
+  animation:rise linear infinite}
+@keyframes rise{0%{transform:translateY(0) translateX(0);opacity:0}
+ 12%{opacity:.7}80%{opacity:.45}100%{transform:translateY(-108svh) translateX(26px);opacity:0}}
+.hero-inner{position:relative;z-index:5;max-width:640px}
+.hero-eyebrow{font-size:.62rem;letter-spacing:.26em;color:var(--light);text-transform:uppercase;
+  margin-bottom:26px;font-weight:500}
+.hero h1{font-family:var(--serif);font-weight:500;color:#fff;font-size:2.15rem;line-height:1.75;
+  letter-spacing:.08em;text-shadow:0 2px 30px rgba(0,0,0,.7);margin-bottom:26px}
+.hero h1 em{font-style:normal;color:#bfeaf9}
+.hero-lead{font-size:.92rem;color:rgba(255,255,255,.86);letter-spacing:.04em;line-height:2.05;
+  text-shadow:0 1px 16px rgba(0,0,0,.8)}
+.hero-when{margin-top:30px;display:inline-block;padding:10px 22px;border-radius:60px;
+  border:1px solid rgba(127,212,238,.5);background:rgba(3,18,31,.35);backdrop-filter:blur(6px);
+  font-size:.78rem;letter-spacing:.1em;color:#dff2fa}
+.scroll-cue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:5;
+  font-size:.52rem;letter-spacing:.34em;color:rgba(255,255,255,.62);text-align:center}
+.scroll-cue::after{content:"";display:block;width:1px;height:46px;margin:10px auto 0;
+  background:linear-gradient(rgba(255,255,255,.7),transparent);animation:cue 2.4s ease-in-out infinite}
+@keyframes cue{0%,100%{opacity:.25;transform:scaleY(.55);transform-origin:top}
+ 50%{opacity:1;transform:scaleY(1);transform-origin:top}}
+
+/* ---------- shared ---------- */
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{position:relative}
+.dark{background:var(--abyss);color:#eaf6fb}
+.deepgrad{background:linear-gradient(180deg,var(--abyss) 0%,#062033 46%,var(--abyss) 100%)}
+.lightbg{background:var(--sand);color:var(--ink)}
+.pad{padding:88px 0}
+.pad-s{padding:64px 0}
+.center{text-align:center}
+.label{font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--mid);margin-bottom:16px;font-weight:600}
+.dark .label{color:var(--light);opacity:.85}
+.stitle{font-family:var(--serif);font-weight:500;font-size:1.55rem;line-height:1.85;
+  letter-spacing:.08em;margin-bottom:20px}
+.ssub{font-size:.88rem;line-height:2.05;letter-spacing:.02em;color:var(--ink-soft);
+  max-width:620px;margin:0 auto}
+.dark .ssub{color:rgba(223,242,250,.72)}
+.hair{width:34px;height:1px;background:var(--gold);margin:0 auto 26px}
+.reveal{opacity:1;transform:none}
+html.js-anim .reveal{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1s ease}
+html.js-anim .reveal.in{opacity:1;transform:none}
+
+/* ---------- lead ---------- */
+.lead-copy{font-family:var(--serif);font-size:1.2rem;line-height:2.2;letter-spacing:.08em;
+  text-align:center;color:#eaf6fb;max-width:620px;margin:0 auto}
+.lead-copy span{color:var(--light)}
+.lead-note{margin-top:34px;font-size:.88rem;line-height:2.05;letter-spacing:.02em;
+  color:rgba(223,242,250,.66);max-width:640px;margin-left:auto;margin-right:auto;text-align:left}
+
+/* ---------- 3 experiences ---------- */
+.exp{display:grid;gap:26px;margin-top:52px}
+.exp-card{position:relative;border-radius:3px;overflow:hidden;background:#08243a;
+  box-shadow:0 20px 50px rgba(0,0,0,.42)}
+.exp-photo{position:relative;aspect-ratio:16/10;overflow:hidden}
+.exp-photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s ease}
+.exp-card:hover .exp-photo img{transform:scale(1.06)}
+.exp-photo::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 40%,rgba(3,18,31,.86) 100%)}
+.exp-no{position:absolute;top:16px;left:18px;z-index:2;font-size:.58rem;letter-spacing:.3em;
+  color:var(--light);opacity:.9}
+.exp-head{position:absolute;left:20px;right:20px;bottom:16px;z-index:2}
+.exp-head h3{font-family:var(--serif);font-size:1.16rem;font-weight:500;letter-spacing:.14em;
+  color:#fff;line-height:1.6}
+.exp-head small{display:block;font-size:.54rem;letter-spacing:.3em;color:var(--light);
+  opacity:.8;margin-top:5px}
+.exp-body{padding:20px 22px 26px;font-size:.87rem;line-height:2.05;letter-spacing:.02em;
+  color:rgba(223,242,250,.78)}
+
+/* ---------- quote band ---------- */
+.band{position:relative;min-height:74svh;display:flex;align-items:center;justify-content:center;
+  text-align:center;overflow:hidden;padding:80px 26px}
+.band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.band .veil{position:absolute;inset:0;z-index:1;background:rgba(3,18,31,.62)}
+.band-inner{position:relative;z-index:3;max-width:600px}
+.band-inner p{font-family:var(--serif);color:#fff;font-size:.98rem;line-height:2.85;
+  letter-spacing:.16em;text-shadow:0 2px 24px rgba(0,0,0,.75)}
+.band-inner .big{font-size:1.3rem;line-height:2.2;margin-bottom:26px;color:#dff2fa}
+
+/* ---------- plans ---------- */
+.plans{display:grid;gap:22px;margin-top:48px}
+.plan{background:#fff;border:1px solid rgba(26,127,168,.16);border-radius:3px;overflow:hidden;
+  box-shadow:0 12px 34px rgba(6,42,68,.07);display:flex;flex-direction:column}
+.plan-top{padding:22px 24px 18px;background:linear-gradient(135deg,var(--deep),var(--ocean));color:#fff;
+  position:relative;overflow:hidden}
+.plan-top::after{content:"";position:absolute;right:-30px;top:-30px;width:130px;height:130px;
+  border-radius:50%;border:1px solid rgba(127,212,238,.22)}
+.plan-tag{display:inline-block;font-size:.56rem;letter-spacing:.26em;padding:4px 12px;
+  border:1px solid rgba(127,212,238,.55);border-radius:60px;color:var(--light);margin-bottom:14px}
+.plan-top h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;letter-spacing:.08em;
+  line-height:1.7}
+.plan-top .nights{font-size:.72rem;letter-spacing:.16em;color:rgba(223,242,250,.8);margin-top:8px}
+.plan-rows{padding:6px 24px 4px}
+.plan-row{display:flex;justify-content:space-between;gap:14px;align-items:baseline;
+  padding:14px 0;border-bottom:1px solid rgba(26,127,168,.11);font-size:.86rem;letter-spacing:.01em;line-height:1.8}
+.plan-row:last-child{border-bottom:none}
+.plan-row dt{color:var(--ink-soft);flex:0 0 auto;font-size:.79rem;letter-spacing:.04em}
+.plan-row dd{text-align:right;font-weight:600}
+.plan-price{padding:16px 24px 22px;background:var(--pale);margin-top:auto}
+.plan-price .p-label{font-size:.6rem;letter-spacing:.22em;color:var(--ink-soft)}
+.plan-price .p-val{font-family:var(--serif);font-size:1.9rem;letter-spacing:.04em;color:var(--deep);
+  line-height:1.4}
+.plan-price .p-val small{font-size:.68rem;letter-spacing:.08em;margin-left:5px;font-family:var(--sans)}
+.plan-price .p-note{font-size:.62rem;color:var(--ink-soft);letter-spacing:.06em;margin-top:3px}
+.kari{display:inline-block;font-size:.56rem;letter-spacing:.16em;background:var(--gold);
+  color:#4a3210;padding:2px 8px;border-radius:3px;margin-left:7px;vertical-align:2px;font-weight:700}
+.plan-note{margin-top:30px;font-size:.82rem;line-height:2;color:var(--ink-soft);
+  letter-spacing:.04em;background:#fff;border-left:2px solid var(--gold);padding:16px 20px}
+
+/* ---------- stay ---------- */
+.stay{display:grid;gap:44px;margin-top:50px}
+.stay-photos{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.stay-photos img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1;border-radius:2px}
+.stay-photos .tall{grid-row:span 2;aspect-ratio:auto}
+.stay-t{font-family:var(--serif);font-size:1.12rem;font-weight:500;letter-spacing:.12em;
+  margin:22px 0 6px}
+.stay-t small{display:block;font-size:.56rem;letter-spacing:.28em;color:var(--mid);
+  margin-top:6px;font-family:var(--sans)}
+.stay-body{font-size:.81rem;line-height:2.2;letter-spacing:.04em;color:var(--ink-soft);margin-top:14px}
+.stay-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.stay-tags span{font-size:.62rem;letter-spacing:.1em;padding:4px 11px;border-radius:60px;
+  background:rgba(26,127,168,.09);color:var(--ocean)}
+
+/* ---------- gallery ---------- */
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:44px}
+.gal img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1;
+  filter:saturate(1.02);transition:transform 1.2s ease,filter .6s}
+.gal a{overflow:hidden;display:block;background:#062033}
+.gal a:hover img{transform:scale(1.07);filter:saturate(1.15)}
+.gal .wide{grid-column:span 2}
+.gal .wide img{aspect-ratio:2/1}
+
+/* ---------- for-you ---------- */
+.foryou{display:grid;gap:12px;margin-top:44px}
+.fy{display:flex;gap:14px;align-items:flex-start;background:rgba(127,212,238,.06);
+  border:1px solid rgba(127,212,238,.14);padding:18px 20px;border-radius:3px}
+.fy .m{flex:0 0 auto;color:var(--light);font-size:.9rem;line-height:1.9}
+.fy p{font-size:.88rem;line-height:2;letter-spacing:.02em;color:rgba(223,242,250,.86)}
+.cond{margin-top:38px;border:1px solid rgba(127,212,238,.2);border-radius:3px;overflow:hidden}
+.cond h4{background:rgba(127,212,238,.1);padding:13px 20px;font-size:.76rem;letter-spacing:.16em;
+  color:var(--light);font-weight:600}
+.cond ul{padding:18px 22px 20px 38px}
+.cond li{font-size:.86rem;line-height:2.05;letter-spacing:.02em;color:rgba(223,242,250,.8);
+  margin-bottom:7px}
+.cond li::marker{color:var(--light)}
+
+/* ---------- faq ---------- */
+.faq{margin-top:40px;max-width:760px;margin-left:auto;margin-right:auto}
+.faq details{border-bottom:1px solid rgba(26,127,168,.16)}
+.faq summary{list-style:none;cursor:pointer;padding:20px 36px 20px 26px;position:relative;
+  font-size:.93rem;letter-spacing:.02em;line-height:1.7;font-weight:600;color:var(--deep)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"Q";position:absolute;left:0;top:19px;font-family:var(--serif);
+  color:var(--mid);font-size:.85rem}
+.faq summary::after{content:"";position:absolute;right:6px;top:26px;width:8px;height:8px;
+  border-right:1.4px solid var(--mid);border-bottom:1.4px solid var(--mid);
+  transform:rotate(45deg);transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(-135deg)}
+.faq .a{padding:0 6px 24px 26px;font-size:.87rem;line-height:2.05;letter-spacing:.02em;
+  color:var(--ink-soft)}
+
+/* ---------- cta ---------- */
+.cta{position:relative;overflow:hidden;text-align:center;padding:104px 24px}
+.cta img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.cta .veil{position:absolute;inset:0;z-index:1;background:rgba(3,18,31,.76)}
+.cta-inner{position:relative;z-index:3;max-width:560px;margin:0 auto}
+.cta h2{font-family:var(--serif);color:#fff;font-size:1.6rem;font-weight:500;line-height:1.85;
+  letter-spacing:.08em;margin-bottom:20px}
+.cta p{font-size:.9rem;line-height:2.05;color:rgba(255,255,255,.85);letter-spacing:.02em;
+  margin-bottom:32px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;
+  width:100%;max-width:360px;margin:0 auto 13px;min-height:58px;padding:16px 20px;border-radius:60px;
+  font-size:1rem;font-weight:700;letter-spacing:.06em;transition:transform .25s,box-shadow .25s}
+.btn-line{background:#06C755;color:#fff;box-shadow:0 8px 26px rgba(6,199,85,.38)}
+.line-ico{display:inline-grid;place-items:center;background:#fff;color:#06C755;
+  font-size:.62rem;font-weight:800;letter-spacing:.02em;width:38px;height:38px;border-radius:10px;
+  flex:0 0 auto}
+.btn:active{transform:scale(.98)}
+.btn-gold{background:var(--gold);color:#3d2909;box-shadow:0 8px 30px rgba(232,184,120,.34)}
+.btn-ghost{border:1px solid rgba(255,255,255,.5);color:#fff}
+.cta-contact{margin-top:30px;font-size:.74rem;letter-spacing:.08em;color:rgba(255,255,255,.66);
+  line-height:2.1}
+.cta-contact a{color:var(--light);border-bottom:1px solid rgba(127,212,238,.4)}
+.sp-br{display:inline}
+@media(min-width:520px){ .sp-br{display:none} }
+
+/* ---------- footer ---------- */
+footer{background:#020c15;color:rgba(223,242,250,.5);text-align:center;padding:46px 24px 40px;
+  font-size:.75rem;letter-spacing:.06em;line-height:2.1}
+footer .fl{font-family:var(--serif);font-size:.92rem;color:#fff;letter-spacing:.2em;
+  margin-bottom:6px;display:block}
+.foot-links{display:flex;justify-content:center;gap:20px;margin:20px 0 24px;flex-wrap:wrap}
+.foot-links a{font-size:.7rem;letter-spacing:.1em;color:var(--light);opacity:.85}
+
+/* ---------- desktop ---------- */
+@media(min-width:768px){
+  .hero h1{font-size:3rem;line-height:1.7}
+  .hero-lead{font-size:1rem}
+  .stitle{font-size:1.8rem}
+  .cta h2{font-size:1.9rem}
+  .lead-copy{font-size:1.35rem}
+  .pad{padding:118px 0}
+  .exp{grid-template-columns:repeat(3,1fr)}
+  .plans{grid-template-columns:repeat(3,1fr)}
+  .stay{grid-template-columns:1fr 1fr;gap:52px}
+  .foryou{grid-template-columns:1fr 1fr}
+  .gal{grid-template-columns:repeat(4,1fr)}
+  .gal .wide{grid-column:span 2}
+  .band-inner p{font-size:1.08rem}
+  .band-inner .big{font-size:1.6rem}
+  .lead-copy{font-size:1.2rem}
+  .nav-pc{display:flex;gap:26px;align-items:center}
+  .nav-pc a{font-size:.72rem;letter-spacing:.14em;color:rgba(255,255,255,.85);
+    text-shadow:0 1px 10px rgba(0,0,0,.5)}
+  .nav-pc a:hover{color:var(--light)}
+  .nav-pc .n-cta{background:var(--gold);color:var(--abyss);padding:9px 20px;border-radius:60px;
+    font-weight:700;text-shadow:none}
+  .menu-toggle{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+
+/* ---------- island / Amami ---------- */
+.isle-hero{position:relative;border-radius:3px;overflow:hidden;margin-top:44px}
+.isle-hero img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.isle-hero .cap{position:absolute;left:0;right:0;bottom:0;padding:34px 18px 14px;
+  background:linear-gradient(transparent,rgba(3,18,31,.9));color:#fff;font-size:.74rem;
+  letter-spacing:.03em;line-height:1.8}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin-top:34px;
+  background:rgba(127,212,238,.18);border:1px solid rgba(127,212,238,.18);border-radius:3px;
+  overflow:hidden}
+.fact{background:var(--abyss);padding:18px 14px;text-align:center}
+.fact .fl{display:block;font-size:.55rem;letter-spacing:.24em;color:var(--light);opacity:.8;
+  margin-bottom:7px}
+.fact .fv{font-family:var(--serif);font-size:1.12rem;color:#fff;letter-spacing:.04em;line-height:1.5}
+.fact .fv small{display:block;font-size:.6rem;letter-spacing:.08em;color:rgba(223,242,250,.6);
+  margin-top:4px;font-family:var(--sans)}
+.heritage{margin-top:34px;border:1px solid rgba(232,184,120,.4);border-radius:3px;
+  background:rgba(232,184,120,.07);padding:22px 22px 24px}
+.heritage .hb{display:inline-block;font-size:.55rem;letter-spacing:.2em;background:var(--gold);
+  color:#3d2909;padding:4px 12px;border-radius:60px;font-weight:700;margin-bottom:14px}
+.heritage h3{font-family:var(--serif);font-size:1.06rem;font-weight:500;letter-spacing:.1em;
+  color:#fff;line-height:1.8;margin-bottom:12px}
+.heritage p{font-size:.87rem;line-height:2.05;letter-spacing:.02em;color:rgba(223,242,250,.82)}
+.spots{display:grid;gap:20px;margin-top:44px}
+.spot{background:#08243a;border-radius:3px;overflow:hidden;box-shadow:0 14px 36px rgba(0,0,0,.32)}
+.spot .ph{position:relative;aspect-ratio:4/3;overflow:hidden}
+.spot .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.3s}
+.spot:hover .ph img{transform:scale(1.06)}
+.spot .bd{padding:16px 18px 20px}
+.spot h4{font-family:var(--serif);font-size:.98rem;font-weight:500;letter-spacing:.1em;color:#fff;
+  line-height:1.7;margin-bottom:4px}
+.spot h4 small{display:block;font-size:.53rem;letter-spacing:.24em;color:var(--light);opacity:.75;
+  margin-top:5px;font-family:var(--sans)}
+.spot p{font-size:.83rem;line-height:2;letter-spacing:.02em;color:rgba(223,242,250,.74);
+  margin-top:10px}
+.life{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+.life figure{background:#08243a;border-radius:3px;overflow:hidden}
+.life img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.life figcaption{padding:13px 15px 16px;font-size:.79rem;line-height:1.95;letter-spacing:.02em;
+  color:rgba(223,242,250,.76)}
+.life figcaption b{display:block;color:#fff;font-size:.82rem;letter-spacing:.08em;
+  font-family:var(--serif);font-weight:500;margin-bottom:4px}
+/* ---------- stay TBD ---------- */
+.tbd{margin-top:44px;border:1px dashed rgba(127,212,238,.45);border-radius:3px;
+  background:rgba(127,212,238,.05);padding:34px 24px;text-align:center}
+.tbd .ic{font-size:1.5rem;display:block;margin-bottom:12px;opacity:.75}
+.tbd h3{font-family:var(--serif);font-size:1.08rem;font-weight:500;letter-spacing:.12em;color:#fff;
+  line-height:1.9;margin-bottom:14px}
+.tbd p{font-size:.79rem;line-height:2.15;letter-spacing:.04em;color:rgba(223,242,250,.74);
+  max-width:520px;margin:0 auto}
+.tbd ul{list-style:none;margin-top:20px;display:inline-block;text-align:left}
+.tbd li{position:relative;padding-left:20px;font-size:.76rem;line-height:2.1;
+  color:rgba(223,242,250,.68);letter-spacing:.04em}
+.tbd li::before{content:"—";position:absolute;left:0;color:var(--light);opacity:.6}
+/* ---------- credits ---------- */
+.credits{background:#020c15;padding:0 0 34px}
+.credits details{max-width:900px;margin:0 auto;padding:0 24px}
+.credits summary{cursor:pointer;list-style:none;font-size:.64rem;letter-spacing:.16em;
+  color:rgba(223,242,250,.45);text-align:center;padding:10px}
+.credits summary::-webkit-details-marker{display:none}
+.credits ul{list-style:none;margin-top:12px;border-top:1px solid rgba(127,212,238,.12);padding-top:14px}
+.credits li{font-size:.6rem;line-height:2;letter-spacing:.03em;color:rgba(223,242,250,.42);
+  margin-bottom:3px}
+.credits a{color:rgba(127,212,238,.62);border-bottom:1px solid rgba(127,212,238,.2)}
+@media(min-width:768px){
+  .facts{grid-template-columns:repeat(4,1fr)}
+  .spots{grid-template-columns:repeat(3,1fr)}
+  .life{grid-template-columns:repeat(4,1fr)}
+}
+
+/* ---------- Green Hill ---------- */
+.ghgrid{display:grid;gap:26px;margin-top:44px}
+.ghphoto{border-radius:3px;overflow:hidden;background:#08243a}
+.phbox{aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:10px;border:1px dashed rgba(127,212,238,.35);border-radius:3px;
+  background:rgba(127,212,238,.05)}
+.phbox .e{font-size:1.7rem;opacity:.6}
+.phbox .t{font-size:.72rem;letter-spacing:.14em;color:rgba(223,242,250,.6)}
+.phbox a{font-size:.7rem;letter-spacing:.1em;color:var(--light);
+  border-bottom:1px solid rgba(127,212,238,.4);padding-bottom:2px}
+.ghtext p{font-size:.88rem;line-height:2.05;letter-spacing:.02em;
+  color:rgba(223,242,250,.8);margin-bottom:16px}
+.ghtext p:last-child{margin-bottom:0}
+.ghspec{margin-top:34px;border:1px solid rgba(127,212,238,.18);border-radius:3px;overflow:hidden}
+.gs{display:flex;border-bottom:1px solid rgba(127,212,238,.12);font-size:.76rem}
+.gs:last-child{border-bottom:none}
+.gs .k{flex:0 0 92px;background:rgba(127,212,238,.07);padding:12px 12px;color:var(--light);
+  font-weight:600;letter-spacing:.04em;font-size:.76rem;line-height:1.9}
+.gs .v{flex:1;padding:12px 14px;color:rgba(223,242,250,.82);line-height:1.95;letter-spacing:.01em;font-size:.84rem}
+.ghfeat{display:grid;gap:12px;margin-top:26px}
+.gf{background:rgba(127,212,238,.06);border:1px solid rgba(127,212,238,.14);
+  border-radius:3px;padding:18px 20px}
+.gf .i{font-size:1.15rem;display:block;margin-bottom:8px}
+.gf h4{font-family:var(--serif);font-size:.94rem;font-weight:500;letter-spacing:.1em;
+  color:#fff;margin-bottom:8px;line-height:1.7}
+.gf p{font-size:.83rem;line-height:2;letter-spacing:.02em;color:rgba(223,242,250,.74)}
+@media(min-width:768px){
+  .ghgrid{grid-template-columns:1fr 1.15fr;align-items:center;gap:38px}
+  .ghfeat{grid-template-columns:repeat(4,1fr)}
+  .plans{max-width:820px;margin-left:auto;margin-right:auto}
+}
+
+/* ---------- Green Hill photos ---------- */
+.ghshots{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:44px}
+.ghshots figure{position:relative;overflow:hidden;border-radius:3px;background:#08243a}
+.ghshots img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;
+  transition:transform 1.3s ease}
+.ghshots figure:hover img{transform:scale(1.05)}
+.ghshots figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 12px 9px;
+  font-size:.64rem;letter-spacing:.08em;color:rgba(255,255,255,.9);
+  background:linear-gradient(transparent,rgba(3,18,31,.88))}
+.ghshots .big{grid-column:span 2}
+.ghshots .big img{aspect-ratio:16/9}
+/* ---------- map ---------- */
+.mapwrap{margin-top:44px;border:1px solid rgba(127,212,238,.2);border-radius:3px;
+  overflow-x:auto;-webkit-overflow-scrolling:touch;background:#03121f}
+.amap{display:block;width:100%;min-width:680px;height:auto}
+.maphint{font-size:.66rem;letter-spacing:.1em;color:rgba(223,242,250,.45);margin-top:9px;text-align:right}
+.mapnote{display:grid;gap:10px;margin-top:18px}
+.mapnote div{background:rgba(127,212,238,.06);border:1px solid rgba(127,212,238,.14);
+  border-radius:3px;padding:14px 16px;font-size:.83rem;line-height:1.95;letter-spacing:.02em;
+  color:rgba(223,242,250,.8)}
+.mapnote b{color:#fff;font-weight:700}
+@media(min-width:768px){ .mapnote{grid-template-columns:repeat(3,1fr)} }
+.faq-group{margin:44px 0 6px;padding-bottom:12px;border-bottom:1px solid rgba(26,127,168,.2)}
+.faq-group h3{font-family:var(--serif);font-size:1.02rem;font-weight:500;letter-spacing:.12em;
+  color:var(--deep);line-height:1.8}
+.faq-group p{font-size:.72rem;letter-spacing:.05em;color:var(--ink-soft);margin-top:6px;line-height:1.95}
+.faq .a a{color:var(--ocean);border-bottom:1px solid var(--mid)}
+.faq .a .box{margin-top:12px;background:rgba(26,127,168,.07);border-left:2px solid var(--mid);
+  padding:12px 14px;border-radius:0 3px 3px 0;font-size:.76rem;line-height:2}
+.faq .a .box b{color:var(--deep)}
+</style>
+</head>
+<body>
+
+<header id="hd">
+  <a href="#top" class="logo">SUNNY FUNNY DAYS<small>AMAMI WHALE RETREAT 2027</small></a>
+  <nav class="nav-pc">
+    <a href="#about">リトリートについて</a>
+    <a href="#island">奄美大島とは</a>
+    <a href="#plans">日程・料金</a>
+    <a href="#stay">滞在</a>
+    <a href="#map">地図</a>
+    <a href="#faq">よくある質問</a>
+  </nav>
+  <button class="menu-toggle" id="mt" aria-label="メニュー" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="drawer" id="dw">
+  <a href="#about">リトリートについて<small>ABOUT</small></a>
+  <a href="#island">奄美大島とは<small>AMAMI OSHIMA</small></a>
+  <a href="#plans">日程・料金<small>DATES &amp; FEE</small></a>
+  <a href="#stay">滞在する場所<small>STAY</small></a>
+  <a href="#map">島の地図<small>MAP</small></a>
+  <a href="#gallery">ギャラリー<small>GALLERY</small></a>
+  <a href="#foryou">こんな方へ・参加条件<small>FOR YOU</small></a>
+  <a href="#faq">よくある質問<small>FAQ</small></a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <img class="hero-bg" fetchpriority="high" decoding="async" src="img/e7a13843ac8f.jpg" alt="海を泳ぐザトウクジラの親子" />
+  <div class="hero-veil"></div>
+  <div class="rays"></div>
+  <div class="bubbles" id="bub"></div>
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Amami Oshima ・ Swim with Whales</p>
+    <h1><em>クジラ</em>に会いに、<br />奄美大島へ。</h1>
+    <p class="hero-lead">
+      世界自然遺産の島で、ザトウクジラと同じ海に浮かぶ。<br />
+      冬だけの、特別な数日間。
+    </p>
+    <div class="hero-when">2027.01 – 02 ｜ 鹿児島県・奄美大島</div>
+  </div>
+  <div class="scroll-cue">SCROLL</div>
+</section>
+
+<!-- ============ LEAD ============ -->
+<section class="dark pad" id="about">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="label">About this Retreat</p>
+      <div class="hair"></div>
+      <p class="lead-copy">
+        クジラと出会い、<br /><span>島の森に還る旅。</span>
+      </p>
+      <p class="lead-note">
+        Sunny Funny Days のリトリートは、冬の奄美の海でザトウクジラと同じ水面に浮かぶ体験を中心に、
+        世界自然遺産に登録された島の森・川・海にふれる特別な数日間です。<br /><br />
+        朝の港から船で大海原へ出て、海の生命と向き合う時間を過ごす。
+        別の日には、太古のシダが茂る原生林を歩き、マングローブの川をたどり、
+        誰もいない白い砂浜で息を整える。<br /><br />
+        奄美は、鹿児島と沖縄のちょうど中間に浮かぶ島。
+        亜熱帯の森と黒潮の海がすぐ隣り合い、そこにしかいない生きものたちが今も静かに暮らしています。
+        海を愛し、自然と調和する暮らしを提案するサニファニならではのリトリート。
+        海と、島と、仲間と、感動を分かちあう数日間になりますように。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ISLAND：奄美大島とは ============ -->
+<section class="deepgrad pad" id="island">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="label">Amami Oshima</p>
+      <div class="hair"></div>
+      <h2 class="stitle" style="color:#fff">奄美大島とは、<br />どんな島か。</h2>
+      <p class="ssub">
+        鹿児島県の島でありながら、南国の色をした海と、屋久島とも沖縄とも違う独特の森をもつ島。<br />
+        「東洋のガラパゴス」とも呼ばれます。
+      </p>
+    </div>
+
+    <div class="isle-hero reveal">
+      <img src="img/1d4e542f9e50.jpg" loading="lazy" decoding="async" alt="奄美大島の入り組んだ海岸線と湾" />
+      <p class="cap">複雑に入り組んだリアス式の海岸線。森がそのまま海へ落ちていく — 奄美大島</p>
+    </div>
+
+    <div class="facts reveal">
+      <div class="fact"><span class="fl">AREA</span><span class="fv">712km²<small>本土4島を除き日本で5番目</small></span></div>
+      <div class="fact"><span class="fl">POPULATION</span><span class="fv">約6万人<small>鹿児島県・奄美市ほか</small></span></div>
+      <div class="fact"><span class="fl">ACCESS</span><span class="fv">約2時間<small>羽田から直行便</small></span></div>
+      <div class="fact"><span class="fl">FEBRUARY</span><span class="fv">18 / 12℃<small>2月の平年最高・最低</small></span></div>
+    </div>
+
+    <div class="heritage reveal">
+      <span class="hb">UNESCO WORLD NATURAL HERITAGE</span>
+      <h3>2021年、世界自然遺産に登録された島。</h3>
+      <p>
+        2021年7月、奄美大島は徳之島・沖縄島北部・西表島とともに「奄美大島、徳之島、沖縄島北部及び西表島」として
+        ユネスコ世界自然遺産に登録されました。評価されたのは、大陸から切り離された島で独自に進化を遂げた
+        生きものたちの多様性。<strong style="color:#fff">アマミノクロウサギ</strong>や
+        <strong style="color:#fff">ルリカケス</strong>のように、地球上でこの島とその周辺にしかいない
+        固有種が、いまも森の奥で生きつづけています。
+      </p>
+    </div>
+
+    <div class="spots">
+      <article class="spot reveal">
+        <div class="ph"><img src="img/23f1f0ab4b2c.jpg" decoding="async" alt="金作原原生林のヒカゲヘゴ" loading="lazy" /></div>
+        <div class="bd">
+          <h4>金作原原生林<small>KINSAKUBARU</small></h4>
+          <p>島の中央部に広がる亜熱帯の照葉樹林。高さ10mにもなる巨大なシダ「ヒカゲヘゴ」が林立し、
+          恐竜のいた時代に迷い込んだような景色が続きます。認定ガイドの同行が必要な、島の宝物のような森です。</p>
+        </div>
+      </article>
+      <article class="spot reveal">
+        <div class="ph"><img src="img/1b3627b37555.jpg" decoding="async" alt="住用のマングローブ原生林" loading="lazy" /></div>
+        <div class="bd">
+          <h4>住用のマングローブ原生林<small>SUMIYO MANGROVE</small></h4>
+          <p>役勝川と住用川が合流する河口に、約71ヘクタールにわたって広がるマングローブ林。
+          西表島に次いで<strong style="color:#fff">日本で2番目の広さ</strong>です。
+          メヒルギとオヒルギが潮の満ち引きとともに姿を変えます。</p>
+        </div>
+      </article>
+      <article class="spot reveal">
+        <div class="ph"><img src="img/89ee4d8a9331.jpg" decoding="async" alt="土盛海岸のサンゴ礁の海" loading="lazy" /></div>
+        <div class="bd">
+          <h4>土盛海岸<small>TOMORI BEACH</small></h4>
+          <p>島の北部、空港からもほど近い場所にある海岸。白い砂と、「奄美ブルー」と呼ばれる
+          透きとおったサンゴ礁の海が広がります。冬でも息をのむ色をしています。</p>
+        </div>
+      </article>
+      <article class="spot reveal">
+        <div class="ph"><img src="img/277bb8448d3c.jpg" decoding="async" alt="高知山から望む大島海峡" loading="lazy" /></div>
+        <div class="bd">
+          <h4>大島海峡と瀬戸内町<small>OSHIMA STRAIT</small></h4>
+          <p>島の南端、奄美大島と加計呂麻島にはさまれた穏やかな海峡。
+          ホエールスイムの船が出る港もこのあたりです。展望台からは、深い緑と青が入り組む
+          リアス式海岸を一望できます。</p>
+        </div>
+      </article>
+      <article class="spot reveal">
+        <div class="ph"><img src="img/57573b60dbc5.jpg" decoding="async" alt="ホノホシ海岸の玉石" loading="lazy" /></div>
+        <div class="bd">
+          <h4>ホノホシ海岸<small>HONOHOSHI COAST</small></h4>
+          <p>太平洋に面した、丸い石で埋め尽くされた不思議な海岸。
+          打ち寄せる波が石を転がし、ゴロゴロと音が響きます。奄美の荒々しいほうの表情に出会える場所。</p>
+        </div>
+      </article>
+      <article class="spot reveal">
+        <div class="ph"><img src="img/15879833d68c.jpg" decoding="async" alt="あやまる岬の海岸" loading="lazy" /></div>
+        <div class="bd">
+          <h4>あやまる岬<small>AYAMARU CAPE</small></h4>
+          <p>島の北東端にある岬。なだらかな芝生の丘の向こうに、サンゴ礁の海が広がります。
+          「あやまる」の名は、丸い形が奄美の伝統的なあや織りの毬に似ていることから。</p>
+        </div>
+      </article>
+    </div>
+
+    <h3 class="stitle center reveal" style="color:#fff;font-size:1.1rem;margin-top:56px">
+      この島にしかいない、いのち。
+    </h3>
+    <div class="life reveal">
+      <figure>
+        <img src="img/9fb1226372ee.jpg" decoding="async" alt="アマミノクロウサギ" loading="lazy" />
+        <figcaption><b>アマミノクロウサギ</b>耳も脚も短い、原始的な姿をとどめた「生きた化石」。国の特別天然記念物で、
+        奄美大島と徳之島にしかいません。夜、森の道でそっと出会えることがあります。</figcaption>
+      </figure>
+      <figure>
+        <img src="img/4068759acd2a.jpg" decoding="async" alt="ルリカケス" loading="lazy" />
+        <figcaption><b>ルリカケス</b>瑠璃色と赤褐色をまとった、鹿児島県の県鳥。国の天然記念物で、
+        世界でも奄美大島とその周辺だけに生息します。森を歩くと声が聞こえてきます。</figcaption>
+      </figure>
+      <figure>
+        <img src="img/c0aa3aee258d.jpg" decoding="async" alt="奄美の照葉樹林" loading="lazy" />
+        <figcaption><b>亜熱帯の照葉樹林</b>島の大部分を覆う亜熱帯照葉樹林。年間の日照時間が日本一短いという
+        奄美の湿った空気が、この深い緑を育てています。</figcaption>
+      </figure>
+      <figure>
+        <img src="img/66c46fb57c3d.jpg" decoding="async" alt="大島紬の泥染め" loading="lazy" />
+        <figcaption><b>本場奄美大島紬</b>テーチ木の煮汁と、鉄分を含む島の泥で幾度も染め重ねる「泥染め」。
+        島唄、三線、黒糖焼酎、鶏飯 — 薩摩と琉球が交わった独自の文化が今も息づきます。</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 EXPERIENCES ============ -->
+<section class="dark pad">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="label">Three Experiences</p>
+      <h2 class="stitle" style="color:#fff">この旅で出会う、三つのこと</h2>
+      <p class="ssub">クジラの海、遺産の森、島の時間。<br />ひとつづきの数日間として味わっていただきます。</p>
+    </div>
+    <div class="exp">
+      <article class="exp-card reveal">
+        <div class="exp-photo">
+          <img src="img/8c81a58598ab.jpg" decoding="async" alt="ザトウクジラの親子" loading="lazy" />
+          <span class="exp-no">01</span>
+          <div class="exp-head"><h3>ホエールスイム</h3><small>SWIM WITH WHALES</small></div>
+        </div>
+        <div class="exp-body">
+          奄美の海には毎年冬、交尾・出産・子育てのためにザトウクジラがやってきます。
+          夏をベーリング海で過ごした彼らが、数千キロを旅して還ってくる海。
+          専門ガイドのもとボートでポイントへ向かい、条件が整えば、静かに海へエントリーして
+          水面から観察します。
+        </div>
+      </article>
+      <article class="exp-card reveal">
+        <div class="exp-photo">
+          <img src="img/1b3627b37555.jpg" decoding="async" alt="住用のマングローブ原生林" loading="lazy" />
+          <span class="exp-no">02</span>
+          <div class="exp-head"><h3>世界自然遺産の森と川</h3><small>WORLD HERITAGE FOREST</small></div>
+        </div>
+        <div class="exp-body">
+          ヒカゲヘゴの林立する金作原の原生林、日本で2番目に広い住用のマングローブ。
+          クジラに会う日以外は、島の内側へ。海と森がひと続きにつながっていることを、
+          歩きながら体で感じる時間です。
+        </div>
+      </article>
+      <article class="exp-card reveal">
+        <div class="exp-photo">
+          <img src="img/4489479a7864.jpg" decoding="async" alt="奄美の白い砂浜" loading="lazy" />
+          <span class="exp-no">03</span>
+          <div class="exp-head"><h3>奄美ブルーの海と島時間</h3><small>AMAMI BLUE</small></div>
+        </div>
+        <div class="exp-body">
+          誰もいない白い砂浜、透きとおったサンゴ礁の海。海況がよければスキンダイビングも。
+          夜は島の食卓を囲んで、鶏飯や島の魚、黒糖焼酎を。
+          何もしない時間そのものを味わう、島のリズムに身をあずける数日間です。
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUOTE BAND ============ -->
+<section class="band">
+  <img src="img/8799ae54cb11.jpg" decoding="async" alt="光の差す海を昇るザトウクジラ" loading="lazy" />
+  <div class="veil"></div>
+  <div class="rays"></div>
+  <div class="band-inner reveal">
+    <p class="big">海の鼓動と<br />ひとつになる瞬間</p>
+    <p>
+      同じ海の中で呼吸を感じながら泳いだ瞬間、<br />
+      時間が止まったようだった。<br />
+      静かな青の世界に響くクジラの声、<br />
+      ゆったりとした動き、やさしいまなざし。<br />
+      あの瞬間、海も自分も、<br />
+      すべてがひとつになった気がした。
+    </p>
+  </div>
+</section>
+
+<!-- ============ PLANS ============ -->
+<section class="lightbg pad" id="plans">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="label">Dates &amp; Fee</p>
+      <div class="hair"></div>
+      <h2 class="stitle">2027年1月・2月の日程</h2>
+      <p class="ssub">
+        奄美のホエールスイムのシーズンは1月初旬から3月下旬。<br />
+        なかでもクジラと泳げる確率が上がる1月下旬に、2便をご用意します。<br />各便とも<strong>定員4名</strong>、インストラクター1名が同行します。
+      </p>
+    </div>
+
+    <div class="plans" style="grid-template-columns:1fr">
+      <article class="plan reveal">
+        <div class="plan-top">
+          <span class="plan-tag">1st ／ 第 1 便</span>
+          <h3>1/26<small style="font-size:.7rem">(火)</small> 〜 1/28<small style="font-size:.7rem">(木)</small></h3>
+          <p class="nights">2泊3日 ／ ホエールスイム 1日コース</p>
+        </div>
+        <dl class="plan-rows">
+          <div class="plan-row"><dt>1日目 1/26(火)</dt><dd>奄美入り・集合<br />午後 島の北部めぐり</dd></div>
+          <div class="plan-row"><dt>2日目 1/27(水)</dt><dd>終日 ホエールスイム<br />（1日コース・約6時間）</dd></div>
+          <div class="plan-row"><dt>3日目 1/28(木)</dt><dd>午前 島あそび・解散</dd></div>
+          <div class="plan-row"><dt>宿 泊</dt><dd>ペンション グリーンヒル<br />（龍郷町・2泊）</dd></div>
+          <div class="plan-row"><dt>定 員</dt><dd>4名</dd></div>
+          <div class="plan-row"><dt>集合／解散</dt><dd>奄美空港</dd></div>
+        </dl>
+        <div class="plan-price">
+          <p class="p-label">参加費<span class="kari">仮</span></p>
+          <p class="p-val">¥110,000<small>／人</small></p>
+          <p class="p-note">往復航空券は含みません</p>
+        </div>
+      </article>
+
+      <article class="plan reveal">
+        <div class="plan-top">
+          <span class="plan-tag">2nd ／ 第 2 便</span>
+          <h3>1/29<small style="font-size:.7rem">(金)</small> 〜 2/1<small style="font-size:.7rem">(月)</small></h3>
+          <p class="nights">3泊4日 ／ ホエールスイム 半日コース×2</p>
+        </div>
+        <dl class="plan-rows">
+          <div class="plan-row"><dt>1日目 1/29(金)</dt><dd>奄美入り・集合</dd></div>
+          <div class="plan-row"><dt>2日目 1/30(土)</dt><dd>午前 ホエールスイム<br />午後 島内観光</dd></div>
+          <div class="plan-row"><dt>3日目 1/31(日)</dt><dd>午前 ホエールスイム<br />午後 島内観光</dd></div>
+          <div class="plan-row"><dt>4日目 2/1(月)</dt><dd>島あそび・解散</dd></div>
+          <div class="plan-row"><dt>宿 泊</dt><dd>ペンション グリーンヒル<br />（龍郷町・3泊）</dd></div>
+          <div class="plan-row"><dt>定 員</dt><dd>4名</dd></div>
+          <div class="plan-row"><dt>集合／解散</dt><dd>奄美空港</dd></div>
+        </dl>
+        <div class="plan-price">
+          <p class="p-label">参加費<span class="kari">仮</span></p>
+          <p class="p-val">¥143,000<small>／人</small></p>
+          <p class="p-note">往復航空券は含みません</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="plan-note reveal">
+      <strong>※ 参加費・定員は仮のものです。</strong>日程は確定、宿とクジラ船も決まっています。<br />
+      ホエールスイムは<strong>マリンスポーツ奄美</strong>さんの船です。第1便は<strong>1日コース（約6時間）</strong>、第2便は<strong>半日コース（9:00〜12:00）を2回</strong>利用します。<br />
+      参加費に含まれるもの：宿泊費（朝夕食つき）／ホエールスイム乗船料・ガイド料／現地での移動（レンタカー）／島内観光の引率<br />
+      含まれないもの：往復航空券／ご自宅から空港までの交通費／昼食代／器材レンタル料／1日レジャー保険／個人的な費用<br />
+      くわしい一日の流れ・持ち物・注意事項は、お申し込み後に詳しくご案内します。
+    </div>
+
+    <div class="plan-note reveal" style="border-left-color:var(--warn,#d9642f);background:#fff8f4">
+      <strong style="color:#b8501f">⚠ ご参加には Cカードが必要です</strong><br />
+      ホエールスイムでお世話になるマリンスポーツ奄美さんでは、<strong>ダイビングまたはスノーケリングのCカード（認定カード）をお持ちの方</strong>を受け入れの基準としています。<br />
+      <strong style="color:var(--deep)">お持ちでない方も大丈夫です。Sunny Funny Days は NAUI の認定施設で、Cカードの発行を行っています。</strong>
+      ツアーまでに「NAUIスキンダイビングコース」を受けていただければ、そのままご参加いただけます。詳しくは
+      <a href="#faq" style="color:var(--ocean);border-bottom:1px solid var(--mid)">よくあるご質問</a>をご覧ください。お早めにご相談を。
+    </div>
+  </div>
+</section>
+
+<!-- ============ STAY ============ -->
+<section class="dark pad" id="stay">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="label">Where You Stay</p>
+      <div class="hair"></div>
+      <h2 class="stitle" style="color:#fff">アマミアンスタイル<br />ペンション グリーンヒル</h2>
+      <p class="ssub">
+        島の北部・龍郷町の手広海岸のすぐそば。<br />
+        「同じ島人の家族のような対応を」を掲げる、アットホームなペンションに全泊します。
+      </p>
+    </div>
+
+    <div class="ghgrid reveal">
+      <div class="ghphoto">
+        <img src="img/966d164580c1.jpg" loading="lazy" decoding="async" alt="ペンション グリーンヒル 本館" style="width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:3px" />
+      </div>
+      <div class="ghtext">
+        <p>
+          サーフィンのメジャースポット「手広海岸」から歩いて3分。ベランダから波チェックができる立地です。
+          本館6室・新館10室のこぢんまりとしたペンションで、併設の新館にはカフェとショップ、
+          そして貸切の「ほこらしゃサウナ」があります。
+        </p>
+        <p>
+          いちばんの名物は、<strong style="color:#fff">お母さんの島料理</strong>。
+          お父さんが畑で育てた無農薬野菜、島の海産物、天然塩、黒糖 —
+          奄美で採れた自然のめぐみが並びます。朝夕の食事はカフェスペースで、
+          泊まっているみんなで一緒に食卓を囲むスタイルです。
+        </p>
+        <p style="color:var(--light)">
+          クジラの日は朝が早いので、前日の午前までにお伝えすれば、
+          お母さんが朝食のかわりに<strong style="color:#fff">特製のおにぎり</strong>を作って持たせてくれます。
+        </p>
+      </div>
+    </div>
+
+    <div class="ghspec reveal">
+      <div class="gs"><span class="k">所在地</span><span class="v">鹿児島県大島郡龍郷町赤尾木1728-2</span></div>
+      <div class="gs"><span class="k">アクセス</span><span class="v">奄美空港から車で約15分／名瀬港から約30分</span></div>
+      <div class="gs"><span class="k">部屋数</span><span class="v">本館6室・新館10室（客室はすべて2階）</span></div>
+      <div class="gs"><span class="k">チェックイン</span><span class="v">14:00 ／ チェックアウト 10:00</span></div>
+      <div class="gs"><span class="k">食事</span><span class="v">朝食 7:00〜9:00 ／ 夕食 19:00〜（島料理・みんなで一緒に）</span></div>
+      <div class="gs"><span class="k">お風呂</span><span class="v">大浴場（17:00〜23:00）＋新館の一人用風呂2つ（24時間）／共同</span></div>
+      <div class="gs"><span class="k">シャワー</span><span class="v">屋外シャワー4か所（玄関横2つは温水／24時間）</span></div>
+      <div class="gs"><span class="k">設備</span><span class="v">Free Wi-Fi・洗濯機／乾燥機（有料）・ウッドデッキ・カフェ／バー・ショップ・駐車場</span></div>
+      <div class="gs"><span class="k">海まで</span><span class="v">手広海岸まで徒歩3分</span></div>
+    </div>
+
+    <div class="ghfeat reveal">
+      <div class="gf">
+        <span class="i">🍚</span>
+        <h4>お母さんの島料理</h4>
+        <p>畑の無農薬野菜、島の魚、天然塩、黒糖。刺身のツマは庭のパパイヤ。
+        朝夕ともカフェスペースで、みんなで囲みます。</p>
+      </div>
+      <div class="gf">
+        <span class="i">🧖</span>
+        <h4>ほこらしゃサウナ</h4>
+        <p>貸切のプライベートサウナ。自家製ハーブロウリュ、薪ストーブ、シンギングボール、星空サウナ。
+        濡れてもよい服を着て入ります（事前予約制・別料金）。</p>
+      </div>
+      <div class="gf">
+        <span class="i">☕️</span>
+        <h4>併設のカフェ＆ショップ</h4>
+        <p>新館にカフェとショップ。10:00〜19:00（土日は9:00〜）、ランチは11:00〜。
+        海から上がったあとの一杯に。</p>
+      </div>
+      <div class="gf">
+        <span class="i">🏄</span>
+        <h4>徒歩3分の手広海岸</h4>
+        <p>島でも指折りのサーフスポット。宿のベランダから波が見えます。
+        朝いちばんに海を眺めに行ける距離です。</p>
+      </div>
+    </div>
+
+    <div class="ghshots reveal">
+      <figure class="big"><img src="img/e0b6daa68c14.jpg" decoding="async" alt="カフェとショップのある新館" loading="lazy" />
+        <figcaption>カフェとショップのある新館。ウッドデッキでのんびり</figcaption></figure>
+      <figure><img src="img/3ed95474e5d6.jpg" decoding="async" alt="夕食の島料理" loading="lazy" />
+        <figcaption>夕食はお母さんの島料理。刺身のツマは庭のパパイヤ</figcaption></figure>
+      <figure><img src="img/c0d9cbba9042.jpg" decoding="async" alt="島料理の食卓" loading="lazy" />
+        <figcaption>畑の無農薬野菜と島の海の幸がならびます</figcaption></figure>
+      <figure class="big"><img src="img/cf91d3c907f3.jpg" decoding="async" alt="新館のショップ" loading="lazy" />
+        <figcaption>併設のショップ。サーフグッズや島のもの</figcaption></figure>
+    </div>
+
+    <p style="font-size:.7rem;color:rgba(223,242,250,.5);margin-top:22px;letter-spacing:.06em;line-height:2.1">
+      ※ 客室にお風呂・シャワー・トイレはありません（すべて共同です）。<br />
+      ※ 歯ブラシ・歯磨き粉・浴衣のご用意はありません。ご持参ください（タオル・シャンプー類は共用のものがあります）。<br />
+      ※ 客室はすべて2階のため、階段のご利用が必要です。<br />
+    </p>
+
+    <div class="isle-hero reveal" style="margin-top:34px">
+      <img src="img/016d1b47e7e2.jpg" loading="lazy" decoding="async" alt="島へ向かう飛行機の窓から" />
+      <p class="cap">羽田からおよそ2時間。東京・大阪・福岡・鹿児島・沖縄から直行便があります</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MAP ============ -->
+<section class="deepgrad pad" id="map">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="label">Map</p>
+      <div class="hair"></div>
+      <h2 class="stitle" style="color:#fff">島のどこで、<br />なにをするか。</h2>
+      <p class="ssub">空港も宿も島の北部。クジラ船の港までは車で30〜40分です。</p>
+    </div>
+    <div class="mapwrap reveal">
+<svg class="amap" viewBox="0 0 1000 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="奄美大島の地図：空港・グリーンヒル・クジラ船の港の位置">
+<defs><linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#062033"/><stop offset="1" stop-color="#03121f"/></linearGradient><linearGradient id="land" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d4f4a"/><stop offset="1" stop-color="#13363a"/></linearGradient><filter id="gl" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<rect width="1000" height="720" fill="url(#sea)"/>
+<line x1="234.6" y1="0" x2="234.6" y2="720" stroke="rgba(127,212,238,.07)"/>
+<line x1="345.2" y1="0" x2="345.2" y2="720" stroke="rgba(127,212,238,.07)"/>
+<line x1="455.8" y1="0" x2="455.8" y2="720" stroke="rgba(127,212,238,.07)"/>
+<line x1="566.3" y1="0" x2="566.3" y2="720" stroke="rgba(127,212,238,.07)"/>
+<line x1="676.9" y1="0" x2="676.9" y2="720" stroke="rgba(127,212,238,.07)"/>
+<line x1="787.5" y1="0" x2="787.5" y2="720" stroke="rgba(127,212,238,.07)"/>
+<line x1="0" y1="617.5" x2="1000" y2="617.5" stroke="rgba(127,212,238,.07)"/>
+<line x1="0" y1="491.9" x2="1000" y2="491.9" stroke="rgba(127,212,238,.07)"/>
+<line x1="0" y1="366.3" x2="1000" y2="366.3" stroke="rgba(127,212,238,.07)"/>
+<line x1="0" y1="240.7" x2="1000" y2="240.7" stroke="rgba(127,212,238,.07)"/>
+<line x1="0" y1="115.1" x2="1000" y2="115.1" stroke="rgba(127,212,238,.07)"/>
+<path d="M678.0 147.2 L676.4 146.2 L674.8 147.4 L671.6 146.6 L670.2 149.0 L665.4 153.1 L663.6 157.0 L661.3 157.2 L660.4 156.7 L660.5 155.1 L660.3 156.1 L658.7 156.0 L658.8 155.2 L661.0 154.9 L660.8 154.2 L658.8 154.9 L658.2 156.1 L655.6 155.0 L650.5 157.2 L646.9 160.9 L646.9 162.3 L644.4 165.4 L644.4 167.1 L642.4 169.4 L641.2 168.6 L641.6 169.1 L640.1 169.7 L641.2 168.0 L639.3 169.9 L635.9 166.8 L634.6 168.6 L634.8 171.4 L634.0 173.6 L635.8 176.9 L635.9 178.6 L632.5 180.2 L629.6 180.0 L629.8 178.7 L630.5 178.7 L628.5 177.2 L626.1 171.2 L620.5 165.5 L615.2 162.2 L614.7 164.7 L614.1 165.3 L612.5 164.8 L611.5 166.4 L610.3 171.2 L606.0 173.0 L604.6 172.8 L604.2 174.7 L606.2 177.0 L603.9 179.6 L599.3 180.9 L599.1 182.9 L596.8 183.9 L594.6 183.4 L594.1 180.5 L592.4 181.2 L592.2 182.4 L590.1 184.2 L590.2 187.1 L586.4 189.4 L587.3 190.7 L585.6 194.1 L586.0 195.9 L584.5 196.4 L585.6 199.3 L584.3 201.2 L587.2 202.6 L587.3 207.8 L586.7 208.5 L584.5 207.5 L582.4 210.3 L581.4 216.3 L582.5 219.0 L581.1 219.9 L580.9 222.0 L579.7 222.0 L579.9 224.0 L578.7 226.4 L579.6 231.6 L580.6 233.0 L584.0 232.9 L587.8 235.8 L586.0 235.9 L591.7 238.5 L591.4 241.0 L584.5 239.6 L584.6 241.6 L582.4 242.7 L578.0 240.9 L575.0 241.5 L575.3 243.9 L574.6 246.2 L572.5 245.5 L569.9 250.7 L571.4 251.4 L569.8 253.9 L570.9 253.8 L570.3 255.0 L567.7 255.9 L566.1 262.2 L564.3 263.4 L563.4 263.8 L563.0 262.9 L562.4 263.9 L560.1 263.8 L562.6 262.0 L563.2 262.5 L561.8 261.0 L561.2 256.4 L561.6 252.7 L563.5 248.4 L562.5 248.8 L562.2 246.7 L563.5 247.0 L562.1 246.5 L562.6 245.2 L563.4 245.2 L563.7 243.7 L563.4 245.0 L562.6 245.0 L563.2 244.0 L562.6 244.0 L563.1 243.1 L562.6 241.7 L563.6 241.5 L563.7 242.9 L563.7 241.5 L567.1 241.5 L561.7 241.2 L562.7 240.0 L562.8 236.8 L560.6 236.2 L561.1 235.2 L559.7 230.8 L557.0 228.6 L555.6 224.6 L554.5 224.7 L551.2 229.6 L550.4 229.7 L549.9 231.0 L550.7 232.4 L548.8 235.1 L546.3 236.4 L545.7 238.5 L546.2 239.9 L543.4 240.5 L540.9 239.6 L539.5 240.0 L538.7 239.1 L534.8 239.0 L533.1 238.4 L533.3 237.6 L532.8 238.5 L529.8 238.2 L531.4 237.8 L530.4 236.6 L532.6 232.8 L534.6 231.3 L534.6 230.4 L532.9 227.2 L525.8 223.4 L524.9 225.3 L518.0 226.5 L515.7 237.2 L516.3 242.1 L514.3 248.2 L509.7 252.5 L508.2 255.1 L508.7 257.3 L506.3 259.9 L508.5 258.0 L508.4 259.0 L509.8 260.3 L507.8 261.2 L507.2 260.2 L507.8 261.3 L509.6 260.6 L511.0 262.9 L510.2 263.8 L508.9 261.7 L510.2 264.0 L507.3 265.6 L505.1 264.3 L504.0 261.8 L501.8 263.7 L499.6 263.6 L498.1 261.5 L496.1 263.9 L491.1 262.4 L490.1 261.8 L490.1 259.7 L488.4 258.2 L487.7 255.5 L484.2 254.0 L483.2 255.2 L480.7 255.0 L480.3 256.8 L477.8 258.4 L476.0 257.8 L474.7 258.8 L472.8 258.8 L472.1 258.4 L472.2 256.6 L469.7 256.5 L466.9 261.0 L461.2 262.6 L455.5 260.3 L452.6 258.2 L450.2 258.2 L449.8 259.8 L453.0 261.5 L454.6 264.9 L460.5 268.2 L461.5 273.4 L462.7 273.5 L463.0 275.1 L461.4 280.9 L465.4 282.1 L465.4 284.8 L466.4 285.9 L467.2 286.3 L468.3 285.4 L467.4 287.9 L466.3 286.3 L465.6 287.6 L465.6 286.3 L463.6 285.0 L462.9 285.9 L461.2 285.9 L462.1 290.2 L461.6 290.9 L458.6 290.3 L460.0 290.7 L459.7 292.1 L460.7 292.7 L458.3 294.3 L457.4 293.3 L458.1 294.2 L456.9 296.0 L456.4 295.2 L456.6 295.8 L455.2 296.0 L454.8 294.8 L455.6 294.6 L454.2 294.3 L455.7 293.4 L455.6 292.6 L457.8 292.3 L453.4 293.1 L454.6 291.6 L453.5 291.8 L453.3 290.3 L454.8 290.5 L454.0 289.5 L453.9 287.3 L451.7 283.7 L451.3 280.7 L447.3 276.4 L444.4 275.8 L443.6 273.9 L441.1 274.3 L440.3 276.3 L439.0 276.6 L439.4 278.7 L437.7 279.4 L437.0 278.5 L436.2 280.9 L433.5 282.9 L432.3 283.4 L429.2 282.3 L428.8 285.3 L429.5 286.3 L425.8 292.7 L422.6 296.4 L418.9 297.7 L415.0 296.6 L414.4 294.9 L413.8 295.5 L411.7 294.8 L411.8 293.5 L409.4 293.8 L409.5 292.0 L411.1 292.4 L410.4 292.0 L411.7 291.0 L408.9 291.8 L408.3 290.8 L406.8 291.5 L403.3 290.0 L401.1 287.5 L401.5 286.8 L402.3 287.2 L401.6 286.7 L402.5 285.0 L398.5 280.9 L396.5 280.9 L396.2 280.0 L394.9 280.5 L395.2 278.9 L391.6 280.7 L389.9 279.8 L389.5 281.1 L388.4 280.3 L387.5 282.5 L385.9 281.7 L386.0 282.4 L384.9 282.6 L386.0 283.8 L386.2 285.9 L384.9 288.0 L378.9 293.2 L377.5 293.6 L375.7 297.6 L375.4 302.0 L374.4 303.5 L371.4 304.0 L370.9 303.2 L370.0 304.6 L362.9 306.1 L360.2 305.7 L357.8 303.1 L357.1 303.8 L357.6 305.0 L356.9 304.5 L356.9 305.3 L355.9 305.4 L356.9 306.2 L359.0 306.0 L361.1 308.3 L361.2 309.5 L358.8 310.2 L359.7 310.4 L359.4 311.7 L357.8 311.3 L357.9 313.9 L356.4 314.3 L358.6 319.1 L357.8 321.5 L359.0 319.3 L359.7 319.6 L360.1 321.2 L359.2 321.2 L361.1 324.5 L358.4 321.8 L358.8 323.0 L357.6 323.0 L356.9 324.9 L354.1 325.2 L353.6 323.9 L352.1 323.3 L352.4 326.1 L350.8 328.5 L347.2 328.7 L345.9 330.4 L339.0 331.0 L337.8 332.1 L331.9 330.6 L331.1 329.6 L332.5 326.2 L331.5 326.4 L331.3 325.5 L330.9 326.3 L330.4 325.4 L329.2 326.1 L329.0 329.1 L326.7 331.5 L323.7 332.2 L322.4 331.4 L319.5 333.5 L317.3 333.7 L317.1 332.5 L317.2 333.7 L315.9 333.4 L316.7 332.9 L315.9 332.4 L317.4 331.9 L315.5 332.4 L315.4 333.3 L315.0 332.1 L309.4 333.0 L306.7 331.6 L305.4 336.2 L303.2 337.0 L301.9 335.9 L299.6 336.3 L301.0 338.5 L299.7 339.1 L300.3 340.5 L297.7 343.9 L294.5 343.2 L290.7 346.9 L288.5 348.0 L287.1 347.6 L287.2 349.2 L285.3 350.0 L283.7 349.5 L282.9 348.2 L281.9 349.1 L279.8 347.7 L278.1 350.5 L278.2 352.7 L276.9 353.3 L276.2 355.0 L273.3 355.6 L272.7 356.6 L270.5 355.2 L269.0 356.5 L266.6 353.4 L263.1 355.8 L261.7 355.1 L260.4 358.3 L257.5 357.0 L256.4 359.6 L252.8 362.3 L251.0 362.0 L251.2 360.5 L250.3 361.0 L249.6 359.3 L247.5 357.6 L246.6 357.8 L248.2 362.6 L249.3 363.2 L249.9 365.2 L252.6 368.6 L254.6 368.7 L257.8 372.2 L257.6 374.1 L260.8 375.0 L261.8 372.9 L264.1 373.1 L263.2 372.7 L264.5 371.1 L267.0 372.7 L267.3 373.5 L265.2 375.3 L266.1 376.2 L265.9 377.4 L264.5 377.0 L263.8 378.2 L266.2 379.9 L268.7 383.0 L271.1 383.3 L271.4 386.9 L272.9 387.5 L273.1 389.0 L277.4 385.2 L279.7 386.0 L281.0 384.5 L281.9 384.4 L281.5 385.0 L282.6 385.7 L282.7 385.0 L283.1 387.0 L281.2 391.5 L283.1 391.0 L286.8 393.4 L288.3 392.9 L289.2 396.0 L288.1 396.9 L289.0 399.1 L290.3 397.9 L292.4 398.7 L293.7 397.9 L296.8 398.3 L300.6 400.9 L301.5 397.4 L304.1 399.1 L306.1 399.0 L306.9 395.7 L305.8 394.3 L307.7 392.8 L305.5 390.8 L304.3 387.0 L306.1 385.6 L305.6 382.5 L307.2 381.1 L309.6 380.7 L312.1 383.7 L312.0 385.2 L315.6 388.0 L317.1 386.6 L319.8 387.3 L321.2 386.4 L324.8 387.4 L327.9 386.9 L328.9 387.7 L331.8 385.8 L333.8 387.0 L335.0 385.1 L338.3 385.8 L338.7 387.7 L337.9 391.1 L338.9 392.6 L341.1 393.3 L339.9 396.1 L341.4 393.8 L340.1 398.6 L340.7 399.3 L339.4 398.2 L340.0 396.4 L339.2 397.6 L340.5 399.6 L340.1 400.2 L337.8 398.4 L337.9 397.0 L337.0 398.0 L337.8 398.4 L336.7 398.6 L336.9 397.8 L332.7 394.4 L329.6 394.9 L328.5 396.2 L326.5 395.3 L324.6 396.7 L321.5 395.9 L321.2 400.0 L320.0 401.0 L317.9 400.2 L319.2 406.3 L316.9 412.3 L317.4 413.7 L316.8 414.7 L313.6 413.7 L314.0 413.2 L313.5 413.4 L311.9 410.8 L312.3 408.2 L311.5 407.6 L308.1 408.7 L307.2 407.5 L305.8 407.5 L305.1 408.8 L305.1 412.3 L303.5 415.3 L301.8 414.4 L301.7 412.7 L300.1 410.5 L298.9 410.0 L297.4 410.7 L295.7 409.7 L294.0 412.5 L294.4 414.6 L291.6 416.2 L293.3 417.8 L292.8 419.1 L290.4 418.5 L289.3 419.2 L289.1 420.9 L292.0 423.5 L290.8 424.8 L290.9 425.7 L288.0 425.2 L287.9 423.7 L287.9 425.1 L286.2 425.1 L286.5 423.8 L288.0 423.0 L285.5 422.1 L284.0 417.5 L285.7 414.9 L287.8 413.6 L285.6 411.8 L284.6 409.2 L282.4 407.5 L280.3 407.4 L277.8 408.4 L276.9 411.0 L274.2 412.1 L273.7 410.3 L274.4 404.2 L272.0 403.2 L269.6 400.2 L267.2 400.8 L264.4 399.4 L260.6 403.1 L258.8 403.9 L257.5 403.2 L258.6 403.7 L255.4 406.1 L254.8 404.8 L252.6 405.5 L249.7 403.3 L250.3 406.8 L249.7 408.0 L251.1 409.0 L249.9 413.1 L251.0 414.4 L250.9 417.2 L251.9 418.2 L250.6 421.6 L249.1 421.7 L247.8 425.6 L245.2 426.0 L244.0 424.0 L240.7 424.1 L239.0 423.5 L239.5 422.6 L238.0 422.8 L236.9 421.5 L240.6 422.1 L236.9 421.5 L236.0 419.5 L236.7 417.9 L234.9 416.5 L233.9 413.8 L229.2 414.3 L225.5 411.7 L222.1 413.5 L216.8 412.0 L217.3 411.6 L215.9 410.4 L215.3 405.9 L216.1 404.0 L215.1 404.4 L213.4 402.8 L212.7 404.8 L211.0 405.0 L210.0 403.6 L208.5 407.3 L205.2 409.9 L204.4 409.7 L203.8 410.9 L202.2 411.5 L200.7 410.0 L201.3 411.7 L199.1 413.1 L197.7 420.0 L195.6 422.3 L190.5 422.5 L188.5 420.6 L188.1 421.3 L184.9 420.5 L183.8 421.1 L181.0 419.8 L174.6 419.7 L174.2 419.0 L173.3 419.8 L172.9 419.0 L172.0 419.9 L170.2 419.7 L169.1 421.4 L168.0 420.6 L167.8 421.5 L163.3 421.3 L162.9 423.0 L161.5 424.1 L163.0 423.6 L163.9 425.7 L164.1 424.8 L165.5 424.6 L166.2 426.6 L169.0 426.0 L170.0 427.2 L172.0 426.5 L171.6 429.0 L173.5 429.1 L172.2 429.7 L172.8 430.3 L171.9 432.1 L173.1 433.0 L172.2 433.9 L173.2 433.6 L173.7 434.4 L175.4 432.9 L176.8 432.8 L179.7 434.2 L179.4 436.6 L180.1 436.7 L181.3 441.6 L181.1 442.9 L179.8 443.9 L182.3 444.9 L181.4 446.0 L187.2 444.1 L188.7 444.1 L190.3 445.3 L192.1 444.9 L193.7 443.2 L192.0 439.6 L193.8 437.8 L198.3 437.4 L201.8 438.5 L202.6 439.8 L201.4 442.3 L204.0 441.3 L204.7 442.1 L203.1 442.6 L204.8 442.1 L206.0 444.1 L205.1 446.9 L206.7 448.6 L206.4 451.1 L207.7 452.8 L207.4 456.0 L208.3 456.7 L207.7 457.9 L209.4 458.3 L209.9 462.1 L210.9 461.4 L214.1 461.8 L216.9 463.2 L216.9 464.1 L218.4 463.9 L218.4 464.7 L221.3 462.5 L223.5 462.8 L224.5 458.7 L228.1 456.8 L230.0 457.6 L230.7 459.3 L230.1 457.7 L234.6 460.0 L236.1 462.0 L236.0 463.3 L239.2 466.8 L237.9 468.9 L244.3 467.0 L248.9 467.9 L248.6 465.3 L249.8 463.4 L250.7 459.3 L250.0 457.7 L253.2 455.1 L255.2 455.4 L256.8 460.7 L255.9 461.8 L258.8 464.1 L262.0 464.1 L267.5 468.0 L269.8 465.6 L275.6 467.8 L277.8 467.7 L279.6 469.2 L281.4 472.5 L281.3 480.5 L282.7 481.6 L282.7 482.9 L283.9 483.6 L285.1 486.4 L286.7 487.3 L291.4 487.4 L293.5 485.8 L297.7 485.5 L298.4 484.7 L297.5 479.2 L295.8 477.9 L293.9 478.7 L292.9 476.4 L289.3 476.8 L287.8 474.4 L288.5 472.2 L289.8 471.2 L291.2 471.8 L292.3 471.2 L294.5 467.6 L292.4 464.8 L294.6 460.8 L293.4 458.0 L291.9 456.7 L292.1 454.9 L293.9 454.2 L292.6 454.1 L293.1 453.0 L293.8 453.6 L293.1 452.9 L293.3 451.5 L294.9 450.0 L298.3 452.4 L298.5 457.5 L299.2 458.0 L300.9 456.5 L300.6 453.5 L301.8 451.5 L303.1 451.4 L304.2 457.6 L303.7 460.7 L304.3 461.2 L306.9 456.0 L307.9 451.6 L310.6 452.3 L309.2 453.2 L310.2 456.6 L311.4 455.5 L312.8 455.8 L315.4 452.4 L317.5 451.2 L319.4 451.1 L320.2 452.4 L320.1 454.6 L319.1 455.2 L320.1 455.8 L320.3 457.4 L316.8 459.3 L318.9 460.6 L318.9 461.6 L315.5 462.0 L315.3 463.4 L313.4 462.3 L313.0 464.0 L310.5 463.8 L311.1 465.5 L310.3 467.0 L311.0 468.2 L308.1 468.4 L306.8 469.4 L304.1 468.7 L302.7 471.9 L303.6 472.7 L308.9 473.6 L313.7 471.1 L316.0 471.8 L318.7 470.6 L320.1 468.6 L321.9 469.5 L323.9 464.7 L325.9 464.6 L326.8 465.8 L328.2 465.2 L329.6 463.2 L331.4 464.8 L333.5 463.4 L336.7 465.7 L337.3 463.8 L336.3 462.8 L338.7 462.9 L339.6 467.9 L336.8 469.5 L335.1 468.7 L334.2 471.9 L331.5 471.5 L330.2 469.7 L329.8 470.1 L329.9 472.6 L332.9 474.8 L331.3 477.2 L327.9 475.6 L325.4 477.7 L325.3 480.0 L323.6 481.4 L317.9 480.9 L317.1 483.1 L315.0 482.9 L315.2 484.9 L314.2 486.5 L315.0 490.5 L314.7 493.8 L312.2 496.6 L310.5 495.5 L308.1 498.8 L305.9 500.4 L307.9 503.8 L305.3 508.3 L303.7 509.2 L304.4 513.2 L308.3 513.0 L310.7 515.3 L317.7 514.6 L316.9 509.0 L321.4 508.4 L323.5 506.9 L322.6 506.0 L322.8 505.0 L325.5 503.3 L325.1 500.8 L323.4 499.6 L324.3 498.0 L324.4 495.2 L326.7 495.1 L326.2 498.2 L328.6 500.8 L328.2 506.4 L330.0 505.6 L330.6 503.6 L334.4 506.1 L331.4 510.4 L329.4 510.9 L328.8 512.0 L326.7 511.4 L326.1 509.8 L325.3 510.8 L325.1 512.0 L326.6 514.3 L326.1 519.4 L328.4 518.0 L331.9 517.4 L333.6 515.2 L335.3 515.2 L336.6 514.1 L337.6 514.7 L339.0 518.9 L336.8 523.2 L333.7 523.3 L333.8 523.8 L336.8 526.6 L338.6 526.8 L339.4 526.0 L342.4 527.8 L342.3 531.7 L338.1 531.4 L338.8 533.3 L338.0 534.3 L335.7 534.2 L334.3 532.3 L332.8 532.5 L332.7 531.5 L330.8 530.8 L330.3 533.8 L327.5 534.9 L331.4 535.5 L330.7 539.1 L333.2 538.7 L341.7 540.8 L342.4 542.8 L341.9 545.0 L340.7 544.4 L338.9 546.3 L340.8 544.7 L341.9 545.3 L339.3 547.9 L337.6 547.9 L336.1 546.6 L336.4 548.3 L335.6 549.7 L336.2 550.9 L340.3 552.6 L340.5 556.7 L344.7 554.4 L346.6 554.6 L346.5 555.6 L347.2 556.0 L346.6 554.7 L347.6 554.6 L348.7 555.3 L347.2 556.5 L348.2 555.9 L349.5 557.2 L350.6 557.1 L351.5 559.6 L352.7 560.5 L352.1 559.9 L352.5 559.2 L353.4 559.7 L352.3 559.0 L353.3 558.1 L355.5 558.7 L355.4 559.6 L354.1 559.7 L354.8 560.0 L354.5 561.1 L353.3 560.7 L356.2 561.8 L356.7 560.7 L355.9 560.2 L358.1 559.7 L358.0 561.9 L359.8 562.3 L358.7 562.0 L359.6 561.4 L359.5 559.7 L361.0 559.9 L360.6 561.6 L359.9 561.7 L362.5 564.0 L361.6 563.1 L362.9 563.6 L363.7 562.3 L364.6 563.0 L363.0 564.1 L365.0 565.6 L364.4 566.4 L367.2 571.3 L369.0 572.4 L369.1 576.5 L370.6 577.1 L371.3 574.9 L372.8 573.5 L377.1 573.0 L379.7 574.9 L381.7 580.9 L385.4 578.9 L388.1 578.7 L387.0 576.9 L387.8 574.2 L387.1 571.4 L390.8 569.0 L395.4 569.1 L396.0 572.1 L397.5 574.3 L397.0 577.2 L399.4 579.6 L399.7 578.2 L401.7 577.1 L405.8 572.1 L409.9 572.2 L412.1 573.9 L411.2 575.7 L411.3 577.4 L413.9 577.1 L415.5 578.8 L419.8 579.6 L419.7 580.7 L416.1 583.3 L415.9 582.3 L409.7 585.0 L412.8 585.1 L415.6 587.9 L413.8 592.9 L417.6 594.0 L420.3 595.9 L421.0 599.1 L419.5 600.3 L418.5 602.8 L423.1 603.7 L426.1 601.4 L429.9 603.1 L431.7 606.2 L433.1 604.6 L432.0 604.5 L434.0 601.2 L433.6 599.6 L433.0 599.9 L432.0 598.1 L433.0 595.7 L430.6 593.9 L431.0 591.4 L432.0 590.5 L431.3 590.0 L431.1 587.3 L432.5 586.0 L431.8 585.1 L430.8 585.4 L424.4 580.1 L424.3 578.9 L425.1 578.9 L423.9 578.4 L423.8 576.6 L426.8 572.9 L423.3 574.3 L422.5 573.3 L422.5 572.4 L424.1 571.2 L422.4 570.7 L422.6 569.3 L421.1 568.2 L421.8 565.8 L417.2 558.6 L417.0 553.6 L415.9 553.4 L414.8 556.4 L408.6 554.9 L406.5 551.6 L407.4 549.5 L405.7 546.7 L403.3 546.5 L402.0 544.8 L399.1 543.7 L397.2 540.4 L393.4 539.5 L391.5 538.3 L389.8 535.9 L386.3 533.6 L386.2 531.2 L387.9 529.4 L392.4 529.9 L395.4 527.7 L398.0 527.5 L398.2 525.5 L401.3 524.5 L408.1 528.0 L408.1 530.2 L409.9 530.6 L412.1 529.2 L414.4 530.6 L415.4 531.9 L415.7 535.1 L413.6 537.3 L414.9 538.4 L415.7 538.4 L415.7 537.0 L416.9 537.7 L421.1 535.2 L424.3 535.4 L428.9 538.1 L431.4 535.4 L436.3 535.1 L437.8 536.6 L437.8 541.0 L442.0 539.2 L446.3 540.8 L448.1 542.8 L449.8 542.9 L450.3 544.9 L452.4 543.6 L454.7 545.3 L454.3 546.7 L455.1 546.6 L455.4 549.0 L456.9 549.8 L458.0 548.5 L457.0 546.5 L458.5 545.8 L459.5 546.9 L461.0 545.1 L460.0 544.1 L461.4 542.8 L460.9 539.4 L461.5 538.0 L460.6 538.5 L461.3 536.5 L460.4 535.7 L461.7 534.9 L462.0 533.2 L460.5 532.3 L459.8 530.5 L463.3 529.3 L464.2 528.1 L464.0 521.4 L464.9 521.0 L465.4 519.0 L464.4 516.9 L465.2 515.3 L464.5 514.3 L466.0 514.4 L464.3 511.7 L461.7 511.9 L459.7 510.6 L458.5 508.6 L458.4 504.9 L460.5 501.6 L464.0 499.8 L464.4 500.8 L464.9 500.4 L467.8 501.7 L469.4 503.2 L469.9 505.1 L472.3 504.1 L472.8 505.6 L474.3 505.4 L474.5 506.7 L475.3 506.4 L477.0 508.3 L477.7 507.7 L477.1 506.4 L478.5 504.8 L480.3 504.1 L482.2 504.7 L483.0 501.9 L488.5 500.7 L489.9 496.8 L491.8 494.1 L493.9 492.9 L496.8 493.3 L500.9 498.2 L501.9 496.9 L501.2 495.9 L502.0 494.8 L505.6 493.0 L507.8 493.5 L507.6 495.3 L508.0 494.8 L509.0 496.4 L508.6 497.3 L509.6 496.3 L510.4 497.9 L512.5 497.7 L510.4 496.4 L510.7 494.7 L511.9 494.4 L512.5 492.9 L513.9 493.6 L515.0 492.4 L514.5 490.3 L513.3 490.3 L513.9 489.3 L512.3 487.8 L512.6 486.6 L517.1 485.7 L516.2 485.0 L517.5 481.5 L520.0 480.1 L521.3 480.6 L522.1 480.0 L521.5 478.9 L522.4 477.5 L524.5 477.6 L526.2 475.6 L527.7 477.8 L527.4 476.4 L528.6 477.3 L528.4 475.4 L530.6 476.5 L531.9 476.0 L533.0 477.0 L533.3 479.5 L532.5 480.6 L533.2 479.9 L533.8 481.6 L535.3 481.5 L537.9 479.2 L539.4 480.6 L539.6 479.1 L540.8 478.5 L540.3 477.8 L541.1 477.3 L540.3 477.1 L539.9 472.5 L538.5 471.4 L539.3 470.9 L538.2 470.1 L536.3 470.4 L534.8 468.8 L534.5 466.7 L535.8 465.8 L532.7 464.9 L531.8 462.8 L528.6 460.8 L528.5 459.9 L525.8 459.2 L524.7 457.6 L523.1 457.5 L520.2 455.5 L519.3 453.9 L519.6 452.6 L518.5 451.5 L517.1 450.9 L514.8 451.4 L512.7 450.3 L513.4 453.9 L511.0 455.5 L511.4 458.2 L509.8 459.8 L508.9 459.4 L509.3 456.8 L510.2 456.4 L509.9 455.5 L507.0 455.3 L502.3 453.5 L499.8 450.9 L499.6 447.8 L496.3 447.9 L494.4 444.8 L492.1 443.8 L492.1 442.7 L490.3 444.2 L489.9 443.3 L489.0 445.1 L488.1 444.0 L488.8 445.1 L487.6 445.2 L487.7 443.7 L485.7 442.6 L485.0 439.7 L483.3 439.5 L482.3 438.0 L482.8 436.4 L481.8 436.6 L480.7 438.8 L477.2 438.8 L480.2 435.0 L483.2 435.0 L480.2 434.9 L477.2 438.7 L475.6 438.6 L471.2 435.9 L469.0 433.4 L467.7 434.0 L465.1 432.4 L463.7 430.0 L464.8 427.8 L465.8 428.1 L466.7 427.3 L469.5 430.0 L486.2 430.3 L488.9 432.6 L489.7 431.7 L492.9 431.1 L494.8 432.3 L495.9 434.9 L497.8 435.6 L501.0 434.3 L503.1 434.5 L505.3 432.1 L504.3 431.1 L506.5 430.8 L505.8 429.5 L504.2 429.4 L503.5 428.0 L505.6 425.3 L505.2 423.1 L507.9 418.7 L507.7 417.5 L509.8 414.9 L514.0 413.3 L514.6 411.1 L520.4 410.8 L522.1 406.5 L519.8 401.8 L520.0 400.3 L519.0 398.0 L516.9 397.5 L516.1 394.8 L516.4 389.6 L519.4 381.7 L516.7 376.6 L516.8 373.7 L515.8 373.1 L514.1 373.9 L515.6 377.2 L514.2 380.9 L512.1 381.7 L506.8 381.8 L504.9 379.2 L505.5 376.8 L504.9 375.9 L507.5 374.8 L508.3 375.5 L509.5 373.0 L512.2 373.4 L516.1 372.4 L517.6 374.1 L520.7 371.1 L524.6 369.6 L525.3 371.0 L530.4 371.0 L531.8 376.2 L534.6 373.3 L536.6 372.5 L537.4 372.6 L537.2 373.5 L537.5 372.6 L539.1 373.3 L536.9 374.2 L539.9 373.7 L542.3 377.8 L544.6 379.8 L550.6 380.1 L554.9 376.3 L556.3 377.2 L557.4 375.9 L556.8 374.2 L558.3 374.6 L557.5 372.7 L559.7 371.0 L562.2 371.5 L564.1 370.1 L565.4 370.6 L565.1 369.5 L566.3 368.4 L574.2 368.4 L576.2 366.8 L582.4 364.5 L587.6 365.3 L591.5 363.7 L592.7 360.9 L595.0 359.7 L600.3 360.8 L603.4 358.0 L608.0 358.2 L610.9 356.5 L615.8 351.8 L614.1 346.8 L614.9 346.3 L614.4 345.7 L611.6 346.3 L609.3 344.0 L609.4 342.8 L607.4 341.6 L606.2 342.0 L606.2 336.6 L605.4 338.8 L606.0 338.8 L606.0 340.2 L605.2 341.8 L603.7 339.7 L605.0 339.0 L604.0 339.5 L603.0 337.9 L605.1 337.7 L603.0 337.9 L602.6 336.6 L602.1 334.0 L603.7 333.2 L602.9 333.1 L602.9 332.1 L605.8 331.4 L606.4 328.6 L607.5 327.8 L617.1 327.5 L620.1 328.7 L621.5 328.1 L622.2 326.0 L625.0 326.1 L626.7 322.9 L628.8 323.9 L629.9 326.0 L632.4 324.8 L635.4 325.1 L637.0 322.8 L638.2 322.7 L639.1 321.5 L638.7 318.2 L640.9 314.3 L643.3 312.8 L645.7 309.8 L644.3 310.9 L645.0 308.6 L646.9 307.5 L648.5 307.7 L651.0 298.0 L652.5 296.7 L654.4 296.7 L654.1 295.3 L657.3 291.7 L659.4 292.2 L658.3 289.2 L658.6 285.8 L659.8 285.5 L660.1 286.2 L659.6 284.7 L662.6 284.4 L663.3 285.1 L661.3 285.8 L661.0 287.7 L663.7 285.1 L664.3 285.8 L666.5 285.2 L666.4 283.6 L669.5 282.3 L671.0 271.9 L672.7 270.1 L672.7 268.3 L674.0 267.4 L674.5 264.7 L677.4 261.4 L678.6 262.1 L678.8 258.9 L680.8 257.5 L683.9 257.0 L689.1 250.5 L689.2 245.1 L690.6 244.7 L689.8 244.1 L690.0 242.1 L691.5 241.5 L689.9 242.0 L690.3 240.7 L691.0 241.2 L690.5 240.6 L690.9 239.9 L691.9 239.5 L693.9 241.0 L695.0 240.9 L695.9 239.8 L695.0 239.0 L695.7 238.1 L697.2 238.7 L697.8 237.0 L700.5 235.2 L702.6 235.6 L705.3 233.5 L710.3 231.5 L712.4 232.1 L712.8 232.7 L712.2 233.0 L713.0 232.4 L715.7 233.4 L716.0 234.8 L716.7 234.3 L723.4 236.1 L724.1 237.2 L726.6 236.7 L736.3 238.4 L738.0 239.9 L737.0 242.9 L738.0 242.7 L737.8 243.5 L738.8 244.5 L740.1 243.0 L743.8 242.2 L748.8 243.7 L748.5 242.5 L749.9 241.7 L749.1 238.4 L750.0 238.5 L751.2 237.2 L750.5 234.7 L751.4 232.1 L755.2 228.1 L764.3 226.6 L766.9 226.9 L767.6 227.7 L769.3 225.8 L773.6 223.5 L776.2 223.6 L776.3 224.4 L776.2 223.6 L778.9 223.2 L781.4 223.9 L786.6 217.3 L789.6 215.0 L790.6 215.5 L792.5 214.2 L790.6 215.3 L789.7 214.9 L790.5 213.5 L791.5 214.0 L790.1 213.3 L796.8 203.5 L797.4 204.1 L793.6 212.1 L797.4 214.1 L798.7 213.2 L799.8 209.2 L808.5 191.6 L808.5 189.8 L806.8 188.9 L804.1 189.8 L803.3 191.5 L802.2 190.3 L805.3 188.3 L806.5 183.7 L805.0 184.3 L805.6 184.5 L805.3 187.3 L803.3 187.0 L804.5 186.6 L803.4 186.4 L803.7 184.2 L804.5 184.3 L803.0 184.0 L803.7 182.7 L802.4 182.8 L803.0 181.3 L804.0 182.2 L802.9 181.2 L806.4 177.7 L806.3 176.6 L808.5 175.5 L812.0 167.8 L811.1 163.3 L808.5 163.2 L806.5 160.1 L806.6 151.8 L807.1 150.4 L808.4 149.8 L808.8 148.5 L808.0 147.6 L808.7 147.1 L807.6 145.9 L805.0 147.8 L801.5 146.5 L798.8 143.9 L793.9 144.2 L791.6 143.2 L792.2 141.7 L790.7 141.8 L790.1 138.6 L788.1 138.0 L785.6 135.1 L784.9 132.8 L785.7 130.6 L783.7 129.8 L781.8 127.0 L784.4 126.7 L780.6 127.1 L782.4 126.5 L782.9 124.9 L782.1 121.3 L776.7 111.6 L778.1 104.1 L780.5 102.3 L780.7 101.1 L779.5 93.0 L776.7 83.6 L777.5 80.2 L776.6 79.6 L776.2 76.3 L770.4 79.6 L762.5 81.7 L761.3 81.3 L760.6 83.7 L758.3 86.4 L752.3 97.0 L748.3 101.9 L748.9 106.2 L747.1 107.4 L743.2 107.6 L742.4 110.4 L743.0 112.8 L742.5 114.5 L742.1 113.6 L738.2 115.7 L737.5 113.9 L737.8 115.5 L736.5 115.5 L736.1 114.5 L737.3 113.1 L735.8 113.5 L730.1 110.6 L728.6 111.2 L727.6 113.5 L727.7 118.2 L730.0 120.6 L733.3 122.1 L735.7 127.2 L738.5 129.3 L739.3 138.1 L745.2 142.1 L746.9 145.0 L749.9 146.3 L753.1 153.9 L756.2 155.2 L756.3 157.4 L755.2 159.9 L756.1 163.0 L755.5 164.1 L756.3 161.5 L757.6 161.6 L758.9 163.3 L758.5 164.6 L756.6 163.7 L758.6 164.9 L758.0 167.7 L756.2 170.0 L754.4 171.2 L753.6 170.8 L753.5 172.5 L751.9 171.3 L751.3 174.7 L750.4 173.8 L750.3 178.4 L751.0 179.1 L750.2 178.7 L749.9 179.7 L749.9 181.2 L753.6 185.3 L754.3 185.3 L753.3 184.3 L754.1 183.8 L757.2 187.8 L754.5 190.5 L751.4 191.9 L749.8 191.7 L748.2 189.8 L748.0 187.3 L745.6 185.4 L744.2 183.1 L744.5 180.9 L745.2 180.7 L744.8 178.4 L743.8 178.4 L744.0 177.3 L745.0 177.2 L744.0 177.3 L743.3 176.1 L742.0 171.5 L741.8 169.7 L742.6 168.1 L741.4 166.0 L737.3 164.0 L737.7 159.7 L736.7 158.3 L736.4 155.4 L731.7 154.6 L729.9 155.2 L730.3 156.2 L731.9 156.8 L732.6 158.6 L732.4 163.9 L731.5 166.1 L734.5 169.5 L732.0 173.9 L732.4 175.6 L730.9 177.2 L730.3 179.4 L732.8 179.7 L733.5 180.6 L734.0 183.6 L733.1 185.7 L734.1 186.1 L734.6 188.9 L735.9 189.7 L736.4 191.5 L738.3 191.4 L739.4 194.1 L741.0 193.9 L741.8 196.5 L741.6 200.4 L742.1 199.8 L741.1 201.3 L741.9 201.0 L741.3 202.2 L740.9 201.6 L740.5 202.2 L741.5 203.8 L740.3 202.4 L740.5 203.4 L739.5 203.8 L739.9 204.4 L739.0 204.0 L737.9 206.3 L738.9 204.6 L739.8 204.9 L739.4 207.3 L738.4 206.6 L739.4 207.4 L738.6 210.0 L735.7 211.6 L736.2 212.4 L734.2 212.9 L732.3 208.8 L732.8 205.9 L728.0 205.2 L727.9 201.1 L729.1 198.8 L728.2 198.2 L727.7 199.3 L725.0 199.9 L724.1 201.1 L725.2 203.3 L722.9 205.7 L724.9 209.7 L722.5 213.3 L723.4 216.3 L721.1 217.9 L720.4 220.2 L709.1 222.5 L703.5 220.6 L699.4 217.9 L699.7 216.0 L701.6 214.4 L700.0 215.4 L699.0 213.6 L702.2 214.2 L698.5 213.0 L697.3 210.1 L697.4 206.6 L699.6 203.5 L710.3 195.8 L707.2 192.2 L708.1 189.9 L706.7 186.2 L709.5 182.6 L705.7 182.2 L703.9 180.4 L704.2 178.1 L700.3 178.0 L699.6 176.8 L699.1 179.6 L695.7 179.9 L694.8 181.1 L694.3 180.4 L693.7 182.3 L694.8 183.5 L694.8 185.1 L698.8 190.1 L698.1 192.4 L697.0 193.0 L698.9 195.0 L698.2 196.4 L696.8 196.9 L696.7 200.0 L691.3 200.7 L689.5 200.0 L692.3 198.4 L692.9 196.6 L691.2 193.9 L689.1 196.5 L680.0 200.9 L681.0 205.6 L680.1 206.2 L680.4 207.4 L678.6 210.9 L679.7 215.2 L678.9 216.2 L679.1 221.5 L677.2 222.1 L675.2 221.5 L672.9 216.6 L668.5 219.7 L672.2 219.8 L673.0 222.1 L672.5 223.5 L670.4 224.9 L665.6 223.7 L666.6 219.1 L668.8 214.5 L670.7 213.6 L670.0 210.5 L668.3 209.6 L668.6 208.0 L670.9 205.0 L674.8 203.8 L673.3 202.1 L674.4 199.6 L672.7 198.6 L673.0 195.9 L676.8 196.2 L678.3 195.2 L683.3 196.4 L684.7 194.8 L684.2 194.4 L685.2 191.4 L683.7 188.4 L684.1 186.1 L682.5 183.1 L682.5 177.1 L683.2 176.9 L682.4 177.1 L682.4 176.2 L683.3 175.9 L683.9 176.7 L683.0 174.1 L684.0 172.3 L688.0 169.9 L689.6 164.9 L691.1 163.4 L694.3 165.5 L691.3 162.4 L693.2 159.1 L694.4 158.2 L696.2 158.4 L697.2 156.6 L700.3 156.6 L700.8 155.6 L698.8 153.1 L697.9 149.5 L699.4 147.2 L701.5 145.9 L701.6 142.7 L698.8 144.5 L694.5 143.2 L692.4 144.6 L692.0 144.1 L691.8 145.3 L690.1 145.3 L690.1 144.5 L694.2 141.9 L690.0 145.1 L678.0 147.2 Z" fill="url(#land)" stroke="#7fd4ee" stroke-width="1.1" stroke-opacity=".55"/>
+<path d="M303.5 551.0 L305.5 550.7 L307.0 551.9 L309.9 551.3 L311.7 554.0 L317.4 553.3 L316.4 548.5 L316.9 544.6 L315.1 543.4 L314.6 541.8 L312.9 541.2 L313.5 536.6 L311.8 534.7 L312.0 532.2 L308.7 532.9 L305.3 528.3 L303.7 528.9 L302.6 531.9 L304.3 534.1 L302.6 535.2 L304.7 537.4 L304.5 538.4 L301.0 541.6 L301.5 544.1 L300.5 545.2 L299.5 542.5 L300.4 537.9 L298.3 538.6 L297.1 534.9 L298.0 533.2 L298.8 524.1 L296.4 524.5 L293.9 526.7 L294.4 530.3 L295.8 532.2 L295.0 535.5 L297.2 538.8 L296.0 543.4 L292.2 545.3 L290.1 549.3 L287.4 549.5 L284.8 552.5 L280.1 553.9 L276.3 552.5 L276.9 551.1 L275.0 550.3 L273.1 543.1 L271.7 544.5 L272.1 549.2 L270.4 550.1 L269.0 549.8 L267.5 547.7 L264.1 547.8 L261.9 545.0 L261.4 542.5 L258.4 544.3 L257.3 543.8 L256.4 542.6 L256.6 540.4 L260.8 533.1 L256.7 535.6 L251.3 536.3 L249.4 538.0 L246.6 535.4 L245.8 533.4 L246.4 531.1 L249.1 526.1 L251.8 524.1 L249.4 525.3 L247.9 524.9 L246.8 523.7 L247.0 521.2 L245.4 519.7 L238.6 518.1 L238.2 515.2 L239.7 513.1 L246.7 512.0 L250.2 507.5 L253.4 508.6 L254.8 505.9 L258.0 503.9 L261.9 502.9 L263.7 503.5 L267.9 501.9 L271.4 504.1 L271.4 506.6 L276.4 509.0 L277.9 510.8 L281.4 508.8 L282.0 506.9 L280.2 504.4 L277.9 503.9 L277.7 505.2 L275.1 505.7 L274.1 504.3 L278.7 499.3 L275.2 499.7 L273.1 497.2 L270.6 497.1 L269.8 493.8 L266.7 496.1 L265.2 499.3 L264.0 499.7 L262.8 498.4 L260.6 499.7 L259.6 499.0 L260.2 500.1 L258.9 502.4 L254.7 503.3 L253.5 502.0 L247.0 500.8 L246.0 499.0 L247.2 499.5 L244.7 496.1 L245.9 492.7 L244.9 490.3 L241.8 492.9 L239.4 492.4 L236.8 494.4 L234.1 494.2 L231.6 496.5 L230.1 495.7 L226.7 498.7 L224.8 498.1 L224.6 499.0 L226.2 499.2 L226.4 500.7 L222.9 507.8 L219.8 508.6 L216.0 508.0 L215.7 504.1 L214.4 503.1 L207.7 506.7 L208.7 509.7 L207.9 512.6 L209.7 515.4 L208.9 516.1 L210.6 516.7 L210.8 519.9 L215.9 522.6 L216.8 524.6 L218.4 525.2 L218.9 528.3 L218.2 531.4 L220.2 533.2 L219.1 534.7 L220.3 535.4 L219.3 538.3 L220.5 538.0 L220.8 539.9 L219.7 542.0 L217.1 541.3 L219.3 543.7 L219.4 542.7 L220.4 543.2 L221.4 546.1 L223.1 546.0 L226.6 550.0 L229.9 548.7 L232.8 552.5 L232.9 555.4 L231.3 558.7 L229.2 560.2 L228.3 559.1 L229.1 561.0 L233.6 560.8 L237.5 564.0 L239.9 560.6 L243.0 558.8 L245.3 559.0 L250.1 565.0 L253.2 566.7 L254.7 565.6 L256.5 567.6 L254.5 572.0 L252.8 571.7 L251.8 574.1 L251.1 581.4 L248.0 583.1 L250.5 584.6 L251.1 588.0 L252.9 588.6 L253.3 590.3 L253.3 592.4 L250.7 598.5 L251.9 601.5 L251.4 602.5 L252.0 603.3 L255.7 602.8 L258.8 605.2 L259.0 610.0 L260.9 612.5 L261.6 618.7 L260.2 621.7 L257.5 622.4 L258.9 624.1 L259.0 627.7 L256.2 633.2 L251.3 635.0 L249.3 633.1 L247.7 634.7 L246.0 634.0 L245.4 635.1 L249.6 636.9 L250.2 638.9 L251.5 639.5 L250.5 642.0 L251.9 646.6 L255.0 647.6 L258.9 645.3 L262.5 639.5 L266.9 635.8 L267.0 630.5 L269.6 629.5 L272.4 625.4 L275.8 624.8 L275.3 622.6 L277.5 618.7 L281.4 616.9 L285.7 618.1 L288.5 617.7 L289.3 615.0 L287.2 611.4 L282.1 610.1 L284.1 606.9 L287.6 607.4 L287.6 605.5 L291.1 603.3 L292.8 603.5 L292.9 604.9 L295.8 607.7 L300.9 610.0 L300.5 612.4 L303.0 618.4 L302.4 620.3 L303.0 623.3 L301.3 625.9 L301.6 627.6 L304.6 630.7 L306.2 630.5 L307.6 634.0 L306.7 638.8 L302.6 641.2 L302.4 644.8 L304.4 645.3 L305.2 648.1 L307.5 650.0 L307.3 651.1 L309.8 651.7 L310.8 655.3 L315.0 655.7 L316.5 657.1 L317.0 660.3 L322.5 661.5 L323.7 663.1 L327.2 664.3 L332.5 661.8 L332.9 658.9 L329.8 659.1 L327.1 653.2 L328.4 649.9 L332.4 647.6 L331.0 646.5 L330.5 642.0 L328.6 640.8 L328.2 639.3 L330.2 635.9 L335.5 635.8 L336.6 632.6 L334.8 631.6 L336.2 628.8 L339.2 628.2 L342.6 631.5 L346.1 630.6 L349.5 634.5 L352.5 633.4 L356.0 629.0 L360.5 626.9 L361.2 622.2 L365.3 621.1 L370.4 623.1 L373.4 628.4 L373.0 630.9 L368.3 633.5 L368.4 634.7 L365.2 639.4 L365.2 643.8 L363.4 647.0 L364.1 649.4 L362.7 650.5 L363.0 652.9 L361.9 654.8 L363.9 655.5 L364.5 654.6 L366.9 654.2 L368.7 656.9 L367.6 659.8 L366.5 659.1 L365.3 660.3 L364.7 663.2 L365.3 665.1 L366.6 664.7 L369.3 659.7 L370.3 660.1 L371.3 658.3 L371.0 657.1 L374.0 653.2 L377.8 651.3 L380.6 651.6 L381.8 649.2 L385.0 648.9 L386.6 650.2 L386.4 647.7 L390.6 646.5 L390.3 644.7 L391.5 643.7 L391.0 636.9 L392.9 635.6 L393.0 631.9 L396.6 630.4 L396.1 626.7 L399.0 623.6 L398.1 619.4 L399.8 617.3 L402.0 617.7 L402.3 613.5 L404.8 614.7 L404.4 612.1 L405.7 611.4 L404.5 606.3 L398.9 607.4 L395.6 605.3 L393.9 602.1 L395.4 597.6 L393.5 596.7 L392.5 594.2 L390.6 594.3 L390.7 600.1 L387.6 603.9 L385.4 604.9 L382.6 604.6 L381.4 603.4 L380.5 604.6 L377.9 604.1 L376.8 603.4 L376.5 601.4 L372.9 600.0 L371.0 602.5 L373.8 604.0 L373.8 608.2 L372.3 611.0 L369.9 611.8 L369.7 615.7 L368.6 616.3 L367.7 613.8 L367.7 615.2 L366.0 615.3 L364.8 612.3 L364.6 609.7 L365.8 607.4 L363.2 607.9 L360.8 605.7 L361.6 604.4 L361.3 599.9 L357.9 603.5 L352.8 603.0 L352.9 599.7 L354.9 597.5 L352.7 598.3 L350.6 596.8 L349.8 593.8 L351.2 592.0 L350.4 592.2 L348.2 589.6 L345.3 594.6 L345.2 597.2 L343.1 598.7 L343.2 604.5 L339.8 608.0 L334.8 606.7 L334.4 604.4 L332.9 604.1 L331.4 601.7 L330.9 599.3 L332.1 597.4 L330.9 596.1 L330.1 596.7 L329.5 595.2 L330.4 593.2 L331.9 592.9 L331.4 591.1 L333.1 589.5 L331.7 584.8 L329.8 587.2 L325.7 587.6 L323.4 593.6 L321.7 594.0 L323.5 596.5 L323.2 597.7 L321.5 598.5 L319.3 597.7 L317.4 601.1 L314.6 600.8 L313.3 598.9 L314.9 593.1 L314.3 591.2 L316.4 588.5 L316.2 587.0 L313.0 585.5 L308.0 586.5 L308.1 591.7 L304.0 595.9 L302.9 595.2 L303.0 596.7 L301.4 596.0 L301.8 594.7 L300.3 593.7 L303.7 593.4 L306.1 588.1 L304.5 584.9 L306.2 582.1 L305.0 581.0 L304.2 581.9 L303.9 580.8 L305.3 579.9 L308.6 582.1 L313.3 579.3 L318.0 574.5 L317.5 570.6 L319.1 566.5 L317.6 564.7 L315.0 566.9 L312.4 565.8 L312.7 568.7 L311.1 570.3 L311.3 572.2 L308.7 572.9 L308.4 575.4 L306.4 577.0 L304.3 576.7 L302.8 574.2 L301.2 575.8 L300.0 575.1 L300.0 578.9 L296.6 579.8 L293.1 588.1 L290.6 587.3 L286.6 588.8 L286.5 590.1 L284.7 589.7 L284.1 587.0 L285.8 585.6 L285.4 582.2 L286.9 581.0 L288.7 581.7 L290.0 576.9 L288.6 576.5 L288.5 574.5 L282.5 575.0 L281.3 570.6 L283.4 568.0 L286.4 566.3 L292.6 568.3 L295.2 567.4 L297.6 564.5 L299.8 565.0 L301.7 563.6 L302.6 561.6 L300.9 559.8 L294.7 561.5 L293.9 562.8 L292.4 562.5 L291.7 564.1 L287.3 563.0 L285.3 563.9 L284.5 562.4 L285.7 562.9 L285.9 561.7 L293.8 559.4 L296.3 556.8 L295.7 555.9 L292.3 555.9 L290.7 557.5 L287.7 557.7 L287.5 556.2 L285.8 557.3 L284.3 556.2 L289.5 553.8 L290.4 551.1 L292.3 550.4 L292.8 549.2 L296.1 552.5 L299.5 551.4 L301.4 552.4 L303.5 551.0 Z" fill="url(#land)" stroke="#7fd4ee" stroke-width="1" stroke-opacity=".4"/>
+<text x="188.2" y="594.9" fill="rgba(223,242,250,.34)" font-size="13" text-anchor="middle">加計呂麻島</text>
+<text x="173.8" y="347.4" fill="rgba(223,242,250,.28)" font-size="15" letter-spacing="6">東シナ海</text>
+<text x="748.8" y="460.5" fill="rgba(223,242,250,.30)" font-size="15" letter-spacing="6">太平洋</text>
+<path d="M798.9 201.9 Q753.8 237.5 696.3 235.0" fill="none" stroke="#e8b878" stroke-width="2" stroke-dasharray="7 6" stroke-opacity=".85"/>
+<rect x="714.1" y="208.1" width="67" height="20" rx="10" fill="rgba(3,18,31,.9)" stroke="rgba(232,184,120,.5)"/>
+<text x="747.7" y="222.1" fill="#e8b878" font-size="12.5" text-anchor="middle">車 約15分</text>
+<path d="M696.3 235.0 Q629.9 262.1 560.2 245.4" fill="none" stroke="#e8b878" stroke-width="2" stroke-dasharray="7 6" stroke-opacity=".85"/>
+<rect x="580.9" y="201.8" width="94" height="20" rx="10" fill="rgba(3,18,31,.9)" stroke="rgba(232,184,120,.5)"/>
+<text x="628.3" y="215.8" fill="#e8b878" font-size="12.5" text-anchor="middle">車 約30〜40分</text>
+<path d="M696.3 235.0 Q628.7 270.4 599.5 340.8" fill="none" stroke="#e8b878" stroke-width="2" stroke-dasharray="7 6" stroke-opacity=".85"/>
+<rect x="636.2" y="296.0" width="94" height="20" rx="10" fill="rgba(3,18,31,.9)" stroke="rgba(232,184,120,.5)"/>
+<text x="683.6" y="310.0" fill="#e8b878" font-size="12.5" text-anchor="middle">車 約30〜40分</text>
+<circle cx="806.8" cy="152.8" r="5" fill="#9fb9c6" stroke="#03121f" stroke-width="2"/>
+<text x="791.8" y="144.8" fill="#c8dbe4" font-size="13.5" text-anchor="end" font-weight="500" paint-order="stroke" stroke="#03121f" stroke-width="3.5" stroke-linejoin="round">あやまる岬・土盛海岸</text>
+<circle cx="798.9" cy="201.9" r="18" fill="#e8b878" opacity=".22" filter="url(#gl)"/>
+<circle cx="798.9" cy="201.9" r="9" fill="#e8b878" stroke="#03121f" stroke-width="2"/>
+<text x="814.9" y="208.9" fill="#ffffff" font-size="16.0" text-anchor="start" font-weight="700" paint-order="stroke" stroke="#03121f" stroke-width="3.5" stroke-linejoin="round">奄美空港</text>
+<circle cx="696.3" cy="235.0" r="19" fill="#ff7f50" opacity=".22" filter="url(#gl)"/>
+<circle cx="696.3" cy="235.0" r="10" fill="#ff7f50" stroke="#03121f" stroke-width="2"/>
+<text x="696.3" y="265.0" fill="#ffffff" font-size="16.0" text-anchor="middle" font-weight="700" paint-order="stroke" stroke="#03121f" stroke-width="3.5" stroke-linejoin="round">グリーンヒル</text>
+<circle cx="560.2" cy="245.4" r="9" fill="#7fd4ee" stroke="#03121f" stroke-width="2"/>
+<text x="544.2" y="235.4" fill="#ffffff" font-size="16.0" text-anchor="end" font-weight="500" paint-order="stroke" stroke="#03121f" stroke-width="3.5" stroke-linejoin="round">マリンスポーツ奄美</text>
+<text x="544.2" y="252.4" fill="#ffffff" font-size="16.0" text-anchor="end" font-weight="500" paint-order="stroke" stroke="#03121f" stroke-width="3.5" stroke-linejoin="round">（名瀬長浜港）</text>
+<circle cx="599.5" cy="340.8" r="7" fill="#7fd4ee" stroke="#03121f" stroke-width="2"/>
+<text x="614.5" y="346.8" fill="#c8dbe4" font-size="13.5" text-anchor="start" font-weight="500" paint-order="stroke" stroke="#03121f" stroke-width="3.5" stroke-linejoin="round">小湊港</text>
+<circle cx="518.1" cy="327.6" r="5" fill="#9fb9c6" stroke="#03121f" stroke-width="2"/>
+<text x="504.1" y="331.6" fill="#c8dbe4" font-size="13.5" text-anchor="end" font-weight="500" paint-order="stroke" stroke="#03121f" stroke-width="3.5" stroke-linejoin="round">金作原原生林</text>
+<circle cx="464.8" cy="417.2" r="5" fill="#9fb9c6" stroke="#03121f" stroke-width="2"/>
+<text x="450.8" y="421.2" fill="#c8dbe4" font-size="13.5" text-anchor="end" font-weight="500" paint-order="stroke" stroke="#03121f" stroke-width="3.5" stroke-linejoin="round">住用マングローブ</text>
+<circle cx="362.2" cy="557.3" r="5" fill="#9fb9c6" stroke="#03121f" stroke-width="2"/>
+<text x="348.2" y="561.3" fill="#c8dbe4" font-size="13.5" text-anchor="end" font-weight="500" paint-order="stroke" stroke="#03121f" stroke-width="3.5" stroke-linejoin="round">古仁屋（大島海峡）</text>
+<rect x="30" y="26" width="250" height="98" rx="6" fill="rgba(3,18,31,.82)" stroke="rgba(127,212,238,.28)"/>
+<circle cx="50" cy="48" r="6" fill="#e8b878"/>
+<text x="66" y="52" fill="rgba(223,242,250,.86)" font-size="13">奄美空港</text>
+<circle cx="50" cy="68" r="6" fill="#ff7f50"/>
+<text x="66" y="72" fill="rgba(223,242,250,.86)" font-size="13">宿（グリーンヒル）</text>
+<circle cx="50" cy="88" r="6" fill="#7fd4ee"/>
+<text x="66" y="92" fill="rgba(223,242,250,.86)" font-size="13">クジラ船の港</text>
+<circle cx="50" cy="108" r="6" fill="#9fb9c6"/>
+<text x="66" y="112" fill="rgba(223,242,250,.86)" font-size="13">島でめぐる場所</text>
+<g transform="translate(810,668)"><line x1="0" y1="0" x2="110.6" y2="0" stroke="rgba(223,242,250,.5)" stroke-width="2"/><line x1="0" y1="-4" x2="0" y2="4" stroke="rgba(223,242,250,.5)" stroke-width="2"/><line x1="110.6" y1="-4" x2="110.6" y2="4" stroke="rgba(223,242,250,.5)" stroke-width="2"/><text x="55.3" y="-8" fill="rgba(223,242,250,.55)" font-size="12" text-anchor="middle">約10km</text></g>
+<text x="980" y="704" fill="rgba(223,242,250,.3)" font-size="11" text-anchor="end">海岸線データ: OpenStreetMap contributors (ODbL)</text>
+</svg>
+    </div>
+    <p class="maphint">← 横にスクロールできます →</p>
+    <div class="mapnote reveal">
+      <div><b>奄美空港 → グリーンヒル</b><br />車で約15分。島の北部、龍郷町の手広海岸のそばに泊まります</div>
+      <div><b>グリーンヒル → クジラ船の港</b><br />車で30〜40分。出港場所は小湊港か名瀬長浜港で、当日クジラの居場所によって決まります</div>
+      <div><b>島あそび</b><br />宿から土盛海岸・あやまる岬は10〜20分。金作原やマングローブは名瀬の先です</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="deepgrad pad-s" id="gallery">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="label">Gallery</p>
+      <h2 class="stitle" style="color:#fff">あの海の記憶</h2>
+      <p class="ssub">クジラの写真は、過去のリトリートで出会ったザトウクジラたちです。</p>
+    </div>
+    <div class="gal reveal">
+      <a><img src="img/bf251f68f57a.jpg" decoding="async" alt="正面を向くザトウクジラ" loading="lazy" /></a>
+      <a><img src="img/2c8e0ba15998.jpg" decoding="async" alt="光の中を昇るクジラ" loading="lazy" /></a>
+      <a><img src="img/dc4d9e158ecf.jpg" decoding="async" alt="水中のザトウクジラ" loading="lazy" /></a>
+      <a><img src="img/15879833d68c.jpg" decoding="async" alt="あやまる岬" loading="lazy" /></a>
+      <a class="wide"><img src="img/885dea2fbfeb.jpg" decoding="async" alt="水面に上がる二頭の尾びれ" loading="lazy" /></a>
+      <a class="wide"><img src="img/de6c9c860bd0.jpg" decoding="async" alt="船とスイマー" loading="lazy" /></a>
+      <a class="wide"><img src="img/a8f44a9cbb8c.jpg" decoding="async" alt="海に立つクジラの尾びれ" loading="lazy" /></a>
+      <a><img src="img/4489479a7864.jpg" decoding="async" alt="奄美の白い砂浜" loading="lazy" /></a>
+      <a><img src="img/c0aa3aee258d.jpg" decoding="async" alt="奄美の森" loading="lazy" /></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOR YOU ============ -->
+<section class="dark pad" id="foryou">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="label">For You</p>
+      <div class="hair"></div>
+      <h2 class="stitle" style="color:#fff">こんな方へ</h2>
+    </div>
+    <div class="foryou">
+      <div class="fy reveal"><span class="m">◇</span><p>いちど、野生のクジラと同じ海に浮かんでみたい方</p></div>
+      <div class="fy reveal"><span class="m">◇</span><p>日常から少し離れて、海と自然の中で自分を取り戻したい方</p></div>
+      <div class="fy reveal"><span class="m">◇</span><p>スノーケリング・スキンダイビングが好きな方</p></div>
+      <div class="fy reveal"><span class="m">◇</span><p>ひとり参加でも、海が好きな仲間と過ごしたい方</p></div>
+      <div class="fy reveal"><span class="m">◇</span><p>世界自然遺産の森や、そこにしかいない生きものに会いたい方</p></div>
+      <div class="fy reveal"><span class="m">◇</span><p>観光地めぐりではなく、島の時間そのものを味わいたい方</p></div>
+    </div>
+
+    <div class="cond reveal">
+      <h4>ご参加の条件</h4>
+      <ul>
+        <li><strong style="color:#fff">ダイビングまたはスノーケリングのCカードをお持ちの方</strong>（船を出すマリンスポーツ奄美さんの受け入れ基準です）。<strong style="color:#fff">お持ちでない方は、Sunny Funny Days の NAUIスキンダイビングコースで取得できます</strong></li>
+        <li>心身ともに健康で、医師から運動を止められていない方</li>
+        <li>足の着かない外洋の海で、ライフジャケットを着けて落ち着いて浮いていられる方</li>
+        <li>マスク・スノーケルを使った呼吸に不安のない方（未経験・不慣れな方は事前にレッスンをご受講ください）</li>
+        <li>クジラまで<strong style="color:#fff">50〜60m泳ぐ</strong>ことがあるため、外洋で泳ぐ体力に不安のない方</li>
+        <li>乗船中は酔い止めの服用など船酔い対策ができる方</li>
+        <li>妊娠中でない方（安全のためご参加いただけません）</li>
+        <li>船長・ガイド・スタッフの指示に必ず従っていただける方</li>
+        <li>クジラを驚かさない・追いかけない・素潜りしないというルールを守っていただける方</li>
+        <li>世界自然遺産のエリアでは、決められたルートとルールを守っていただける方</li>
+      </ul>
+    </div>
+    <p style="font-size:.72rem;color:rgba(223,242,250,.55);margin-top:20px;letter-spacing:.06em;line-height:2.1">
+      ※ 泳ぎに不安のある方にはライフジャケットの貸し出しがあります。お気軽にご相談ください。<br />
+      ※ ホエールスイム当日は、船・インストラクターの保険の対象外となる場合があるため、<strong style="color:#fff">1日レジャー保険（1日数百円）へのご加入</strong>をお願いしています。
+    </p>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="lightbg pad" id="faq">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="label">FAQ</p>
+      <div class="hair"></div>
+      <h2 class="stitle">よくあるご質問</h2>
+      <p class="ssub">
+        ホエールスイムに関するものは、船を出していただく
+        <a href="https://www.msamami.com/whale2.html" target="_blank" rel="noopener" style="color:var(--ocean);border-bottom:1px solid var(--mid)">マリンスポーツ奄美さん</a>
+        のご案内にもとづいています。
+      </p>
+    </div>
+    <div class="faq reveal">
+
+      <details>
+        <summary>なぜ奄美大島なのですか？</summary>
+        <div class="a">奄美の海には毎年冬、ザトウクジラがロシアの海から交尾・出産・子育てのために還ってきます。2025年シーズンには奄美全体で約1700頭が確認されました。さらに奄美は2021年に世界自然遺産に登録された島。クジラの海と、そこにしかいない生きものが暮らす森が、車で行き来できる距離にあります。海と森をひと続きに味わえるのが、この島ならではの魅力です。</div>
+      </details>
+
+      <details>
+        <summary>ホエールスイムのシーズンはいつですか？</summary>
+        <div class="a">奄美にザトウクジラがいるのは12月中旬から5月上旬ごろ。ホエールスイムの開催は1月初旬から3月下旬までです。今回は、クジラと泳げる確率がいちばん高くなる<strong>1月下旬</strong>に2便を組みました。</div>
+      </details>
+
+      <details>
+        <summary>ホエールスイムは何時からですか？</summary>
+        <div class="a">便によって違います。<strong>第1便（1/27）は1日コース</strong>で、9:00に出港して16:00ごろ帰港する約6時間。午前と午後の2回に分けて出るのが基本ですが、6時間続けて海に出ることもあります。<strong>第2便（1/30・31）は半日コース</strong>で、9:00出港・12:00ごろ帰港の約3時間を2日間。宿から出港場所（小湊港または名瀬長浜港）までは車で30〜40分ほどなので、どちらも朝食をとってから出発できます。</div>
+      </details>
+
+      <details>
+        <summary>必ずクジラと泳げますか？</summary>
+        <div class="a">お約束はできません。相手は野生のザトウクジラです。ただ、マリンスポーツ奄美さんによると、2025年シーズンのクジラとの遭遇率は98%。さらに<strong>1月中旬から3月中旬は、出会ったクジラの6〜8割は一緒に泳げる</strong>とのことです（それ以外の時期は4〜5割）。今回の日程はちょうどその時期にあたります。それでも船上からの観察のみとなる日はあります。自然の生きものを見に行くため、<strong>遭遇できなかった場合の返金はありません</strong>。やさしい気持ちでご参加ください。</div>
+      </details>
+
+      <details>
+        <summary>どんな種類・大きさのクジラに会えますか？</summary>
+        <div class="a">主に<strong>ザトウクジラ</strong>です。大人で体長13〜15m、体重は30トンほど。夏をベーリング海で過ごし、冬に数千キロを旅して奄美へやってきます。</div>
+      </details>
+
+      <details>
+        <summary>Cカードが必要と聞きました。持っていません。</summary>
+        <div class="a">ご安心ください。<strong>Sunny Funny Days は NAUI の認定施設で、Cカードの発行を行っています。</strong>ツアーまでに「NAUIスキンダイビングコース」を受けていただければ、そのままご参加いただけます。ふだんの海でしっかり練習してから奄美へ向かえるので、いちばんおすすめの流れです。日程はご相談のうえ決めますので、お早めにお問い合わせください。<br /><br />
+          なお、Cカードは受け入れの<em>基準</em>であって、それだけで十分というわけではありません。大海原（ときには荒れていることもあります）で泳ぐため、<strong>泳ぎに自信のない方のご参加はご遠慮ください</strong>とのことです。</div>
+      </details>
+
+      <details>
+        <summary>泳ぎが得意ではないのですが参加できますか？</summary>
+        <div class="a">足の着かない外洋でのアクティビティのため、ある程度の泳力が必要です。クジラによっては<strong>50〜60mを泳がないといけない</strong>ことがあり、かなりハードなときもあります。ライフジャケットの貸し出しは行っていますが、不安のある方は無理をなさらずご相談ください。スノーケリングが未経験・不慣れな方は、事前のプールレッスン・海レッスンの受講をおすすめしています。</div>
+      </details>
+
+      <details>
+        <summary>妊娠中でも参加できますか？</summary>
+        <div class="a">申し訳ありませんが、<strong>妊婦の方はご参加いただけません。</strong></div>
+      </details>
+
+      <details>
+        <summary>器材は借りられますか？決まりはありますか？</summary>
+        <div class="a">ウェットスーツ、マスク＆スノーケル、フィン＆ソックス、ブーツ、フード、グローブ、ウエイトのレンタルをご用意しています。料金は詳細ページに記載しています。<br /><br />
+          器材には次の決まりがあります。<br />
+          ・<strong>フィンは70cm（ワープフィン）まで。ロングフィンは禁止</strong>です（2024年からルールが変わりました）<br />
+          ・<strong>ドライスーツは使えません</strong>。うまく泳げないため、ウェットスーツでのご参加をお願いしています（冬は5mm以上を推奨）<br />
+          ・GoProなどを取り付ける<strong>棒は30cm以下</strong>。海に落とすと取りに行けないので、ストラップを必ずお付けください</div>
+      </details>
+
+      <details>
+        <summary>一度に何人まで海に入れますか？</summary>
+        <div class="a">協会のルールで<strong>8名まで</strong>です。それ以上いる場合は2チームに分けてエントリーします。今回は定員4名なので、みなさん一緒に入れます。また、<strong>親子クジラへのスイムは2回までのエントリー</strong>と決められています。子クジラを連れた母クジラは神経質になっているため、近づく行為は絶対にしないでください。</div>
+      </details>
+
+      <details>
+        <summary>船に酔いやすいのですが……</summary>
+        <div class="a">少しでも酔いやすい方は、<strong>乗船30分ほど前に酔い止め薬（アネロンを推奨しています）</strong>を服用してください。また、船室内に入ると酔いやすくなるため、風通しのよい甲板で過ごすことをおすすめしています。船には温水シャワーとトイレがあります。</div>
+      </details>
+
+      <details>
+        <summary>1〜2月の奄美はどのくらい寒いですか？</summary>
+        <div class="a">1月末〜2月初めの平年気温は最高17〜18℃・最低12℃前後、水温は20℃前後です。ただし奄美の冬は曇りがちで北風が強く、船の上では体感温度がぐっと下がります。水中よりも、濡れたまま船上で待つ時間のほうが寒く感じます。ウインドブレーカーやニット帽などの防寒具は必ずお持ちください。帰港後は船の温水シャワーで温まれます。</div>
+      </details>
+
+      <details>
+        <summary>雨が降っているときはどうなりますか？</summary>
+        <div class="a">運航に支障がない範囲であれば実施します。ただし<strong>雨具は各自でご用意ください</strong>。</div>
+      </details>
+
+      <details>
+        <summary>クジラに会えない日は何をしますか？</summary>
+        <div class="a">奄美には、海が荒れた日でも楽しめる場所がたくさんあります。金作原の原生林トレッキング、住用のマングローブ、島の北から南までの海岸めぐり、大島紬の工房や島の食文化にふれる時間など。その日の天候とみなさまの体調に合わせて、いちばん良いかたちにアレンジします。</div>
+      </details>
+
+      <details>
+        <summary>ひとりでの参加でも大丈夫ですか？</summary>
+        <div class="a">はい、おひとりでのご参加が多いリトリートです。宿のグリーンヒルさんは本館6室・新館10室のこぢんまりとしたペンションで、朝夕の食事はカフェスペースで泊まっているみなさんと一緒に囲みます。自然と打ち解けられる雰囲気です。</div>
+      </details>
+
+      <details>
+        <summary>航空券は自分で手配するのですか？</summary>
+        <div class="a">はい、往復の航空券はご自身での手配をお願いしています。参加費には含まれません。奄美空港へは東京（羽田）から直行便で約2時間、成田からもPeachの直行便があります。直行便は1日1便ずつなので、<strong>鹿児島で乗り継ぐ</strong>と便を選びやすくなります（鹿児島〜奄美は1日9便）。ご予約後、往復の便名・時刻をお知らせください。空港までお迎えにあがります。</div>
+      </details>
+
+      <details>
+        <summary>キャンセルしたい場合は？</summary>
+        <div class="a">宿・船ともに早い段階での確保が必要なため、キャンセル規定を設けています。規定の詳細は詳細ページに記載しています（現時点では仮の内容です）。天候により船が出せない場合の取り扱いもあわせてご確認ください。</div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta" id="apply">
+  <img class="bg" src="img/2c8e0ba15998.jpg" loading="lazy" decoding="async" alt="" />
+  <div class="veil"></div>
+  <div class="rays"></div>
+  <div class="cta-inner reveal">
+    <h2>あの海で、<br />会いましょう。</h2>
+    <p>
+      参加希望の方、ご不明点がある方は、<br />こちらのLINEまで。<br />
+      はじめての方も、どんな小さな疑問でも<br class="sp-br" />お気軽にどうぞ。
+    </p>
+    <a href="https://lin.ee/3Y35omR" target="_blank" rel="noopener" class="btn btn-line">
+      <span class="line-ico" aria-hidden="true">LINE</span>LINEで問い合わせる
+    </a>
+  </div>
+</section>
+
+<footer>
+  <span class="fl">Sunny Funny Days</span>
+  奄美大島 ホエールスイムリトリート 2027
+  <div class="foot-links">
+    <a href="#island">奄美大島とは</a>
+    <a href="#plans">日程・料金</a>
+    <a href="#apply">お申し込み</a>
+  </div>
+  © 2027 Sunny Funny Days. All rights reserved.
+</footer>
+
+<div class="credits">
+  <details>
+    <summary>写真クレジット / PHOTO CREDITS ＋</summary>
+    <ul>
+      <li>クジラ・船上の写真 — Sunny Funny Days（過去のリトリートより）</li>
+      <li>宿（グリーンヒル）の写真 — アマミアンスタイル ペンション グリーンヒル</li>
+      <li>地図の海岸線データ — <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors（ODbL）</a></li>
+      <li>島へ向かう機上から — Ktjava / <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（<a href="https://commons.wikimedia.org/wiki/File:Amami_%C5%8Cshima_from_Airplane.png" target="_blank" rel="noopener">Wikimedia Commons</a>）</li>
+      <li>あやまる岬 — tinbotu / <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>（<a href="https://commons.wikimedia.org/wiki/File:%E3%81%82%E3%82%84%E3%81%BE%E3%82%8B%E5%B2%AC%E5%85%AC%E5%9C%92_-_panoramio.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>）</li>
+      <li>奄美大島の海岸線 — TANAKA Juuyoh (田中十洋) / <a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener">CC BY 2.0</a>（<a href="https://commons.wikimedia.org/wiki/File:Amami_beach.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>）</li>
+      <li>大島紬の泥染め — Markmcnbowe97 / <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener">CC0</a>（<a href="https://commons.wikimedia.org/wiki/File:Mud_Dyeing_Kanai_Workshop.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>）</li>
+      <li>奄美の照葉樹林 — Indiana jo / <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（<a href="https://commons.wikimedia.org/wiki/File:Primeval_forest_in_Amami_Oshima.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>）</li>
+      <li>ホノホシ海岸 — Niiryoku2910 / <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（<a href="https://commons.wikimedia.org/wiki/File:Amami_island_Honohoshi_beach.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>）</li>
+      <li>金作原原生林 — Asset utilitist / <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener">CC0</a>（<a href="https://commons.wikimedia.org/wiki/File:%E9%87%91%E4%BD%9C%E5%8E%9F%E5%8E%9F%E5%A7%8B%E6%9E%97_07.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>）</li>
+      <li>高知山から望む大島海峡 — 岩元剛 Tsuyoshi Iwamoto / <a href="https://creativecommons.org/licenses/by/3.0" target="_blank" rel="noopener">CC BY 3.0</a>（<a href="https://commons.wikimedia.org/wiki/File:View_of_Koniya_from_Kochi-yama.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>）</li>
+      <li>住用のマングローブ原生林 — Vanquish0 / <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>（<a href="https://commons.wikimedia.org/wiki/File:Mangrove_in_amami.JPG" target="_blank" rel="noopener">Wikimedia Commons</a>）</li>
+      <li>ルリカケス — ★Kumiko★ / <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener">CC BY-SA 2.0</a>（<a href="https://commons.wikimedia.org/wiki/File:Garrulus_lidthi_%2831423483354%29.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>）</li>
+      <li>土盛海岸 — 岩元剛 Tsuyoshi Iwamoto / <a href="https://creativecommons.org/licenses/by/3.0" target="_blank" rel="noopener">CC BY 3.0</a>（<a href="https://commons.wikimedia.org/wiki/File:Tomori-kaigan.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>）</li>
+      <li>土盛海岸の砂浜 — 投稿者自身による撮影 / Public domain（<a href="https://commons.wikimedia.org/wiki/File:Amami-Tomori_beach_20040712.JPG" target="_blank" rel="noopener">Wikimedia Commons</a>）</li>
+      <li>アマミノクロウサギ — Mmsmr / <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener">CC0</a>（<a href="https://commons.wikimedia.org/wiki/File:%E3%82%A2%E3%83%9E%E3%83%9F%E3%83%8E%E3%82%AF%E3%83%AD%E3%82%A6%E3%82%B5%E3%82%AE_Pentalagus_furnessi_Amami-Oshima%2C_Japan.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>）</li>
+    </ul>
+  </details>
+</div>
+
+<script>
+(function(){
+  var hd=document.getElementById('hd'), mt=document.getElementById('mt'), dw=document.getElementById('dw');
+  function onScroll(){ hd.classList.toggle('solid', window.scrollY>60); }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  mt.addEventListener('click', function(){
+    var open = dw.classList.toggle('open');
+    mt.classList.toggle('open', open);
+    mt.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  dw.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      dw.classList.remove('open'); mt.classList.remove('open');
+      mt.setAttribute('aria-expanded','false'); document.body.style.overflow='';
+    });
+  });
+
+  var b=document.getElementById('bub');
+  for(var i=0;i<18;i++){
+    var s=Math.random()*9+3, e=document.createElement('i');
+    e.style.width=e.style.height=s+'px';
+    e.style.left=(Math.random()*100)+'%';
+    e.style.animationDuration=(Math.random()*16+13)+'s';
+    e.style.animationDelay=(-Math.random()*22)+'s';
+    e.style.opacity=(Math.random()*0.4+0.2);
+    b.appendChild(e);
+  }
+
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('js-anim');
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+  },{threshold:0.1, rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el,i){
+    el.style.transitionDelay=(Math.min(i,4)*0.07)+'s';
+    io.observe(el);
+  });
+  setTimeout(function(){ document.documentElement.classList.remove('js-anim'); }, 4000);
+})();
+</script>
+</body>
+</html>
