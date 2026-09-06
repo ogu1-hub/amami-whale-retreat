@@ -42,8 +42,9 @@ html{scroll-behavior:smooth;scroll-padding-top:64px;font-size:16px}
   .toc a{font-size:.8rem;padding:8px 15px}
   .tab{font-size:.78rem;padding:13px 10px}
   .tab b{font-size:.92rem}
-  .contact h2{font-size:1.35rem}
-  .contact p{font-size:.9rem}
+  .cta h2{font-size:1.5rem}
+  .cta p{font-size:.95rem}
+  .btn{font-size:1.05rem}
   .sch-note{font-size:.86rem;line-height:1.95}
 }
 
@@ -277,22 +278,30 @@ p.txt{font-size:.88rem;line-height:2.2;letter-spacing:.04em;color:var(--ink-soft
 .cx-case .res.r{background:rgba(217,100,47,.12);color:var(--warn)}
 .cx-case p{font-size:.85rem;line-height:2.05;color:var(--ink-soft);letter-spacing:.03em}
 
-/* contact */
-.contact{background:var(--abyss);color:#fff;text-align:center;padding:64px 24px;position:relative;
-  overflow:hidden}
-.contact img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.34}
-.contact .veil{position:absolute;inset:0;background:rgba(3,18,31,.72);z-index:1}
-.contact .in{position:relative;z-index:3;max-width:520px;margin:0 auto}
-.contact h2{font-family:var(--serif);font-size:1.2rem;font-weight:500;letter-spacing:.14em;
-  line-height:2;margin-bottom:14px}
-.contact p{font-size:.88rem;line-height:2.15;color:rgba(223,242,250,.8);letter-spacing:.05em;
-  margin-bottom:26px}
-.btn{display:block;width:100%;max-width:330px;margin:0 auto 12px;padding:16px;border-radius:60px;
-  font-size:.85rem;font-weight:700;letter-spacing:.12em}
-.btn-gold{background:var(--gold);color:#fff}
-.btn-ghost{border:1px solid rgba(255,255,255,.45);color:#fff}
-.contact .mail{margin-top:22px;font-size:.82rem;letter-spacing:.08em;color:rgba(255,255,255,.7)}
-.contact .mail a{color:var(--light);border-bottom:1px solid rgba(127,212,238,.4)}
+/* お問い合わせ（募集ページと共通） */
+.cta{position:relative;overflow:hidden;text-align:center;padding:104px 24px;background:var(--abyss)}
+.cta img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.cta .veil{position:absolute;inset:0;z-index:1;background:rgba(3,18,31,.76)}
+.rays{position:absolute;inset:0;z-index:2;pointer-events:none;mix-blend-mode:screen;opacity:.5;
+  background:
+   linear-gradient(168deg,rgba(190,240,255,.22) 0 4%,transparent 4% 13%),
+   linear-gradient(190deg,rgba(190,240,255,.15) 0 3%,transparent 3% 16%),
+   linear-gradient(155deg,rgba(190,240,255,.12) 0 5%,transparent 5% 22%)}
+.cta-inner{position:relative;z-index:3;max-width:560px;margin:0 auto}
+.cta h2{font-family:var(--serif);color:#fff;font-size:1.6rem;font-weight:500;line-height:1.85;
+  letter-spacing:.08em;margin-bottom:20px}
+.cta p{font-size:.9rem;line-height:2.05;color:rgba(255,255,255,.85);letter-spacing:.02em;
+  margin-bottom:32px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;
+  width:100%;max-width:360px;margin:0 auto 13px;min-height:58px;padding:16px 20px;border-radius:60px;
+  font-size:1rem;font-weight:700;letter-spacing:.06em;transition:transform .25s,box-shadow .25s}
+.btn-line{background:#06C755;color:#fff;box-shadow:0 8px 26px rgba(6,199,85,.38)}
+.line-ico{display:inline-grid;place-items:center;background:#fff;color:#06C755;
+  font-size:.62rem;font-weight:800;letter-spacing:.02em;width:38px;height:38px;border-radius:10px;
+  flex:0 0 auto}
+.btn:active{transform:scale(.98)}
+.sp-br{display:inline}
+@media(min-width:520px){ .sp-br{display:none} }
 
 footer{background:#020c15;color:rgba(223,242,250,.48);text-align:center;padding:38px 24px;
   font-size:.66rem;letter-spacing:.12em;line-height:2.2}
@@ -1803,34 +1812,30 @@ a{color:var(--turq-d)}
   </div>
 </section>
 
-<!-- contact -->
-<section class="contact">
-  <img class="bg" src="img/8c81a58598ab.jpg" alt="" loading="lazy" decoding="async" />
+<!-- お問い合わせ -->
+<section class="cta" id="apply">
+  <img class="bg" src="img/2c8e0ba15998.jpg" alt="" loading="lazy" decoding="async" />
   <div class="veil"></div>
-  <div class="in">
-    <h2>ご不明な点は<br />いつでもご連絡ください</h2>
-    <p>初めての方も、ご経験のある方も、どんな小さな疑問でもお気軽にどうぞ。<br />不安なことは、出発前にぜんぶ解消しておきましょう。</p>
-    <!-- ▼▼ 申し込みフォームのURLが決まったら、下の href="#" を差し替えてください ▼▼ -->
-    <a href="#" class="btn btn-gold">参加を申し込む</a>
-    <!-- ▲▲ -->
-    <a href="ホエールスイムリトリート2027.html" class="btn btn-ghost">募集ページへ戻る</a>
-    <p class="mail">お問い合わせ<br /><a href="mailto:ogu@sunnyfunnydays.com">ogu@sunnyfunnydays.com</a></p>
-    <p class="mail" style="margin-top:16px;font-size:.7rem">
-      Cカードの取得は Sunny Funny Days へ（NAUI認定施設）<br />
-      ホエールスイム（船）<a href="https://www.msamami.com/whale2.html" target="_blank" rel="noopener">マリンスポーツ奄美</a><br />
-      宿 <a href="https://greenhill-amami.com/" target="_blank" rel="noopener">ペンション グリーンヒル</a>
+  <div class="rays"></div>
+  <div class="cta-inner">
+    <h2>あの海で、<br />会いましょう。</h2>
+    <p>
+      参加希望の方、ご不明点がある方は、<br />こちらのLINEまで。<br />
+      はじめての方も、どんな小さな疑問でも<br class="sp-br" />お気軽にどうぞ。
     </p>
+    <a href="https://lin.ee/3Y35omR" target="_blank" rel="noopener" class="btn btn-line">
+      <span class="line-ico" aria-hidden="true">LINE</span>LINEで問い合わせる
+    </a>
   </div>
 </section>
 
 <footer>
   <span class="fl">Sunny Funny Days</span>
-  奄美大島 ホエールスイムリトリート 2027 ／ 参加者向け詳細
+  奄美大島 ホエールスイムリトリート 2027
   <div class="foot-links">
-    <a href="#schedule">スケジュール</a>
-    <a href="#flights">航空便</a>
+    <a href="#schedule">日程・スケジュール</a>
     <a href="#packing">持ち物</a>
-    <a href="ホエールスイムリトリート2027.html">募集ページ</a>
+    <a href="#apply">お問い合わせ</a>
   </div>
   © 2027 Sunny Funny Days. All rights reserved.
 </footer>
