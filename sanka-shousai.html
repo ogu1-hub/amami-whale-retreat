@@ -599,6 +599,27 @@ a{color:var(--turq-d)}
 .card a,.txt a,.qa .a a{color:var(--turq-d);border-bottom-color:var(--turq)}
 .backtop{background:var(--orange);border:none;box-shadow:0 4px 14px rgba(243,127,17,.4)}
 
+/* FAQ（募集ページから再掲） */
+.qa details{border-radius:14px;box-shadow:0 2px 10px rgba(28,43,51,.05);margin-bottom:9px;
+  border:1px solid var(--line);overflow:hidden}
+.qa summary{font-size:.86rem;font-weight:700;color:var(--ink);line-height:1.75;
+  padding:15px 36px 15px 40px}
+.qa summary::before{color:var(--turq);font-weight:700;top:15px;font-size:.95rem}
+.qa summary::after{border-right:2px solid var(--turq);border-bottom:2px solid var(--turq);top:22px}
+.qa details[open] summary{border-bottom:1px solid var(--line)}
+.qa .a{padding:14px 18px 17px 40px;font-size:.8rem;line-height:2.1;color:var(--ink-soft)}
+.whalefacts{display:grid;gap:9px;margin-top:6px}
+.wf{background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px 16px;
+  display:flex;align-items:baseline;gap:12px;box-shadow:0 2px 10px rgba(28,43,51,.05)}
+.wf .k{flex:0 0 78px;font-size:.72rem;font-weight:700;letter-spacing:.06em;color:var(--turq-d);white-space:nowrap}
+.wf .v{flex:1;font-size:1rem;font-weight:700;color:var(--ink);letter-spacing:.02em;line-height:1.6}
+.wf .v small{display:block;font-size:.72rem;font-weight:400;color:var(--ink-soft);
+  letter-spacing:.02em;margin-top:2px;line-height:1.8}
+@media(min-width:768px){
+  .whalefacts{grid-template-columns:1fr 1fr;gap:11px}
+  .wf .v{font-size:1.05rem}
+}
+
 /* ヒーロー：写真を大きく見せる＋目次を中に入れる */
 .phero h1{font-size:min(1.55rem,6.6vw);line-height:1.9;letter-spacing:.1em;white-space:nowrap}
 .phero .eyebrow{font-size:.62rem;letter-spacing:.34em}
@@ -640,6 +661,10 @@ a{color:var(--turq-d)}
   .fl-b .tbl th,.fl-b .tbl td{padding:10px 11px}
   .fl-b .memo{font-size:.8rem;line-height:1.9}
   .fl-links a{font-size:.84rem;padding:11px 16px}
+  .qa summary{font-size:.94rem;padding:15px 34px 15px 38px}
+  .qa .a{font-size:.88rem;line-height:1.95;padding:13px 15px 16px 38px}
+  .wf .k{flex:0 0 82px;font-size:.8rem}
+  .wf .v{font-size:1.05rem}.wf .v small{font-size:.8rem}
   .fl-b .tbl th,.fl-b .tbl td{padding:9px 8px}
   .fl-b .tbl.t3 th:nth-child(1),.fl-b .tbl.t3 td:nth-child(1){width:36%}
   .fl-b .tbl.t3 th:nth-child(2),.fl-b .tbl.t3 td:nth-child(2){width:30%}
@@ -661,6 +686,7 @@ a{color:var(--turq-d)}
     <a href="#flow">当日の流れ</a>
     <a href="#packing">持ち物</a>
     <a href="#cancel">キャンセル規定</a>
+    <a href="#faq">よくある質問</a>
     <a href="ホエールスイムリトリート2027.html" class="n-back">募集ページ</a>
   </nav>
   <button class="menu-toggle" id="mt" aria-label="メニュー" aria-expanded="false">
@@ -681,6 +707,7 @@ a{color:var(--turq-d)}
   <a href="#rental">10 ｜ 器材レンタル料金</a>
   <a href="#fee">11 ｜ 参加費に含まれるもの</a>
   <a href="#cancel">12 ｜ キャンセル規定</a>
+  <a href="#faq">13 ｜ よくあるご質問</a>
   <a href="ホエールスイムリトリート2027.html" class="d-back">募集ページへ戻る</a>
 </div>
 
@@ -707,6 +734,7 @@ a{color:var(--turq-d)}
     <a href="#rental">レンタル</a>
     <a href="#fee">参加費</a>
     <a href="#cancel">キャンセル</a>
+    <a href="#faq">よくある質問</a>
     </div>
   </nav>
   <a class="scrollcue" href="#schedule" aria-label="下へスクロール"><span></span></a>
@@ -1838,6 +1866,125 @@ a{color:var(--turq-d)}
       <p class="res y">△ 規定のキャンセル料が発生します</p>
       <p>安全のため、体調に不安がある場合は無理をなさらずご相談ください。診断書のご提出など、状況に応じて個別に対応させていただきます。</p>
     </div>
+  </div>
+</section>
+
+<!-- 13 よくあるご質問 -->
+<section class="pad mint" id="faq">
+  <div class="wrap">
+    <div class="shead">
+      <span class="no">13 ／ FAQ</span>
+      <h2>よくあるご質問</h2>
+      <p>募集ページでご覧いただいた内容も含め、出発前にもう一度確認しておきたいことをまとめました。ホエールスイムに関する部分は、船を出していただく<a href="https://www.msamami.com/whale2.html" target="_blank" rel="noopener">マリンスポーツ奄美さん</a>のご案内にもとづいています。</p>
+    </div>
+
+    <h3 class="sub">ザトウクジラのこと</h3>
+    <div class="whalefacts">
+      <div class="wf"><span class="k">種類</span><span class="v">ザトウクジラ<small>Humpback Whale</small></span></div>
+      <div class="wf"><span class="k">大きさ</span><span class="v">体長 13〜15m<small>体重はおよそ30トン</small></span></div>
+      <div class="wf"><span class="k">回遊距離</span><span class="v">数千km<small>夏のベーリング海から、冬の奄美へ</small></span></div>
+      <div class="wf"><span class="k">生息数</span><span class="v">約1,700頭<small>2025年シーズンの確認数</small></span></div>
+      <div class="wf"><span class="k">シーズン</span><span class="v">12月中旬〜5月上旬<small>スイムの開催は1月初旬〜3月下旬</small></span></div>
+      <div class="wf"><span class="k">遭遇率</span><span class="v">98%<small>2025年シーズンの遭遇率</small></span></div>
+    </div>
+    <p class="txt" style="margin-top:12px">
+      1月中旬から3月中旬は、出会ったクジラの<strong>6〜8割は一緒に泳げる</strong>時期にあたります（それ以外の時期は4〜5割）。今回の2便は、ちょうどその時期に組んでいます。
+    </p>
+
+    <h3 class="sub">出発前の準備について</h3>
+    <div class="qa">
+      <details>
+        <summary>Cカードをまだ持っていません。間に合いますか？</summary>
+        <div class="a"><strong>Sunny Funny Days は NAUI の認定施設です。</strong>ツアーまでに「NAUIスキンダイビングコース」を受けていただければ、そのままご参加いただけます。ふだんの海で練習してから奄美へ向かえるので、いちばんおすすめの流れです。日程はご相談のうえ決めますので、お早めにお知らせください。すでにお持ちの方は、<strong>当日Cカードをご持参ください</strong>。→ <a href="#rules">07 ルールと注意事項</a></div>
+      </details>
+      <details>
+        <summary>泳ぎが得意ではないのですが、大丈夫でしょうか。</summary>
+        <div class="a">足の着かない外洋でのアクティビティのため、ある程度の泳力が必要です。クジラによっては<strong>50〜60m泳がないといけない</strong>ことがあり、かなりハードなときもあります。ライフジャケットの貸し出し（無料）はありますので、ご不安な方は無理をなさらずご相談ください。スノーケリングが不慣れな方は、事前のプールレッスン・海レッスンをおすすめしています。</div>
+      </details>
+      <details>
+        <summary>器材は借りられますか。決まりはありますか。</summary>
+        <div class="a">ウェットスーツ、マスク＆スノーケル、フィン＆ソックス、ブーツ、フード、グローブ、ウエイトをご用意しています。料金は <a href="#rental">10 器材レンタル料金</a> をご覧ください。器材には決まりがあります。<br />
+        ・<strong>フィンは70cm（ワープフィン）まで。ロングフィンは禁止</strong>です<br />
+        ・<strong>ドライスーツは使えません</strong>（冬は5mm以上のウェットスーツを推奨）<br />
+        ・GoProなどを取り付ける<strong>棒は30cm以下</strong>。落とすと拾えないのでストラップを必ずお付けください</div>
+      </details>
+      <details>
+        <summary>保険は必要ですか。</summary>
+        <div class="a">船やインストラクターが加盟している保険では適用できない場合があるため、マリンスポーツ奄美さんから<strong>1日レジャー保険（1日数百円）へのご加入</strong>をお願いされています。加入方法はお申し込み後に個別にご案内します。参加費には含まれていません。</div>
+      </details>
+      <details>
+        <summary>航空券は自分で手配するのですか。</summary>
+        <div class="a">はい、往復の航空券はご自身での手配・お支払いをお願いしています（参加費に含まれません）。どんな便があるかは <a href="#flights">03 奄美へのフライト</a> にまとめました。ご予約後、<strong>往復の便名・日付・時刻</strong>をお知らせください。到着時刻に合わせて奄美空港までお迎えにあがります。</div>
+      </details>
+      <details>
+        <summary>何を持っていけばいいですか。</summary>
+        <div class="a"><a href="#packing">09 持ち物リスト</a> にまとめています。タップでチェックが付き、次に開いたときも残るようになっているので、荷造りにお使いください。船の上は想像以上に寒いので、<strong>ウインドブレーカー・ニット帽などの防寒具</strong>は必ずお持ちください。→ <a href="#clothes">08 船上の服装・防寒</a></div>
+      </details>
+    </div>
+
+    <h3 class="sub">ホエールスイムのこと</h3>
+    <div class="qa">
+      <details>
+        <summary>必ずクジラと泳げますか。</summary>
+        <div class="a">お約束はできません。相手は野生のザトウクジラです。2025年シーズンの遭遇率は98%、1月中旬〜3月中旬は出会った個体の6〜8割と泳げるとのことですが、それでも<strong>船上からの観察のみとなる日はあります</strong>。自然の生きものを見に行くため、<strong>会えなかった場合の返金はありません</strong>。やさしい気持ちでご参加ください。</div>
+      </details>
+      <details>
+        <summary>当日は何時からですか。</summary>
+        <div class="a">便によって違います。<strong>第1便（1/27）は1日コース</strong>で9:00出港・16:00ごろ帰港の約6時間。<strong>第2便（1/30・31）は半日コース</strong>で9:00出港・12:00ごろ帰港の約3時間を2日間です。宿から出港場所（小湊港または名瀬長浜港）まで車で30〜40分なので、どちらも朝食をとってから出発できます。→ <a href="#schedule">01 日程別スケジュール</a></div>
+      </details>
+      <details>
+        <summary>一度に何人まで海に入れますか。</summary>
+        <div class="a">協会のルールで<strong>8名まで</strong>です。今回は定員4名なので、みなさん一緒に入れます。また<strong>親子クジラへのスイムは2回までのエントリー</strong>と決められています。子クジラを連れた母クジラは神経質になっているため、近づく行為は絶対にしないでください。</div>
+      </details>
+      <details>
+        <summary>船に酔いやすいのですが……</summary>
+        <div class="a">少しでも酔いやすい方は、<strong>乗船30分ほど前に酔い止め薬（アネロンを推奨）</strong>を服用してください。船室内に入ると酔いやすくなるため、風通しのよい甲板で過ごすのがおすすめです。船には温水シャワーとトイレがあります。</div>
+      </details>
+      <details>
+        <summary>雨が降っているときはどうなりますか。</summary>
+        <div class="a">運航に支障がない範囲であれば実施します。ただし<strong>雨具は各自でご用意ください</strong>。船が出せない場合の取り扱いは <a href="#cancel">12 キャンセル規定</a> をご覧ください。</div>
+      </details>
+    </div>
+
+    <h3 class="sub">島での過ごし方</h3>
+    <div class="qa">
+      <details>
+        <summary>1〜2月の奄美はどのくらい寒いですか。</summary>
+        <div class="a">1月末〜2月初めの平年気温は最高17〜18℃・最低12℃前後、水温は20℃前後です。ただし奄美の冬は曇りがちで北風が強く、船の上では体感温度がぐっと下がります。<strong>水中よりも、濡れたまま船上で待つ時間のほうが寒く感じます。</strong>帰港後は船の温水シャワーで温まれます。</div>
+      </details>
+      <details>
+        <summary>クジラに会えない日は何をしますか。</summary>
+        <div class="a">奄美には、海が荒れた日でも楽しめる場所がたくさんあります。金作原の原生林トレッキング、住用のマングローブ、島の北から南までの海岸めぐり、大島紬の工房や島の食文化にふれる時間など。その日の天候とみなさまの体調に合わせて、いちばん良いかたちにアレンジします。→ <a href="#island">05 島でめぐる場所</a></div>
+      </details>
+      <details>
+        <summary>ひとりでの参加でも大丈夫ですか。</summary>
+        <div class="a">はい、おひとりでのご参加が多いリトリートです。宿のグリーンヒルさんは本館6室・新館10室のこぢんまりとしたペンションで、朝夕の食事はカフェスペースで泊まっているみなさんと一緒に囲みます。自然と打ち解けられる雰囲気です。→ <a href="#stay">04 宿について</a></div>
+      </details>
+      <details>
+        <summary>島の中の移動はどうなりますか。</summary>
+        <div class="a">現地の移動はすべてこちらのレンタカーで行います（参加費に含まれます）。空港の送迎、出港場所までの往復、観光の移動もすべて込みです。宿の送迎サービスは終了しているため、送迎もこちらで行います。→ <a href="#meet">02 集合・解散とアクセス</a></div>
+      </details>
+    </div>
+
+    <h3 class="sub">お支払い・キャンセルについて</h3>
+    <div class="qa">
+      <details>
+        <summary>支払い方法と期限は？</summary>
+        <div class="a">お店で事前にお支払い（カード・各種電子決済に対応）、または銀行振込をご利用いただけます。お支払い期限は、お申し込み後に個別にご案内します。→ <a href="#fee">11 参加費に含まれるもの</a></div>
+      </details>
+      <details>
+        <summary>参加費に含まれないものは何ですか。</summary>
+        <div class="a">往復の航空券、ご自宅から空港までの交通費、昼食代（朝食・夕食は宿の料金に含まれます）、器材レンタル料、1日レジャー保険・旅行保険、ほこらしゃサウナの利用料金、観光施設の入場料、お土産代などです。→ <a href="#fee">11 参加費に含まれるもの</a></div>
+      </details>
+      <details>
+        <summary>キャンセルしたい場合は？</summary>
+        <div class="a">宿・船ともに早い段階での確保が必要なため、キャンセル規定を設けています。悪天候で船が出せなかった場合、クジラに会えなかった場合、航空便の欠航で来られない場合など、ケース別の取り扱いを <a href="#cancel">12 キャンセル規定</a> にまとめています。</div>
+      </details>
+    </div>
+
+    <p class="txt" style="margin-top:18px">
+      ここに載っていないことは、どんな小さなことでもお気軽にお尋ねください。<a href="#apply">ページ下部のLINE</a>からご連絡いただけます。
+    </p>
   </div>
 </section>
 
