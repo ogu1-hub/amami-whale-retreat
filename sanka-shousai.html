@@ -85,7 +85,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:
 
 /* hero */
 .phero{position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;
-  justify-content:center;text-align:center;padding:104px 20px 26px;overflow:hidden;background:var(--abyss)}
+  justify-content:flex-start;text-align:center;padding:104px 20px 56px;overflow:hidden;background:var(--abyss)}
 .phero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
   transform:scale(1.05)}
 .phero .veil{position:absolute;inset:0;z-index:1;
@@ -99,7 +99,8 @@ header{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:
 @keyframes riseHero{0%{transform:translateY(0) translateX(0);opacity:0}
   14%{opacity:.75}78%{opacity:.4}100%{transform:translateY(-104svh) translateX(26px);opacity:0}}
 @media(prefers-reduced-motion:reduce){.bubbles{display:none}}
-.phero .inner{position:relative;z-index:3;flex:1;display:grid;place-content:center;width:100%}
+.phero .inner{position:relative;z-index:3;flex:0 0 auto;width:100%;
+  min-height:calc(100svh - 84px);display:grid;place-content:center}
 .phero .eyebrow{font-size:.56rem;letter-spacing:.38em;color:var(--light);margin-bottom:18px}
 .phero h1{font-family:var(--serif);font-weight:500;color:#fff;font-size:1.3rem;line-height:1.95;
   letter-spacing:.15em;text-shadow:0 2px 24px rgba(0,0,0,.7)}
@@ -602,14 +603,15 @@ a{color:var(--turq-d)}
 .phero h1{font-size:min(1.55rem,6.6vw);line-height:1.9;letter-spacing:.1em;white-space:nowrap}
 .phero .eyebrow{font-size:.62rem;letter-spacing:.34em}
 .phero .sub{font-size:.8rem}
-.phero .toc{position:relative;z-index:3;width:100%;background:none;padding:0;margin-top:auto}
+.phero .toc{position:relative;z-index:3;width:100%;background:none;padding:0;margin-top:40px}
 .phero .toc .wrap{padding:0 2px;gap:7px}
 .phero .toc a{font-size:.72rem;padding:7px 12px;color:#fff;font-weight:600;
   border:1px solid rgba(255,255,255,.4);background:rgba(3,18,31,.34);
   -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
   text-shadow:0 1px 6px rgba(0,0,0,.5)}
 .phero .toc a:hover{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.7)}
-.scrollcue{position:relative;z-index:3;display:block;width:26px;height:40px;margin:16px auto 0}
+.scrollcue{position:absolute;z-index:3;left:50%;transform:translateX(-50%);
+  top:calc(100svh - 58px);display:block;width:26px;height:40px}
 .scrollcue span{position:absolute;left:50%;top:0;width:1px;height:26px;
   background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.85));
   animation:cue 2.2s ease-in-out infinite}
@@ -617,7 +619,7 @@ a{color:var(--turq-d)}
   40%{opacity:1}100%{transform:translateY(14px) scaleY(1);opacity:0}}
 @media(prefers-reduced-motion:reduce){.scrollcue span{animation:none;opacity:.8}}
 @media(min-width:768px){
-  .phero{padding:120px 24px 34px}
+  .phero{padding:120px 24px 64px}
   .phero h1{font-size:2.4rem;line-height:1.8;letter-spacing:.13em}
   .phero .eyebrow{font-size:.68rem;margin-bottom:24px}
   .phero .sub{font-size:.9rem;margin-top:20px}
