@@ -606,10 +606,17 @@ a{color:var(--turq-d)}
   padding:15px 18px;font-size:.8rem;line-height:2.05;color:var(--ink-soft);margin-bottom:16px}
 .visitnote2 b{display:block;font-size:.82rem;color:var(--orange-d);letter-spacing:.06em;margin-bottom:5px}
 .spotlist{display:grid;gap:11px}
-.sp{background:#fff;border:1px solid var(--line);border-radius:14px;padding:15px 17px 16px;
-  box-shadow:0 2px 10px rgba(28,43,51,.05)}
+.sp{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  box-shadow:0 2px 10px rgba(28,43,51,.05);display:flex;flex-direction:column}
+.sp>.sp-h{margin:15px 17px 7px}
+.sp>p{margin:0 17px 16px}
+.sp-ph{margin:0;position:relative}
+.sp-ph img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.sp-ph figcaption{position:absolute;left:0;right:0;bottom:0;padding:16px 12px 8px;
+  font-size:.62rem;letter-spacing:.06em;color:rgba(255,255,255,.92);
+  background:linear-gradient(180deg,transparent,rgba(3,18,31,.78))}
 .sp.opt{background:var(--lemon);border-style:dashed}
-.sp-h{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:7px}
+.sp-h{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
 .sp-n{flex:0 0 auto;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;
   background:var(--turq);color:#fff;font-size:.66rem;font-weight:700;letter-spacing:0}
 .sp.opt .sp-n{background:var(--orange)}
@@ -685,6 +692,7 @@ a{color:var(--turq-d)}
   .visitnote2{font-size:.88rem;line-height:1.95}
   .visitnote2 b{font-size:.9rem}
   .sp-h b{font-size:1.02rem}
+  .sp-ph figcaption{font-size:.72rem}
   .sp-h em{font-size:.78rem}
   .sp p{font-size:.87rem;line-height:1.95}
   .qa summary{font-size:.94rem;padding:15px 34px 15px 38px}
@@ -1388,44 +1396,37 @@ a{color:var(--turq-d)}
     </div>
     <div class="spotlist">
       <div class="sp">
+        <figure class="sp-ph"><img src="img/6c89c99d72a8.jpg" alt="加世間峠あたりの空中写真。細い地形の両側に海が広がる" loading="lazy" /><figcaption>空中写真 ／ 上下の二つの海にはさまれた細い土地</figcaption></figure>
         <div class="sp-h"><span class="sp-n">01</span><b>加世間峠</b><em>宿から車10〜15分</em></div>
         <p>龍郷町・赤尾木の丘。左手に東シナ海、右手に太平洋 — <strong>二つの海を同時に見わたせる</strong>場所です。島がいちばん細くなるところで、宿のある手広の集落も一望できます。昼前から午後の光がおすすめ。</p>
       </div>
       <div class="sp">
+        <figure class="sp-ph"><img src="img/d6dd3464d028.jpg" alt="ハートロックのある赤尾木の海岸の空中写真" loading="lazy" /><figcaption>空中写真 ／ 赤尾木の海岸。右手の岩場のあたりにあります</figcaption></figure>
         <div class="sp-h"><span class="sp-n">02</span><b>ハートロック</b><em>宿から車10〜15分</em></div>
         <p>同じく赤尾木の海岸にある、ハートの形をした潮だまり。<strong>干潮のときにしか姿を見せません</strong>。駐車場から浜へ下りて、岩場を歩きます。滑りやすいので<strong>濡れてもよい靴</strong>があると安心です。潮の時間と天候が合えば、という場所です。</p>
       </div>
       <div class="sp">
+        <figure class="sp-ph"><img src="img/b2eb6fafa1ad.jpg" alt="大浜海浜公園の砂浜" loading="lazy" /><figcaption>「日本の渚百選」の浜</figcaption></figure>
         <div class="sp-h"><span class="sp-n">03</span><b>大浜海浜公園</b><em>宿から車で約50分</em></div>
         <p>名瀬の西にある「<strong>日本の渚百選</strong>」の浜。島いちばんの夕日の名所として知られ、芝生の見はらし広場から東シナ海に沈む陽を眺められます。園内には奄美海洋展示館もあります。</p>
       </div>
       <div class="sp">
+        <figure class="sp-ph"><img src="img/008465449063.jpg" alt="宮古崎（ササント）の空中写真。草原の岬が海に突き出す" loading="lazy" /><figcaption>空中写真 ／ 明るい緑に見えるところが笹の草原</figcaption></figure>
         <div class="sp-h"><span class="sp-n">04</span><b>宮古崎（ササント）</b><em>宿から車で約1時間</em></div>
         <p>大和村の岬。「ササント」は<strong>笹の茂る岬</strong>という意味で、一面の笹の草原の向こうに東シナ海が広がります。駐車場から遊歩道を20分ほど歩いて先端の展望へ。<strong>歩きやすい靴</strong>でどうぞ。</p>
       </div>
       <div class="sp">
+        <figure class="sp-ph"><img src="img/1b3627b37555.jpg" alt="住用のマングローブ原生林" loading="lazy" /><figcaption>日本で2番目の広さのマングローブ林</figcaption></figure>
         <div class="sp-h"><span class="sp-n">05</span><b>マングローブ原生林</b><em>宿から車で約50分</em></div>
         <p>住用の河口に広がる約71ヘクタールのマングローブ林。西表島に次いで<strong>日本で2番目の広さ</strong>です。展望台から見おろすほか、時間と条件が合えばカヌーで川をのぼることもできます。</p>
       </div>
       <div class="sp opt">
+        <figure class="sp-ph"><img src="img/9fb1226372ee.jpg" alt="アマミノクロウサギ" loading="lazy" /><figcaption>国の特別天然記念物・アマミノクロウサギ</figcaption></figure>
         <div class="sp-h"><span class="sp-n">＋</span><b>アマミノクロウサギの観察</b><em>夜・別料金・要予約</em></div>
         <p>この島と徳之島にしかいない、国の特別天然記念物。<strong>会える可能性がありそうなら、夜の観察に出かけたいと考えています</strong>。ただし観察エリアの林道は<strong>認定ガイドの同行と事前予約</strong>が必要で、<strong>別料金</strong>となります。野生の生きものなので、<strong>会えるとは限りません</strong>。</p>
       </div>
     </div>
-    <div class="mini" style="margin-top:18px">
-      <figure>
-        <img src="img/b2eb6fafa1ad.jpg" alt="大浜海浜公園の砂浜" loading="lazy" />
-        <figcaption><b>大浜海浜公園</b>「日本の渚百選」。夕日の名所です。</figcaption>
-      </figure>
-      <figure>
-        <img src="img/1b3627b37555.jpg" alt="住用のマングローブ原生林" loading="lazy" />
-        <figcaption><b>マングローブ原生林</b>日本で2番目の広さ。</figcaption>
-      </figure>
-      <figure>
-        <img src="img/9fb1226372ee.jpg" alt="アマミノクロウサギ" loading="lazy" />
-        <figcaption><b>アマミノクロウサギ</b>会えるかどうかは、その夜しだいです。</figcaption>
-      </figure>
-    </div>
+
     <div class="cards" style="margin-top:20px">
       <div class="card ok">
         <h4><span class="ic">🐇</span>夜の森でのお願い</h4>
@@ -2085,6 +2086,7 @@ a{color:var(--turq-d)}
       <li>クジラ・船上の写真 — Sunny Funny Days（過去のリトリートより）</li>
       <li>宿（グリーンヒル）の写真 — アマミアンスタイル ペンション グリーンヒル</li>
       <li>地図の海岸線データ — <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors（ODbL）</a></li>
+      <li>加世間峠・ハートロック・宮古崎の空中写真 — 出典：<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">国土地理院 地理院タイル（シームレス空中写真）</a></li>
       <li>住用のマングローブ原生林 — Vanquish0 / <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>（<a href="https://commons.wikimedia.org/wiki/File:Mangrove_in_amami.JPG" target="_blank" rel="noopener">Wikimedia Commons</a>）</li>
       <li>大浜海浜公園 — Ubuhouse / <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（<a href="https://commons.wikimedia.org/wiki/File:Oohamakaihinkouen.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>）</li>
       <li>アマミノクロウサギ — Mmsmr / <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener">CC0</a>（<a href="https://commons.wikimedia.org/wiki/File:%E3%82%A2%E3%83%9E%E3%83%9F%E3%83%8E%E3%82%AF%E3%83%AD%E3%82%A6%E3%82%B5%E3%82%AE_Pentalagus_furnessi_Amami-Oshima%2C_Japan.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>）</li>

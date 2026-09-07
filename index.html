@@ -336,15 +336,9 @@ footer .fl{font-family:var(--serif);font-size:.92rem;color:#fff;letter-spacing:.
   margin-top:5px;font-family:var(--sans)}
 .spot p{font-size:.83rem;line-height:2;letter-spacing:.02em;color:rgba(223,242,250,.74);
   margin-top:10px}
-.spot .ph.noimg{display:grid;place-items:center;
-  background:linear-gradient(150deg,#0d4f74,#062a44 55%,#03121f);
-  position:relative}
-.spot .ph.noimg::after{content:"";position:absolute;inset:0;
-  background:radial-gradient(circle at 30% 25%,rgba(127,212,238,.18),transparent 60%)}
-.spot .ph.noimg .nm{position:relative;z-index:1;text-align:center;
-  font-family:var(--serif);font-size:1.15rem;letter-spacing:.16em;color:rgba(255,255,255,.9)}
-.spot .ph.noimg .nm em{display:block;font-style:normal;font-family:var(--sans);
-  font-size:.58rem;letter-spacing:.28em;color:var(--light);opacity:.7;margin-top:10px}
+.airtag{position:absolute;left:10px;bottom:10px;z-index:2;font-size:.6rem;letter-spacing:.16em;
+  background:rgba(3,18,31,.78);color:rgba(223,242,250,.92);padding:4px 11px;border-radius:60px;
+  border:1px solid rgba(127,212,238,.32);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
 .visitnote{margin-top:22px;border:1px solid rgba(232,184,120,.45);border-radius:3px;
   background:rgba(232,184,120,.08);padding:20px 22px;
   font-size:.85rem;line-height:2.05;letter-spacing:.02em;color:rgba(223,242,250,.85)}
@@ -615,21 +609,21 @@ footer .fl{font-family:var(--serif);font-size:.92rem;color:#fff;letter-spacing:.
 
     <div class="spots">
       <article class="spot reveal">
-        <div class="ph noimg"><span class="nm">加世間峠<em>KASEKEN PASS</em></span></div>
+        <div class="ph"><img src="img/6c89c99d72a8.jpg" alt="加世間峠あたりの空中写真。細い地形の両側に海が広がる" loading="lazy" /><span class="airtag">空中写真</span></div>
         <div class="bd">
           <h4>加世間峠<small>FUTATSU-NO-UMI</small></h4>
           <p>龍郷町・赤尾木の丘。左手に東シナ海、右手に太平洋 —
           <strong style="color:#fff">二つの海を同時に見わたせる</strong>場所です。
-          島がいちばん細くなるところで、宿のある手広の集落も一望できます。宿から近く、立ち寄りやすい場所です。</p>
+          島がいちばん細くなるところで、宿のある手広の集落も一望できます。宿から近く、立ち寄りやすい場所です。<br /><span style="opacity:.62;font-size:.92em">写真の上と下、二つの海にはさまれた細い土地。ここを見おろす丘です。</span></p>
         </div>
       </article>
       <article class="spot reveal">
-        <div class="ph noimg"><span class="nm">ハートロック<em>HEART ROCK</em></span></div>
+        <div class="ph"><img src="img/d6dd3464d028.jpg" alt="ハートロックのある赤尾木の海岸の空中写真" loading="lazy" /><span class="airtag">空中写真</span></div>
         <div class="bd">
           <h4>ハートロック<small>TIDE POOL</small></h4>
           <p>同じく龍郷町・赤尾木の海岸にある、ハートの形をした潮だまり。
           <strong style="color:#fff">干潮のときにしか姿を見せません</strong>。
-          駐車場から浜へ下りて歩きます。潮の時間と天候が合えば、という場所です。</p>
+          駐車場から浜へ下りて歩きます。潮の時間と天候が合えば、という場所です。<br /><span style="opacity:.62;font-size:.92em">写真はその海岸を空から見たもの。右手の岩場のあたりにあります。</span></p>
         </div>
       </article>
       <article class="spot reveal">
@@ -642,11 +636,11 @@ footer .fl{font-family:var(--serif);font-size:.92rem;color:#fff;letter-spacing:.
         </div>
       </article>
       <article class="spot reveal">
-        <div class="ph noimg"><span class="nm">宮古崎<em>MIYAKOZAKI</em></span></div>
+        <div class="ph"><img src="img/008465449063.jpg" alt="宮古崎（ササント）の空中写真。草原の岬が海に突き出す" loading="lazy" /><span class="airtag">空中写真</span></div>
         <div class="bd">
           <h4>宮古崎（ササント）<small>SASANTO</small></h4>
           <p>大和村にある岬。「ササント」は<strong style="color:#fff">笹の茂る岬</strong>という意味で、
-          一面の笹の草原の向こうに東シナ海が広がります。遊歩道を20分ほど歩いて先端の展望へ。</p>
+          一面の笹の草原の向こうに東シナ海が広がります。遊歩道を20分ほど歩いて先端の展望へ。<br /><span style="opacity:.62;font-size:.92em">写真で明るい緑に見えるところが、その笹の草原です。</span></p>
         </div>
       </article>
       <article class="spot reveal">
@@ -1185,6 +1179,7 @@ footer .fl{font-family:var(--serif);font-size:.92rem;color:#fff;letter-spacing:.
       <li>クジラ・船上の写真 — Sunny Funny Days（過去のリトリートより）</li>
       <li>宿（グリーンヒル）の写真 — アマミアンスタイル ペンション グリーンヒル</li>
       <li>地図の海岸線データ — <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors（ODbL）</a></li>
+      <li>加世間峠・ハートロック・宮古崎の空中写真 — 出典：<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">国土地理院 地理院タイル（シームレス空中写真）</a></li>
       <li>島へ向かう機上から — Ktjava / <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（<a href="https://commons.wikimedia.org/wiki/File:Amami_%C5%8Cshima_from_Airplane.png" target="_blank" rel="noopener">Wikimedia Commons</a>）</li>
       <li>奄美大島の海岸線 — TANAKA Juuyoh (田中十洋) / <a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener">CC BY 2.0</a>（<a href="https://commons.wikimedia.org/wiki/File:Amami_beach.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>）</li>
       <li>大島紬の泥染め — Markmcnbowe97 / <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener">CC0</a>（<a href="https://commons.wikimedia.org/wiki/File:Mud_Dyeing_Kanai_Workshop.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>）</li>
