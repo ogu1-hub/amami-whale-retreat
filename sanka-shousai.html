@@ -601,6 +601,27 @@ a{color:var(--turq-d)}
 .card a,.txt a,.qa .a a{color:var(--turq-d);border-bottom-color:var(--turq)}
 .backtop{background:var(--orange);border:none;box-shadow:0 4px 14px rgba(243,127,17,.4)}
 
+/* 参加費の表 */
+.tbl.fee{table-layout:fixed}
+.tbl.fee th:nth-child(1),.tbl.fee td:nth-child(1){width:52%}
+.tbl.fee th:nth-child(2),.tbl.fee td:nth-child(2){width:48%}
+.tbl.fee td b{font-size:.95rem;font-weight:700;color:var(--ink);letter-spacing:.04em}
+.tbl.fee td .kari{margin-left:6px;vertical-align:2px}
+.tbl.fee td small{display:block;font-size:.73rem;color:var(--ink-soft);font-weight:400;
+  letter-spacing:0;margin-top:3px;line-height:1.75}
+.tbl.fee td.t{text-align:right;font-variant-numeric:tabular-nums;font-weight:700;
+  color:var(--ink-soft);white-space:normal}
+.tbl.fee td.t .big{display:block;font-size:1.1rem;color:var(--orange-d);white-space:nowrap}
+.tbl.fee td.t small{display:block;font-size:.7rem;font-weight:400;color:var(--ink-soft);
+  margin-top:3px;letter-spacing:0;white-space:nowrap}
+@media(max-width:767px){
+  .tbl.fee th,.tbl.fee td{padding:11px 9px}
+  .tbl.fee td b{font-size:1.02rem}
+  .tbl.fee td small{font-size:.8rem}
+  .tbl.fee td.t .big{font-size:1.18rem}
+  .tbl.fee td.t small{font-size:.76rem}
+}
+
 /* 立ち寄る場所（候補） */
 .visitnote2{background:var(--orange-pale);border:1px solid rgba(243,127,17,.4);border-radius:14px;
   padding:15px 18px;font-size:.8rem;line-height:2.05;color:var(--ink-soft);margin-bottom:16px}
@@ -793,7 +814,7 @@ a{color:var(--turq-d)}
     <div class="shead">
       <span class="no">01 ／ SCHEDULE</span>
       <h2>日程別スケジュール</h2>
-      <p>ご参加の便を選んでご覧ください。ホエールスイムはマリンスポーツ奄美さんの船で、<strong>第1便は1日コース（約6時間）</strong>、<strong>第2便は半日コース（9:00〜12:00）を2回</strong>利用します。各便とも定員4名、インストラクター1名が同行します。細かい時間は、その日の海況・天候・みなさまの体調に合わせて現地で調整します。</p>
+      <p>ご参加の便を選んでご覧ください。ホエールスイムはマリンスポーツ奄美さんの船で、<strong>第1便は1日コース（約6時間）</strong>、<strong>第2便は半日コース（9:00〜12:00）を2回</strong>利用します。各便とも定員4名・<strong>最少催行3名</strong>、インストラクター1名が同行します。細かい時間は、その日の海況・天候・みなさまの体調に合わせて現地で調整します。</p>
     </div>
 
     <div class="tabs" id="tabs">
@@ -1852,9 +1873,23 @@ a{color:var(--turq-d)}
   <div class="wrap">
     <div class="shead">
       <span class="no">11 ／ WHAT'S INCLUDED</span>
-      <h2>参加費に含まれるもの<span class="kari">仮</span></h2>
-      <p>参加費：第1便（2泊3日・クジラ1日コース）¥110,000 ／ 第2便（3泊4日・クジラ半日コース×2）¥143,000（いずれもお一人さま・<strong>仮の金額</strong>です）。各便とも定員4名、インストラクター1名が同行します。</p>
+      <h2>参加費に含まれるもの</h2>
+      <p>各便とも定員4名・<strong>最少催行3名</strong>、インストラクター1名が同行します。往復の航空券は含まれません。</p>
     </div>
+    <table class="tbl fee" style="margin-bottom:18px">
+      <thead><tr><th>便</th><th>参加費（お一人さま）</th></tr></thead>
+      <tbody>
+        <tr><td><b>第1便</b><small>2泊3日／1月26日〜28日<br />クジラ 1日コース</small></td>
+            <td class="t"><span class="big">¥132,000</span><small>税込／税別 ¥120,000</small></td></tr>
+        <tr><td><b>第2便</b><span class="kari">仮</span><small>3泊4日／1月29日〜2月1日<br />クジラ 半日コース×2</small></td>
+            <td class="t"><span class="big">¥171,600</span><small>税込／税別 ¥156,000</small></td></tr>
+      </tbody>
+    </table>
+    <p class="txt" style="margin-bottom:18px">
+      いずれもお一人さまの金額です。<strong>第1便の参加費は確定</strong>、第2便はまだ仮の金額です。<br />
+      <strong>各便とも最少催行人数は3名です。</strong>ホエールスイムの船（マリンスポーツ奄美さん）が3名様からの催行のため、
+      <strong>お申し込みが2名以下の場合は開催を見合わせることがあります</strong>。その場合は参加費を全額お返しします（→ <a href="#cancel">12 キャンセル規定</a>）。
+    </p>
     <div class="incl">
       <div class="inc-box yes">
         <h4>含まれるもの</h4>
@@ -1955,7 +1990,7 @@ a{color:var(--turq-d)}
     <div class="cx-case">
       <h4>4. 最少催行人数に満たず、当店の判断で中止する場合</h4>
       <p class="res g">✓ お支払いいただいた参加費は全額返金します</p>
-      <p>クジラ船は当日の参加者が3名以上で催行となります。中止が決まった場合は、できるだけ早くご連絡します。航空券をすでに手配されている場合のキャンセル料はお客様のご負担となりますので、航空券のご手配は催行決定のご連絡後をおすすめします。</p>
+      <p><strong>各便とも最少催行人数は3名です。</strong>ホエールスイムの船（マリンスポーツ奄美さん）が3名様からの催行のため、<strong>お申し込みが2名以下の場合は開催を見合わせることがあります</strong>。中止が決まった場合は、遅くとも<strong>出発の2週間前まで</strong>にご連絡します。もう一方の便への振替もご相談いただけます。航空券をすでに手配されている場合のキャンセル料はお客様のご負担となりますので、<strong>航空券のご手配は催行決定のご連絡後</strong>をおすすめします。</p>
     </div>
 
     <div class="cx-case">
@@ -2031,7 +2066,7 @@ a{color:var(--turq-d)}
       </details>
       <details>
         <summary>一度に何人まで海に入れますか。</summary>
-        <div class="a">協会のルールで<strong>8名まで</strong>です。今回は定員4名なので、みなさん一緒に入れます。また<strong>親子クジラへのスイムは2回までのエントリー</strong>と決められています。子クジラを連れた母クジラは神経質になっているため、近づく行為は絶対にしないでください。</div>
+        <div class="a">協会のルールで<strong>8名まで</strong>です。今回は定員4名（最少催行3名）なので、みなさん一緒に入れます。また<strong>親子クジラへのスイムは2回までのエントリー</strong>と決められています。子クジラを連れた母クジラは神経質になっているため、近づく行為は絶対にしないでください。</div>
       </details>
       <details>
         <summary>船に酔いやすいのですが……</summary>
@@ -2065,6 +2100,16 @@ a{color:var(--turq-d)}
 
     <h3 class="sub">お支払い・キャンセルについて</h3>
     <div class="qa">
+      <details>
+        <summary>何名から開催されますか？</summary>
+        <div class="a">各便とも<strong>最少催行人数は3名</strong>です。ホエールスイムの船（マリンスポーツ奄美さん）が<strong>3名様からの催行</strong>のため、お申し込みが2名以下の場合は<strong>開催を見合わせることがあります</strong>。その場合は参加費を全額お返しし、もう一方の便への振替もご相談いただけます。開催の可否は、遅くとも出発の2週間前までにご連絡します。<strong>航空券のご手配は、催行決定のご連絡を受けてからをおすすめします。</strong>→ <a href="#cancel">12 キャンセル規定</a></div>
+      </details>
+
+      <details>
+        <summary>参加費はいくらですか。税込ですか。</summary>
+        <div class="a">第1便（2泊3日）は税別120,000円・<strong>税込132,000円</strong>で確定しています。第2便（3泊4日）は税別156,000円・<strong>税込171,600円</strong>で、こちらはまだ仮の金額です。いずれもお一人さまの金額で、往復の航空券は含まれません。→ <a href="#fee">11 参加費に含まれるもの</a></div>
+      </details>
+
       <details>
         <summary>支払い方法と期限は？</summary>
         <div class="a">お店で事前にお支払い（カード・各種電子決済に対応）、または銀行振込をご利用いただけます。お支払い期限は、お申し込み後に個別にご案内します。→ <a href="#fee">11 参加費に含まれるもの</a></div>
