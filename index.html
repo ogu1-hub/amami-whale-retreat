@@ -7,6 +7,8 @@
 <meta name="description" content="2027年1月26日〜2月1日、奄美大島へ。冬の海に還るザトウクジラと同じ水面に浮かぶ、海が主役の2泊3日／3泊4日のリトリート。定員5名・インストラクター同行。宿はペンショングリーンヒル。" />
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+/* スマホで行末に1〜2文字だけ残るのを防ぐ（未対応ブラウザでは無視される） */
+p,li,dd,dt,summary,h2,h3,h4{text-wrap:pretty}
 html{scroll-behavior:smooth;font-size:16px}
 @media(max-width:767px){ html{font-size:18px} }
 
@@ -176,6 +178,12 @@ html.js-anim .reveal.in{opacity:1;transform:none}
 .plan-row:last-child{border-bottom:none}
 .plan-row dt{color:var(--ink-soft);flex:0 0 auto;font-size:.84rem;letter-spacing:.04em}
 .plan-row dd{text-align:right;font-weight:600}
+@media (max-width:400px){
+  .plan-rows{padding-left:16px;padding-right:16px}
+  .plan-row{gap:8px}
+  .plan-row dt{font-size:.78rem}
+  .plan-row dd{font-size:.82rem}
+}
 /* ホエールスイムの内容をいちばん目立たせる帯 */
 .swim{padding:22px 24px 20px;text-align:center;
   background:linear-gradient(135deg,#e6f4fb,#d5ecf7);border-bottom:1px solid rgba(26,127,168,.18)}
@@ -253,7 +261,9 @@ html.js-anim .reveal.in{opacity:1;transform:none}
   transform:rotate(45deg);transition:transform .3s}
 .faq details[open] summary::after{transform:rotate(-135deg)}
 .faq .a{padding:0 6px 24px 26px;font-size:.87rem;line-height:2.05;letter-spacing:.02em;
-  color:var(--ink-soft)}
+  color:var(--ink-soft);text-wrap:pretty}
+/* 文末の短い塊を分断させない（スマホで1〜2文字だけ残るのを防ぐ） */
+.nb{white-space:nowrap}
 
 /* ---------- cta ---------- */
 .cta{position:relative;overflow:hidden;text-align:center;padding:104px 24px}
@@ -275,8 +285,8 @@ html.js-anim .reveal.in{opacity:1;transform:none}
 .btn-gold{background:var(--gold);color:#3d2909;box-shadow:0 8px 30px rgba(232,184,120,.34)}
 .btn-ghost{border:1px solid rgba(255,255,255,.5);color:#fff}
 .cta-note{margin-top:26px;font-size:.72rem;line-height:2;letter-spacing:.04em;
-  color:rgba(255,255,255,.6);max-width:400px;margin-left:auto;margin-right:auto}
-.cta-note a{color:var(--light);border-bottom:1px solid rgba(127,212,238,.4)}
+  color:rgba(255,255,255,.6);max-width:400px;margin-left:auto;margin-right:auto;
+  text-wrap:pretty}
 .cta-contact{margin-top:30px;font-size:.74rem;letter-spacing:.08em;color:rgba(255,255,255,.66);
   line-height:2.1}
 .cta-contact a{color:var(--light);border-bottom:1px solid rgba(127,212,238,.4)}
@@ -596,7 +606,7 @@ footer .fl{font-family:var(--serif);font-size:.92rem;color:#fff;letter-spacing:.
         <div class="plan-price">
           <p class="p-label">参加費</p>
           <p class="p-val">¥110,000<small>／人・税込</small></p>
-          <p class="p-note">税別 ¥100,000 ／ 往復航空券は含みません</p>
+          <p class="p-note">税別 ¥100,000 ／ <span class="nb">往復航空券は含みません</span></p>
         </div>
       </article>
 
@@ -623,7 +633,7 @@ footer .fl{font-family:var(--serif);font-size:.92rem;color:#fff;letter-spacing:.
         <div class="plan-price">
           <p class="p-label">参加費</p>
           <p class="p-val">¥143,000<small>／人・税込</small></p>
-          <p class="p-note">3泊4日（基本）／税別 ¥130,000 ／ 往復航空券は含みません</p>
+          <p class="p-note">3泊4日（基本）／税別 ¥130,000 ／ <span class="nb">往復航空券は含みません</span></p>
           <div class="p-opt">
             <span class="t">2泊3日に短縮する場合</span>
             <span class="v">¥121,000<small>／人・税込</small></span>
@@ -1037,12 +1047,12 @@ footer .fl{font-family:var(--serif);font-size:.92rem;color:#fff;letter-spacing:.
       <h2 class="stitle" style="color:#fff">こんな方へ</h2>
     </div>
     <div class="foryou">
-      <div class="fy reveal"><span class="m">◇</span><p>いちど、野生のクジラと同じ海に浮かんでみたい方</p></div>
-      <div class="fy reveal"><span class="m">◇</span><p>日常から少し離れて、海と自然の中で自分を取り戻したい方</p></div>
-      <div class="fy reveal"><span class="m">◇</span><p>スノーケリング・スキンダイビングが好きな方</p></div>
-      <div class="fy reveal"><span class="m">◇</span><p>ひとり参加でも、海が好きな仲間と過ごしたい方</p></div>
-      <div class="fy reveal"><span class="m">◇</span><p>冬の奄美ブルーの海と、島の海岸をゆっくりめぐりたい方</p></div>
-      <div class="fy reveal"><span class="m">◇</span><p>観光地めぐりではなく、島の時間そのものを味わいたい方</p></div>
+      <div class="fy reveal"><span class="m">◇</span><p>いちど、野生のクジラと同じ海に浮かん<span class="nb">でみたい方</span></p></div>
+      <div class="fy reveal"><span class="m">◇</span><p>日常から少し離れて、海と自然の中で自分を取り<span class="nb">戻したい方</span></p></div>
+      <div class="fy reveal"><span class="m">◇</span><p>スノーケリング・スキンダイビング<span class="nb">が好きな方</span></p></div>
+      <div class="fy reveal"><span class="m">◇</span><p>ひとり参加でも、海が好きな仲間と過<span class="nb">ごしたい方</span></p></div>
+      <div class="fy reveal"><span class="m">◇</span><p>冬の奄美ブルーの海と、島の海岸をゆっくりめ<span class="nb">ぐりたい方</span></p></div>
+      <div class="fy reveal"><span class="m">◇</span><p>観光地めぐりではなく、島の時間そのものを味<span class="nb">わいたい方</span></p></div>
     </div>
 
     <div class="cond reveal">
@@ -1197,7 +1207,7 @@ footer .fl{font-family:var(--serif);font-size:.92rem;color:#fff;letter-spacing:.
 
       <details>
         <summary>キャンセルしたい場合は？</summary>
-        <div class="a">クジラの船を団体でチャーターし、宿も一棟まとめて押さえているため、キャンセル規定を設けています。<strong>出発の61日前まで無料</strong>、60日前から30%・30日前から60%・7日前から75%と段階的にいただき、当日は100%です。代わりに参加される方がいらっしゃる場合は、<strong>名義変更を無料</strong>で承ります（出発7日前まで）。天候により船が出せない場合の取り扱いとあわせて、<a href="sanka-shousai.html#cancel">詳細ページのキャンセル規定</a>をご確認ください。</div>
+        <div class="a">クジラの船を団体でチャーターし、宿も一棟まとめて押さえているため、キャンセル<span class="nb">規定を設けています。</span><strong>出発の61日前まで無料</strong>、60日前から30%、30日前から60%、7日前から75%、<span class="nb">当日は100%です。</span>代わりに参加される方がいらっしゃれば、<strong>名義変更は無料</strong>で<span class="nb">承ります</span><span class="nb">（出発の7日前まで）。</span>悪天候で船が出せない場合の取り扱いなど、ご不明な点は<span class="nb">お気軽にお尋ねください。</span></div>
       </details>
 
     </div>
@@ -1219,9 +1229,10 @@ footer .fl{font-family:var(--serif);font-size:.92rem;color:#fff;letter-spacing:.
       <span class="line-ico" aria-hidden="true">LINE</span>LINEで問い合わせる
     </a>
     <p class="cta-note">
-      クジラの船を団体でチャーターし、宿も一棟まとめて押さえるため、キャンセル規定を設けています。<br />
-      <strong>出発の61日前まで無料</strong>、以降は段階的にキャンセル料をいただきます。<br />
-      <a href="sanka-shousai.html#cancel">キャンセル規定の詳細を見る</a>
+      クジラの船を団体で押さえるため、<br />
+      キャンセル規定を設けています。<br />
+      <strong>出発の61日前まで無料</strong>、<br />
+      以降は段階的にいただきます。
     </p>
   </div>
 </section>
