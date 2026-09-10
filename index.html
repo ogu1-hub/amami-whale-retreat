@@ -176,12 +176,28 @@ html.js-anim .reveal.in{opacity:1;transform:none}
 .plan-row:last-child{border-bottom:none}
 .plan-row dt{color:var(--ink-soft);flex:0 0 auto;font-size:.84rem;letter-spacing:.04em}
 .plan-row dd{text-align:right;font-weight:600}
+/* ホエールスイムの内容をいちばん目立たせる帯 */
+.swim{padding:22px 24px 20px;text-align:center;
+  background:linear-gradient(135deg,#e6f4fb,#d5ecf7);border-bottom:1px solid rgba(26,127,168,.18)}
+.swim .sl{font-size:.66rem;letter-spacing:.26em;color:var(--ocean);font-weight:700;margin-bottom:12px}
+.swim .sv{font-family:var(--serif);font-size:1.62rem;line-height:1.45;letter-spacing:.05em;
+  color:var(--deep);font-weight:500}
+.swim .sv .c{font-weight:700;border-bottom:3px solid var(--gold);padding-bottom:2px}
+.swim .sv .x{font-family:var(--sans);font-size:1rem;color:var(--mid);margin:0 10px;font-weight:400}
+.swim .sv .n{font-weight:700;color:var(--warn)}
+.swim .sn{margin-top:11px;font-size:.78rem;letter-spacing:.08em;color:var(--ink-soft);line-height:1.85}
 .plan-price{padding:16px 24px 22px;background:var(--pale);margin-top:auto}
 .plan-price .p-label{font-size:.68rem;letter-spacing:.22em;color:var(--ink-soft)}
 .plan-price .p-val{font-family:var(--serif);font-size:1.9rem;letter-spacing:.04em;color:var(--deep);
   line-height:1.4}
 .plan-price .p-val small{font-size:.68rem;letter-spacing:.08em;margin-left:5px;font-family:var(--sans)}
 .plan-price .p-note{font-size:.7rem;color:var(--ink-soft);letter-spacing:.06em;margin-top:3px}
+.p-opt{margin-top:14px;padding-top:13px;border-top:1px dashed rgba(26,127,168,.35)}
+.p-opt .t{display:inline-block;font-size:.64rem;letter-spacing:.14em;font-weight:700;color:#fff;
+  background:var(--mid);padding:3px 10px;border-radius:60px;margin-bottom:7px}
+.p-opt .v{display:block;font-family:var(--serif);font-size:1.3rem;letter-spacing:.04em;color:var(--deep)}
+.p-opt .v small{font-size:.62rem;letter-spacing:.08em;margin-left:5px;font-family:var(--sans)}
+.p-opt .n{display:block;font-size:.7rem;color:var(--ink-soft);letter-spacing:.06em;margin-top:3px;line-height:1.8}
 .kari{display:inline-block;font-size:.63rem;letter-spacing:.16em;background:var(--gold);
   color:#4a3210;padding:2px 8px;border-radius:3px;margin-left:7px;vertical-align:2px;font-weight:700}
 .plan-note{margin-top:30px;font-size:.82rem;line-height:2;color:var(--ink-soft);
@@ -741,7 +757,7 @@ footer .fl{font-family:var(--serif);font-size:.92rem;color:#fff;letter-spacing:.
       <h2 class="stitle">2027年1月・2月の日程</h2>
       <p class="ssub">
         奄美のホエールスイムのシーズンは1月初旬から3月下旬。<br />
-        なかでもクジラと泳げる確率が上がる1月下旬に、2便をご用意します。<br />各便とも<strong>定員4名・最少催行3名</strong>、インストラクター1名が同行します。
+        なかでもクジラと泳げる確率が上がる1月下旬に、2便をご用意します。<br /><strong>第1便は1日コースを1本、第2便は半日コースを2本。</strong><br />各便とも<strong>定員4名・最少催行3名</strong>、インストラクター1名が同行します。
       </p>
     </div>
 
@@ -750,12 +766,17 @@ footer .fl{font-family:var(--serif);font-size:.92rem;color:#fff;letter-spacing:.
         <div class="plan-top">
           <span class="plan-tag">1st ／ 第 1 便</span>
           <h3>1/26<small style="font-size:.7rem">(火)</small> 〜 1/28<small style="font-size:.7rem">(木)</small></h3>
-          <p class="nights">2泊3日 ／ ホエールスイム 1日コース</p>
+          <p class="nights">2泊3日</p>
+        </div>
+        <div class="swim">
+          <p class="sl">WHALE SWIM ／ ホエールスイム</p>
+          <p class="sv"><span class="c">1日コース</span><span class="x">×</span><span class="n">1本</span></p>
+          <p class="sn">朝から夕方まで、まる一日クジラの海に（約6時間）<br />そのぶん<strong>3日目は島をしっかり観光</strong>して帰ります</p>
         </div>
         <dl class="plan-rows">
           <div class="plan-row"><dt>1日目 1/26(火)</dt><dd>奄美入り・集合<br />午後 島の北部めぐり</dd></div>
-          <div class="plan-row"><dt>2日目 1/27(水)</dt><dd>終日 ホエールスイム<br />（1日コース・約6時間）</dd></div>
-          <div class="plan-row"><dt>3日目 1/28(木)</dt><dd>午前 島あそび・解散</dd></div>
+          <div class="plan-row"><dt>2日目 1/27(水)</dt><dd><strong>終日 ホエールスイム</strong><br />1日コース・約6時間</dd></div>
+          <div class="plan-row"><dt>3日目 1/28(木)</dt><dd>午前〜昼 島内観光<br />午後 奄美空港へ・解散</dd></div>
           <div class="plan-row"><dt>宿 泊</dt><dd>ペンション グリーンヒル<br />（龍郷町・2泊）</dd></div>
           <div class="plan-row"><dt>定 員</dt><dd>4名<br /><strong>最少催行 3名</strong></dd></div>
           <div class="plan-row"><dt>集合／解散</dt><dd>奄美空港</dd></div>
@@ -771,30 +792,43 @@ footer .fl{font-family:var(--serif);font-size:.92rem;color:#fff;letter-spacing:.
         <div class="plan-top">
           <span class="plan-tag">2nd ／ 第 2 便</span>
           <h3>1/29<small style="font-size:.7rem">(金)</small> 〜 2/1<small style="font-size:.7rem">(月)</small></h3>
-          <p class="nights">3泊4日 ／ ホエールスイム 半日コース×2</p>
+          <p class="nights">3泊4日（2泊3日に短縮もできます）</p>
+        </div>
+        <div class="swim">
+          <p class="sl">WHALE SWIM ／ ホエールスイム</p>
+          <p class="sv"><span class="c">半日コース</span><span class="x">×</span><span class="n">2本</span></p>
+          <p class="sn">午前中に約3時間、それを<strong>二日間</strong>（9:00〜12:00）<br />一日目に会えなくても、翌日もう一度チャンスがあります</p>
         </div>
         <dl class="plan-rows">
           <div class="plan-row"><dt>1日目 1/29(金)</dt><dd>奄美入り・集合</dd></div>
-          <div class="plan-row"><dt>2日目 1/30(土)</dt><dd>午前 ホエールスイム<br />午後 島内観光</dd></div>
-          <div class="plan-row"><dt>3日目 1/31(日)</dt><dd>午前 ホエールスイム<br />午後 島内観光</dd></div>
+          <div class="plan-row"><dt>2日目 1/30(土)</dt><dd><strong>午前 ホエールスイム</strong>（1本目）<br />午後 島内観光</dd></div>
+          <div class="plan-row"><dt>3日目 1/31(日)</dt><dd><strong>午前 ホエールスイム</strong>（2本目）<br />午後 島内観光<br /><span style="font-size:.9em;color:#0d4f74">※短縮の方は夕方に解散</span></dd></div>
           <div class="plan-row"><dt>4日目 2/1(月)</dt><dd>島あそび・解散</dd></div>
-          <div class="plan-row"><dt>宿 泊</dt><dd>ペンション グリーンヒル<br />（龍郷町・3泊）</dd></div>
+          <div class="plan-row"><dt>宿 泊</dt><dd>ペンション グリーンヒル<br />（龍郷町・3泊／短縮は2泊）</dd></div>
           <div class="plan-row"><dt>定 員</dt><dd>4名<br /><strong>最少催行 3名</strong></dd></div>
           <div class="plan-row"><dt>集合／解散</dt><dd>奄美空港</dd></div>
         </dl>
         <div class="plan-price">
           <p class="p-label">参加費</p>
-          <p class="p-val">¥132,000<small>／人・税込</small></p>
-          <p class="p-note">税別 ¥120,000 ／ 往復航空券は含みません</p>
+          <p class="p-val">¥143,000<small>／人・税込</small></p>
+          <p class="p-note">3泊4日（基本）／税別 ¥130,000 ／ 往復航空券は含みません</p>
+          <div class="p-opt">
+            <span class="t">2泊3日に短縮する場合</span>
+            <span class="v">¥121,000<small>／人・税込</small></span>
+            <span class="n">ホエールスイムは同じ半日×2本。3日目の夕方に解散します<br />（税別 ¥110,000）</span>
+          </div>
         </div>
       </article>
     </div>
 
     <div class="plan-note reveal">
-      <strong>※ 参加費は確定しました。</strong>第1便 税込110,000円（税別100,000円）／第2便 税込132,000円（税別120,000円）。日程・宿・クジラ船も決まっています。<br />
+      <strong>※ 参加費は確定しました。</strong>第1便 税込110,000円／第2便 税込143,000円（2泊3日に短縮する場合は121,000円）。日程・宿・クジラ船も決まっています。<br />
+      <strong>※ 二つの便のいちばん大きな違いは、ホエールスイムの出かた</strong>です。第1便は<strong>1日コースを1本</strong>（まる一日／約6時間）、第2便は<strong>半日コースを2本</strong>（午前中3時間×二日間）。
+      第1便は海に出るのが1回のぶん<strong>3日目に島をしっかりめぐって</strong>から帰り、第2便は<strong>クジラに会うチャンスが二日ある</strong>のが持ち味です。
+      第2便を2泊3日に短縮された場合は、スイムは同じ2本のまま、<strong>3日目午後の観光がなくなり</strong>夕方に解散となります。<br />
       <strong>※ 各便とも最少催行人数は3名です。</strong>ホエールスイムの船（マリンスポーツ奄美さん）が3名様からの催行のため、
       <strong>お申し込みが2名以下の場合は開催を見合わせることがあります</strong>。その場合は参加費を全額お返しし、もう一方の便への振替もご相談いただけます。<br />
-      ホエールスイムは<strong>マリンスポーツ奄美</strong>さんの船です。第1便は<strong>1日コース（約6時間）</strong>、第2便は<strong>半日コース（9:00〜12:00）を2回</strong>利用します。<br />
+      ホエールスイムは<strong>マリンスポーツ奄美</strong>さんの船です。<br />
       参加費に含まれるもの：宿泊費（朝夕食つき）／ホエールスイム乗船料・ガイド料／現地での移動（レンタカー）／島内観光の引率<br />
       含まれないもの：往復航空券／ご自宅から空港までの交通費／昼食代／器材レンタル料／1日レジャー保険／個人的な費用<br />
       くわしい一日の流れ・持ち物・注意事項は、お申し込み後に詳しくご案内します。
@@ -1137,13 +1171,31 @@ footer .fl{font-family:var(--serif);font-size:.92rem;color:#fff;letter-spacing:.
       </details>
 
       <details>
+        <summary>第1便と第2便は何が違いますか？</summary>
+        <div class="a">いちばん大きな違いは<strong>ホエールスイムの出かた</strong>です。<br />
+          <strong>第1便</strong>は<strong>1日コースを1本</strong>。朝から夕方まで約6時間、まる一日クジラの海に出ます。海に出るのは1回なので、<strong>3日目は島をしっかり観光</strong>してから帰ります。<br />
+          <strong>第2便</strong>は<strong>半日コースを2本</strong>。午前中の約3時間を二日間くり返します。<strong>クジラに会うチャンスが二日ある</strong>のが持ち味で、午後は島内観光にあてられます。<br />
+          乗っている時間の合計はどちらも約6時間ですが、<strong>「一日じっくり」か「二日にわけて二度チャンス」か</strong>の違いとお考えください。</div>
+      </details>
+
+      <details>
+        <summary>第2便を2泊3日にできますか？</summary>
+        <div class="a">はい。<strong>1泊減らして、3日目（1/31）の夕方に解散</strong>するかたちにできます。参加費は税込<strong>121,000円</strong>（税別110,000円）です。<br />
+          <strong>ホエールスイムは同じ半日コース×2本のまま</strong>で、減るのは宿1泊と3日目午後の島内観光です。お帰りの便の都合に合わせてお選びください。お申し込みのときにお知らせいただければ大丈夫です。</div>
+      </details>
+
+      <details>
         <summary>何名から開催されますか？</summary>
         <div class="a">各便とも<strong>最少催行人数は3名</strong>です。ホエールスイムの船（マリンスポーツ奄美さん）が<strong>3名様からの催行</strong>のため、お申し込みが2名以下の場合は<strong>開催を見合わせることがあります</strong>。その場合は参加費を全額お返しし、もう一方の便への振替もご相談いただけます。開催の可否は、遅くとも出発の2週間前までにご連絡します。定員は4名です。</div>
       </details>
 
       <details>
         <summary>参加費は税込ですか？</summary>
-        <div class="a">はい、表示している金額は<strong>税込</strong>です。第1便（2泊3日）は税別100,000円・<strong>税込110,000円</strong>、第2便（3泊4日）は税別120,000円・<strong>税込132,000円</strong>。いずれもお一人さまの金額で、往復の航空券は含まれません。</div>
+        <div class="a">はい、表示している金額は<strong>税込</strong>です。<br />
+          ・第1便（2泊3日・1日コース×1本）… 税込<strong>110,000円</strong>（税別100,000円）<br />
+          ・第2便（3泊4日・半日コース×2本）… 税込<strong>143,000円</strong>（税別130,000円）<br />
+          ・第2便を2泊3日に短縮する場合 … 税込<strong>121,000円</strong>（税別110,000円）<br />
+          いずれもお一人さまの金額で、往復の航空券は含まれません。</div>
       </details>
 
       <details>
