@@ -351,11 +351,13 @@ footer .fl{font-family:var(--serif);font-size:.92rem;color:#fff;letter-spacing:.
 .tbd li::before{content:"—";position:absolute;left:0;color:var(--mid)}
 /* island mini spots */
 /* AI生成イメージ。実写のクレジットと混ざらないよう、キャプションで明示する */
-.aiimg{margin:18px 0 4px}
-.aiimg img{width:100%;height:auto;display:block;border-radius:3px}
-.aiimg figcaption{margin-top:7px;font-size:.72rem;letter-spacing:.04em;line-height:1.9;
+.aiimg,.phimg{margin:18px 0 4px}
+.phimg.portrait{max-width:520px;margin-left:auto;margin-right:auto}
+.aiimg img,.phimg img{width:100%;height:auto;display:block;border-radius:3px}
+.phimg figcaption .tag{background:var(--turq-d)}
+.aiimg figcaption,.phimg figcaption{margin-top:7px;font-size:.72rem;letter-spacing:.04em;line-height:1.9;
   color:var(--ink-soft);display:flex;gap:7px;align-items:baseline;flex-wrap:wrap}
-.aiimg figcaption .tag{flex:0 0 auto;font-size:.62rem;font-weight:700;letter-spacing:.1em;
+.aiimg figcaption .tag,.phimg figcaption .tag{flex:0 0 auto;font-size:.62rem;font-weight:700;letter-spacing:.1em;
   padding:2px 7px;border-radius:3px;background:var(--ink-soft);color:#fff}
 .mini{display:grid;gap:12px;margin-top:8px}
 .mini figure{background:#fff;border:1px solid var(--line);border-radius:3px;overflow:hidden}
@@ -1558,9 +1560,9 @@ a{color:var(--turq-d)}
       <p>マリンスポーツ奄美さんの船を利用します。<strong>第1便は1日コース（9:00〜16:00ごろ・約6時間）</strong>、<strong>第2便は半日コース（9:00〜12:00・約3時間）を2日間</strong>。船にはクジラの位置がわかるソナーが載っていて、「9時の方向、距離35m」のようにアナウンスが入ります。クジラ次第でタイミングは読めないので、いつでも入れる準備をしておくのがコツです。</p>
     </div>
 
-    <figure class="aiimg reveal">
-      <img src="img/6d7379857d20.jpg" width="1200" height="800" alt="白い船の甲板でガイドの説明を聞き、マスクやフィンを準備する参加者のAI生成イメージ" loading="lazy" decoding="async" />
-      <figcaption><span class="tag">AI生成イメージ</span><span>出港前のブリーフィングと器材の準備。実際の船・人物を写したものではありません</span></figcaption>
+    <figure class="phimg reveal">
+      <img src="img/954c4f3fe628.jpg" width="1200" height="800" alt="船尾でマスクを着け、エントリーの合図を待つ参加者" loading="lazy" decoding="async" />
+      <figcaption><span class="tag">実際のホエールスイム</span><span>出港前、船尾でマスクを着けて合図を待つ。2025年1月のホエールスイムで撮影</span></figcaption>
     </figure>
 
     <div class="layer">
@@ -1646,9 +1648,9 @@ a{color:var(--turq-d)}
       <p>ホエールスイムは、追いかけたり潜ったりはできません。クジラを驚かさないよう、水面から静かに観察します。以下は<strong>マリンスポーツ奄美さんおよびホエール協会の決まり</strong>です。ひとりが守れないと参加者全員に影響します。必ずお読みください。</p>
     </div>
 
-    <figure class="aiimg reveal">
-      <img src="img/bbd75369f0f1.jpg" width="1200" height="800" alt="水面に浮かぶ参加者が距離を保ってザトウクジラを観察するAI生成イメージ" loading="lazy" decoding="async" />
-      <figcaption><span class="tag">AI生成イメージ</span><span>水面から静かに観察します。距離を示す縮尺図ではありません</span></figcaption>
+    <figure class="phimg portrait reveal">
+      <img src="img/77625024ef78.jpg" width="900" height="1125" alt="水面に浮かぶ参加者の下を、ザトウクジラが通り過ぎていく" loading="lazy" decoding="async" />
+      <figcaption><span class="tag">実際のホエールスイム</span><span>水面から静かに見守る参加者の下を、クジラが通り過ぎていく。2025年1月のホエールスイムで撮影</span></figcaption>
     </figure>
 
     <div class="cards">
@@ -1754,9 +1756,9 @@ a{color:var(--turq-d)}
       <p>1月末〜2月初めの奄美は平年で最高17〜18℃・最低12℃前後、水温は20℃前後。ただし冬は曇りがちで北風が強く、船上の体感温度はぐっと下がります。<strong>濡れたまま船上で待つ時間</strong>がいちばん寒く感じます。「肌に密着する暖かいもの → 保温するもの → 風を通さないもの」の3層で考えてください。</p>
     </div>
 
-    <figure class="aiimg reveal">
-      <img src="img/a0274dab7014.jpg" width="1200" height="800" alt="ニット帽・防水アウター・防寒パンツ・ブーツで船上の寒さに備えるAI生成イメージ" loading="lazy" decoding="async" />
-      <figcaption><span class="tag">AI生成イメージ</span><span>ニット帽・防水アウター・防寒パンツ・ブーツ。濡れたまま船上で待つ時間がいちばん寒く感じます</span></figcaption>
+    <figure class="phimg reveal">
+      <img src="img/7a81a39a51fe.jpg" width="1200" height="800" alt="フード付きのウェットスーツで船上に座る参加者" loading="lazy" decoding="async" />
+      <figcaption><span class="tag">実際のホエールスイム</span><span>フード付きのウェットスーツで船上の風をしのぐ。2025年1月のホエールスイムで撮影</span></figcaption>
     </figure>
 
     <div class="sgrid" style="grid-template-columns:1fr 1fr">
@@ -2309,7 +2311,8 @@ a{color:var(--turq-d)}
       <li>島の風景・宿・立ち寄る場所の写真 — Sunny Funny Days（現地にて撮影）</li>
       <li>宿（グリーンヒル）の写真 — アマミアンスタイル ペンション グリーンヒル</li>
       <li>地図の海岸線データ — <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors（ODbL）</a></li>
-      <li><strong>AI生成イメージ</strong>（当日の流れ・ルール・服装・持ち物の4点） — 内容を伝えるために生成した画像です。実在の船・人物・場所を撮影したものではありません。Sunny Funny Days 作成</li>
+      <li>船上・水中の写真と動画 — Sunny Funny Days 撮影（2025年1月のホエールスイム）</li>
+      <li><strong>AI生成イメージ</strong>（持ち物リストの1点） — 内容を伝えるために生成した画像です。実在の物を撮影したものではありません。Sunny Funny Days 作成</li>
       <li>アマミノクロウサギ — Mmsmr / <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener">CC0</a>（<a href="https://commons.wikimedia.org/wiki/File:%E3%82%A2%E3%83%9E%E3%83%9F%E3%83%8E%E3%82%AF%E3%83%AD%E3%82%A6%E3%82%B5%E3%82%AE_Pentalagus_furnessi_Amami-Oshima%2C_Japan.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>）</li>
     </ul>
   </details>
