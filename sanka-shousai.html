@@ -85,8 +85,8 @@ header{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:
 
 /* hero */
 .phero{--ph:min(100svh,152svw);
-  position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;
-  justify-content:flex-start;text-align:center;padding:104px 20px 56px;overflow:hidden;background:var(--abyss)}
+  position:relative;min-height:108svh;display:flex;flex-direction:column;align-items:center;
+  justify-content:flex-start;text-align:center;padding:124px 20px 72px;overflow:hidden;background:var(--abyss)}
 .phero img{position:absolute;top:0;left:0;width:100%;height:var(--ph);object-fit:cover;
   object-position:center 42%;z-index:0}
 .phero .veil{position:absolute;top:0;left:0;right:0;height:var(--ph);z-index:1;
@@ -120,11 +120,11 @@ header{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:
 @media(min-width:768px){.vband{min-height:70svh}.vband .vb-big{font-size:2rem}}
 .phimg video{width:100%;height:auto;display:block;border-radius:3px;background:#04182a}
 /* ヒーローの申し込みボタンと注意書き */
-.apply{margin-top:26px}
-.apply .btn{max-width:320px;margin:0 auto;padding:15px 24px;font-size:.95rem;border-radius:60px;text-decoration:none;
+.apply{margin-top:22px}
+.apply .btn{max-width:264px;margin:0 auto;padding:11px 20px;font-size:.84rem;border-radius:60px;text-decoration:none;
   font-weight:700;letter-spacing:.08em;background:#e8b878;color:#3d2909;box-shadow:0 8px 30px rgba(232,184,120,.34)}
-.apply .btn2{margin-top:12px;background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.55);box-shadow:none;font-weight:600}
-.apply-note{margin:16px auto 0;max-width:440px;text-align:left;font-size:.74rem;line-height:1.95;letter-spacing:.02em;
+.apply .btn2{margin-top:9px;background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.55);box-shadow:none;font-weight:600}
+.apply-note{margin:14px auto 0;max-width:400px;text-align:left;font-size:.7rem;line-height:1.9;letter-spacing:.02em;
   color:rgba(255,255,255,.86);text-shadow:0 1px 12px rgba(0,0,0,.8)}
 .apply-note li{position:relative;padding-left:26px;list-style:none;margin-bottom:6px}
 .apply-note li::before{content:attr(data-n);position:absolute;left:0;top:.35em;width:18px;height:18px;border-radius:50%;
@@ -623,15 +623,16 @@ h3.sub{color:var(--ink);border-left:4px solid var(--orange);border-radius:2px}
 
 /* インストラクター紹介 */
 .instr{display:grid;gap:22px;margin-top:26px;align-items:start}
-.instr-ph{display:grid;grid-template-columns:1.25fr 1fr;gap:10px;align-items:start}
-.instr-ph img{width:100%;height:100%;object-fit:cover;border-radius:14px;aspect-ratio:3/4;display:block}
+.instr-ph{display:grid;grid-template-columns:1.55fr 1fr;gap:10px;align-items:start}
+.instr-ph img{width:100%;height:100%;object-fit:cover;border-radius:14px;aspect-ratio:4/5;display:block}
+.instr-ph img:first-child{aspect-ratio:3/4}
 .instr-name{font-family:var(--serif);font-size:1.45rem;letter-spacing:.06em;line-height:1.5;margin-bottom:14px}
 .instr-name span{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;opacity:.7;margin-bottom:6px}
 .instr-name small{display:block;font-family:var(--sans);font-size:.72rem;letter-spacing:.14em;opacity:.7;margin-top:2px}
 .instr-lead{font-family:var(--serif);font-size:1.08rem;line-height:2;letter-spacing:.04em;margin-bottom:14px;color:var(--deep)}
 .instr-tx p{font-size:.9rem;line-height:2.1;letter-spacing:.02em;margin-bottom:12px}
 .instr-prof{font-size:.8rem!important;line-height:1.95!important;opacity:.78;padding-top:12px;border-top:1px solid var(--line)}
-@media(min-width:768px){.instr{grid-template-columns:1fr 1.15fr;gap:40px;align-items:center}}
+@media(min-width:768px){.instr{grid-template-columns:1.3fr 1fr;gap:44px;align-items:center}}
 /* キャンセル規定 */
 .cx-row.hd{background:var(--turq)}
 .cx-row.hd div:last-child{white-space:nowrap}
@@ -1643,7 +1644,7 @@ a{color:var(--turq-d)}
 
     <figure class="phimg reveal">
       <img src="img/954c4f3fe628.jpg" width="1200" height="800" alt="船尾でマスクを着け、エントリーの合図を待つ参加者" loading="lazy" decoding="async" />
-      <figcaption><span class="tag">実際のホエールスイム</span><span>出港前、船尾でマスクを着けて合図を待つ。2025年1月のホエールスイムで撮影</span></figcaption>
+      <figcaption><span>出港前、船尾でマスクを着けて合図を待つ</span></figcaption>
     </figure>
 
     <div class="layer">
@@ -1732,7 +1733,7 @@ a{color:var(--turq-d)}
     <figure class="phimg reveal">
       <video autoplay muted loop playsinline preload="metadata" poster="img/640a9b3b6a67.jpg" src="video/rules.mp4"
         aria-label="真下を頭から尾までゆっくり通り過ぎていくザトウクジラ"></video>
-      <figcaption><span class="tag">実際のホエールスイム</span><span>頭から尾まで、真下をゆっくり通り過ぎていく。追いかけず、水面で静かに浮いているだけで、この距離になります。2025年1月のホエールスイムで撮影</span></figcaption>
+      <figcaption><span>頭から尾まで、真下をゆっくり通り過ぎていく。追いかけず、水面で静かに浮いているだけで、この距離になります</span></figcaption>
     </figure>
 
     <div class="cards">
@@ -1840,7 +1841,7 @@ a{color:var(--turq-d)}
 
     <figure class="phimg reveal">
       <img src="img/7a81a39a51fe.jpg" width="1200" height="800" alt="フード付きのウェットスーツで船上に座る参加者" loading="lazy" decoding="async" />
-      <figcaption><span class="tag">実際のホエールスイム</span><span>フード付きのウェットスーツで船上の風をしのぐ。2025年1月のホエールスイムで撮影</span></figcaption>
+      <figcaption><span>フード付きのウェットスーツで船上の風をしのぐ</span></figcaption>
     </figure>
 
     <div class="sgrid" style="grid-template-columns:1fr 1fr">
@@ -2192,11 +2193,11 @@ a{color:var(--turq-d)}
     </div>
     <div class="instr reveal">
       <div class="instr-ph">
-        <img src="img/42e37d7eb9b8.jpg" width="900" height="1600" alt="海辺でフィンを抱えて笑う津島友子" loading="lazy" />
-        <img src="img/9ab82917652b.jpg" width="900" height="1199" alt="葉山の店先、SUPボードの前でポーズをとる津島友子" loading="lazy" />
+        <img src="img/42e37d7eb9b8.jpg" width="900" height="1600" alt="海辺でフィンを抱えて笑うTOMOKO" loading="lazy" />
+        <img src="img/9ab82917652b.jpg" width="900" height="1199" alt="葉山の店先、SUPボードの前でポーズをとるTOMOKO" loading="lazy" />
       </div>
       <div class="instr-tx">
-        <p class="instr-name"><span>Sunny Funny Days</span>津島 友子<small>つしま ともこ</small></p>
+        <p class="instr-name"><span>Sunny Funny Days</span>TOMOKO</p>
         <p class="instr-lead">今回、みなさんと一緒に奄美に行けることを、心から楽しみにしています。</p>
         <p>クジラと同じ海に浮かぶ時間は、言葉にできないくらい特別なものです。その瞬間を安心して味わっていただけるよう、出発前の準備から、船の上、水の中、宿での毎日まで、<strong>私が責任を持ってみなさんをアテンドします。</strong></p>
         <p>海が初めての方も、久しぶりの方も、どうぞ安心していらしてください。分からないことや不安なことは、どんな小さなことでも遠慮なく聞いてくださいね。奄美の青い海で、お会いできるのを楽しみにしています。</p>
