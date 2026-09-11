@@ -104,7 +104,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:
 .phero .inner{position:relative;z-index:3;flex:0 0 auto;width:100%;
   min-height:calc(100svh - 84px);display:grid;place-content:center}
 /* ヒーローのロゴ（3段組・白）。募集ページと同じ大きさ・同じ呼吸の動き */
-.phero .hero-logo{display:block;width:94px;height:auto;margin:34px auto 0;transform-origin:50% 50%;
+.phero .hero-logo{display:block;width:94px;height:auto;margin:44px auto 0;transform-origin:50% 50%;
   filter:drop-shadow(0 2px 22px rgba(0,0,0,.5));animation:breathe 7.2s cubic-bezier(.42,0,.58,1) infinite;will-change:transform,opacity}
 @keyframes breathe{0%{transform:scale(1.055) translateY(-2px);opacity:1}13%{transform:scale(1.055) translateY(-2px);opacity:1}
   51%{transform:scale(1) translateY(0);opacity:.72}63%{transform:scale(1) translateY(0);opacity:.72}100%{transform:scale(1.055) translateY(-2px);opacity:1}}
@@ -120,11 +120,12 @@ header{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:
 @media(min-width:768px){.vband{min-height:70svh}.vband .vb-big{font-size:2rem}}
 .phimg video{width:100%;height:auto;display:block;border-radius:3px;background:#04182a}
 /* ヒーローの申し込みボタンと注意書き */
-.apply{margin-top:22px}
-.apply .btn{max-width:264px;margin:0 auto;padding:11px 20px;font-size:.84rem;border-radius:60px;text-decoration:none;
+.apply{margin-top:30px}
+@media(min-width:768px){.apply .btn{max-width:240px;padding:10px 20px;font-size:.8rem}.apply-note{font-size:.72rem}}
+.apply .btn{max-width:216px;margin:0 auto;padding:8px 16px;font-size:.74rem;border-radius:60px;text-decoration:none;
   font-weight:700;letter-spacing:.08em;background:#e8b878;color:#3d2909;box-shadow:0 8px 30px rgba(232,184,120,.34)}
-.apply .btn2{margin-top:9px;background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.55);box-shadow:none;font-weight:600}
-.apply-note{margin:14px auto 0;max-width:400px;text-align:left;font-size:.7rem;line-height:1.9;letter-spacing:.02em;
+.apply .btn2{margin-top:8px;background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.55);box-shadow:none;font-weight:600}
+.apply-note{margin:18px auto 0;max-width:380px;text-align:left;font-size:.66rem;line-height:1.85;letter-spacing:.02em;
   color:rgba(255,255,255,.86);text-shadow:0 1px 12px rgba(0,0,0,.8)}
 .apply-note li{position:relative;padding-left:26px;list-style:none;margin-bottom:6px}
 .apply-note li::before{content:attr(data-n);position:absolute;left:0;top:.35em;width:18px;height:18px;border-radius:50%;
@@ -633,6 +634,15 @@ h3.sub{color:var(--ink);border-left:4px solid var(--orange);border-radius:2px}
 .instr-tx p{font-size:.9rem;line-height:2.1;letter-spacing:.02em;margin-bottom:12px}
 .instr-prof{font-size:.8rem!important;line-height:1.95!important;opacity:.78;padding-top:12px;border-top:1px solid var(--line)}
 @media(min-width:768px){.instr{grid-template-columns:1.3fr 1fr;gap:44px;align-items:center}}
+/* 長い補足は折りたたんでおく */
+details.fold{background:#fff;border:1px solid var(--line);border-radius:12px;margin:14px 0 0;overflow:hidden}
+details.fold>summary{list-style:none;cursor:pointer;padding:15px 44px 15px 18px;position:relative;font-family:var(--serif);font-size:.98rem;color:var(--deep);letter-spacing:.04em}
+details.fold>summary::-webkit-details-marker{display:none}
+details.fold>summary::after{content:"";position:absolute;right:20px;top:20px;width:8px;height:8px;border-right:1.5px solid var(--mid);border-bottom:1.5px solid var(--mid);transform:rotate(45deg);transition:transform .25s}
+details.fold[open]>summary::after{transform:rotate(-135deg);top:24px}
+details.fold[open]>summary{border-bottom:1px solid var(--line)}
+details.fold>.fold-b{padding:6px 18px 18px}
+details.fold>.fold-b>h3.sub{display:none}
 /* キャンセル規定 */
 .cx-row.hd{background:var(--turq)}
 .cx-row.hd div:last-child{white-space:nowrap}
@@ -1148,7 +1158,8 @@ a{color:var(--turq-d)}
       </div>
     </div>
 
-    <h3 class="sub">位置関係</h3>
+    <details class="fold"><summary>位置関係</summary><div class="fold-b">
+<h3 class="sub">位置関係</h3>
     <div class="mapwrap">
 <svg class="amap" viewBox="0 0 1000 830" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="奄美大島の地図。奄美空港・宿・クジラ船の出港場所・立ち寄る可能性のある場所の位置関係">
 <defs><linearGradient id="sea2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#062033"/><stop offset="1" stop-color="#03121f"/></linearGradient><linearGradient id="land2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d4f4a"/><stop offset="1" stop-color="#123339"/></linearGradient><filter id="gl2" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
@@ -1201,6 +1212,7 @@ a{color:var(--turq-d)}
       空港も宿も島の北部です。クジラ船の出港場所（小湊港・名瀬長浜港）は名瀬のあたりで、宿から車で30〜40分。
       出港場所はクジラの居場所によって当日決まります。
     </p>
+</div></details>
   </div>
 </section>
 
@@ -1220,7 +1232,7 @@ a{color:var(--turq-d)}
 
     <div class="flacc">
 
-      <details open>
+      <details>
         <summary><span class="fl-t o">直行便</span>東京（羽田・成田）↔ 奄美</summary>
         <div class="fl-b">
           <p>東京から奄美への直行便は<strong>1日1〜2便</strong>です。羽田からは午前発・午後戻りの1往復のみ、成田からはピーチが飛んでいます。</p>
@@ -1454,7 +1466,8 @@ a{color:var(--turq-d)}
       <div><dt>海まで</dt><dd>手広海岸まで徒歩3分</dd></div>
     </dl>
 
-    <h3 class="sub">お部屋</h3>
+    <details class="fold"><summary>お部屋</summary><div class="fold-b">
+<h3 class="sub">お部屋</h3>
     <p class="txt">
       客室はシンプルなつくりです。ベッド、テレビ、エアコン、机、ハンガーラック。
       <strong>客室にお風呂・シャワー・トイレはありません</strong>（共同のものをご利用いただきます）。
@@ -1471,7 +1484,9 @@ a{color:var(--turq-d)}
         <figcaption>宿のお母さんと、インストラクターのTOMOKO</figcaption></figure>
     </div>
 
-    <h3 class="sub">食事 — お母さんの島料理</h3>
+    </div></details>
+<details class="fold"><summary>食事 — お母さんの島料理</summary><div class="fold-b">
+<h3 class="sub">食事 — お母さんの島料理</h3>
     <p class="txt">
       朝食 7:00〜9:00 ／ 夕食 19:00〜。お父さんが畑で育てた無農薬野菜、島の海産物、天然塩、黒糖など、
       奄美で採れた自然のめぐみがたっぷりのボリューム満点の島料理です。
@@ -1508,7 +1523,9 @@ a{color:var(--turq-d)}
       </div>
     </div>
 
-    <h3 class="sub">お風呂・シャワー・設備</h3>
+    </div></details>
+<details class="fold"><summary>お風呂・シャワー・設備</summary><div class="fold-b">
+<h3 class="sub">お風呂・シャワー・設備</h3>
     <div class="cards">
       <div class="card">
         <h4><span class="ic">🛁</span>お風呂とシャワー（すべて共同）</h4>
@@ -1561,6 +1578,7 @@ a{color:var(--turq-d)}
         </ul>
       </div>
     </div>
+</div></details>
   </div>
 </section>
 
@@ -1801,7 +1819,8 @@ a{color:var(--turq-d)}
       </div>
     </div>
 
-    <h3 class="sub">Cカードをお持ちでない方へ</h3>
+    <details class="fold"><summary>Cカードをお持ちでない方へ</summary><div class="fold-b">
+<h3 class="sub">Cカードをお持ちでない方へ</h3>
     <p class="txt">
       <strong>Sunny Funny Days は NAUI の認定施設です。</strong>当店でCカードの発行を行っていますので、
       ツアーまでに「NAUIスキンダイビングコース」を受けていただければ、そのままご参加いただけます。
@@ -1827,6 +1846,7 @@ a{color:var(--turq-d)}
       <a href="https://www.oceanz-jp.com/snorkeller" target="_blank" rel="noopener">OCEANZ（オーシャンズ）さん</a>
       （笠利町・空港や宿の近く）でもスノーケラーCカードの講習を受けられます。
     </p>
+</div></details>
   </div>
 </section>
 
@@ -2120,7 +2140,8 @@ a{color:var(--turq-d)}
       <p>どうしても来られなくなった場合、<strong>ご友人・ご家族など代わりに参加される方がいらっしゃれば、名義変更は無料</strong>で承ります（出発の7日前まで／泳力などの条件を満たす方に限ります）。人数が減らなければ団体の条件を保てるため、この方法がいちばん負担が軽くなります。まずはご相談ください。</p>
     </div>
 
-    <h3 class="sub">なぜ60日前から、そして少し厳しめなのか</h3>
+    <details class="fold"><summary>なぜ60日前から、そして少し厳しめなのか</summary><div class="fold-b">
+<h3 class="sub">なぜ60日前から、そして少し厳しめなのか</h3>
     <p class="txt">キャンセル料は「罰金」ではなく、実際に生じる損害をおぎなうためのものです。この旅では、次の理由でおひとりの欠員の影響が大きくなります。</p>
     <div class="cx-case">
       <h4>クジラの船を「団体チャーター」で押さえているため</h4>
@@ -2133,7 +2154,9 @@ a{color:var(--turq-d)}
       <p>上記をふまえて試算すると、当方に実際に残る損害の割合は各時期の設定料率を上回ります（たとえば30日前で約66%、7日前で約77%、前日で約84%）。<strong>設定している料率は、いずれもその実損を下回る水準</strong>にしてあります。算定の根拠については、お求めがあればご説明します。</p>
     </div>
 
-    <h3 class="sub">クジラ船（マリンスポーツ奄美）のキャンセル規定</h3>
+    </div></details>
+<details class="fold"><summary>クジラ船（マリンスポーツ奄美）のキャンセル規定</summary><div class="fold-b">
+<h3 class="sub">クジラ船（マリンスポーツ奄美）のキャンセル規定</h3>
     <p class="txt">下記は船側の規定です。上記のリトリート全体のキャンセル料には、この船のキャンセル料も含まれています（別途いただくものではありません）。</p>
     <div class="cx">
       <div class="cx-row hd"><div>キャンセル時期</div><div>キャンセル料</div></div>
@@ -2148,7 +2171,9 @@ a{color:var(--turq-d)}
       ※ 航空券のキャンセル・変更手数料はお客様のご負担となります。手続きはご自身でお願いします。<strong>航空券のご手配は、催行決定のご連絡を受けてからをおすすめします。</strong>
     </p>
 
-    <h3 class="sub">ケース別の取り扱い</h3>
+    <details class="fold"><summary>ケース別の取り扱い</summary><div class="fold-b">
+</div></details>
+<h3 class="sub">ケース別の取り扱い</h3>
 
     <div class="cx-case">
       <h4>1. 悪天候などでホエール船が出港できない場合</h4>
@@ -2179,6 +2204,7 @@ a{color:var(--turq-d)}
       <p class="res y">△ 規定のキャンセル料が発生します</p>
       <p>安全のため、体調に不安がある場合は無理をなさらずご相談ください。診断書のご提出など、状況に応じて個別に対応させていただきます。代わりに参加される方がいらっしゃる場合は、<strong>名義変更を無料で承ります</strong>（出発7日前まで）。</p>
     </div>
+</div></details>
   </div>
 </section>
 
