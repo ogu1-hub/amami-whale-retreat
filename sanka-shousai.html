@@ -172,6 +172,13 @@ p.txt{font-size:.88rem;line-height:2.2;letter-spacing:.04em;color:var(--ink-soft
 .day-d{flex:0 0 auto;font-family:var(--serif);font-size:1.02rem;color:var(--deep);letter-spacing:.04em}
 .day-t{font-size:.76rem;letter-spacing:.08em;color:var(--mid);font-weight:700;line-height:1.7}
 .day-b{padding:14px 18px 18px}
+/* 同じ日のなかで、2泊3日の方と3泊4日の方に分かれるところ */
+.branch{margin-top:14px;border-radius:12px;padding:12px 14px 6px;border:1px solid rgba(19,176,196,.35);background:var(--turq-pale)}
+.branch.b4{border-color:rgba(243,127,17,.35);background:var(--orange-pale)}
+.branch>b{display:inline-block;font-size:.7rem;letter-spacing:.14em;font-weight:700;color:#fff;background:var(--turq);
+  padding:3px 11px;border-radius:60px;margin-bottom:6px}
+.branch.b4>b{background:var(--orange)}
+.branch .tl{margin-top:4px}
 .tl{list-style:none}
 .tl li{display:flex;gap:14px;padding:8px 0;font-size:.85rem;line-height:1.95;letter-spacing:.03em;
   border-bottom:1px dotted rgba(13,79,116,.14)}
@@ -870,7 +877,7 @@ a{color:var(--turq-d)}
   <div class="vb-inner reveal">
     <p class="vb-eyebrow">2025年1月・ホエールスイムの海から</p>
     <p class="vb-big">同じ海に、浮かぶ。</p>
-    <p>船のエンジンが止まり、静かに水面へ。<br />光の差す青のなかを、クジラがゆっくり横切っていく。<br />この数分のために、奄美へ行きます。</p>
+    <p>船長の合図で、静かに水面へ。<br />光の差す青のなかを、クジラがゆっくり横切っていく。<br />この数分のために、奄美へ行きます。</p>
   </div>
 </section>
 
@@ -898,7 +905,7 @@ a{color:var(--turq-d)}
 
     <div class="tabs" id="tabs">
       <button class="tab t1 on" data-p="p1"><b>第 1 便</b>1/26(火)〜1/28(木)・2泊3日<br />クジラ 1日コース</button>
-      <button class="tab t2" data-p="p2"><b>第 2 便</b>1/29(金)〜2/1(月)・3泊4日<br />クジラ 半日コース×2</button>
+      <button class="tab t2" data-p="p2"><b>第 2 便</b>1/29(金)〜2/1(月)・3泊4日<br />クジラ 半日コース×2（2泊3日も可）</button>
     </div>
 
     <!-- 第1便 -->
@@ -934,7 +941,7 @@ a{color:var(--turq-d)}
         </div>
       </div>
       <div class="day">
-        <div class="day-h"><span class="day-d">1/28<small>(木)</small></span><span class="day-t">島あそび ／ 出発日</span></div>
+        <div class="day-h"><span class="day-d">1/28<small>(木)</small></span><span class="day-t">島あそび ／ 出発日（3泊4日の方）</span></div>
         <div class="day-b">
           <ul class="tl">
             <li><span class="t">7:00〜</span><span class="c">朝食（宿にて）</span></li>
@@ -982,19 +989,33 @@ a{color:var(--turq-d)}
         </div>
       </div>
       <div class="day">
-        <div class="day-h"><span class="day-d">1/31<small>(日)</small></span><span class="day-t">ホエールスイム 2日目 ／ 午後 島内観光</span></div>
+        <div class="day-h"><span class="day-d">1/31<small>(日)</small></span><span class="day-t">ホエールスイム 2日目 ／ 2泊3日の方はこの日に解散</span></div>
         <div class="day-b">
           <ul class="tl">
             <li><span class="t">7:00〜</span><span class="c">朝食（宿にて）</span></li>
             <li><span class="t">8:00ごろ</span><span class="c">宿を出発。出港場所へ</span></li>
             <li><span class="t">8:30ごろ</span><span class="c">港に集合・ブリーフィング</span></li>
             <li><span class="t">9:00</span><span class="c">出港。クジラ捜索 ／ スイム＆ウォッチング</span></li>
-            <li><span class="t">12:00ごろ</span><span class="c">帰港</span></li>
-            <li><span class="t">昼</span><span class="c">昼食</span></li>
-            <li><span class="t">午後</span><span class="c">島内観光（宮古崎・大浜海浜公園など。夕日の時間に合わせて）</span></li>
-            <li><span class="t">19:00</span><span class="c">宿にて夕食</span></li>
+            <li><span class="t">12:00ごろ</span><span class="c">帰港。温水シャワーで温まって、器材を洗います</span></li>
+            <li><span class="t">昼</span><span class="c">昼食。ここから、お帰りの日程で分かれます</span></li>
           </ul>
-          <div class="meals"><span>朝食 宿にて</span><span>昼食 各自</span><span>夕食 宿にて（島料理）</span><span class="stay-tag">泊 グリーンヒル</span></div>
+          <div class="branch">
+            <b>2泊3日の方</b>
+            <ul class="tl">
+              <li><span class="t">朝のうち</span><span class="c">チェックアウトを済ませ、荷物は車に積んでから出港場所へ</span></li>
+              <li><span class="t">昼すぎ</span><span class="c">島の時間を少し。空港までは宿から約15分</span></li>
+              <li><span class="t">午後</span><span class="c">奄美空港へお送りします → 解散</span></li>
+              <li><span class="t">便の目安</span><span class="c">直行便 JAL658（14:30発）は帰港からの時間が厳しいため、<strong>鹿児島経由の午後〜夕方の便</strong>がおすすめです（→ <a href="#flights">03 航空便</a>）</span></li>
+            </ul>
+          </div>
+          <div class="branch b4">
+            <b>3泊4日の方</b>
+            <ul class="tl">
+              <li><span class="t">午後</span><span class="c">島内観光（宮古崎・大浜海浜公園など。夕日の時間に合わせて）</span></li>
+              <li><span class="t">19:00</span><span class="c">宿にて夕食</span></li>
+            </ul>
+          </div>
+          <div class="meals"><span>朝食 宿にて</span><span>昼食 各自</span><span>夕食 宿にて（3泊4日の方）</span><span class="stay-tag">泊 グリーンヒル（3泊4日の方）</span></div>
         </div>
       </div>
       <div class="day">
@@ -1014,7 +1035,7 @@ a{color:var(--turq-d)}
       <div class="card ok" style="margin-top:14px">
         <h4><span class="ic">✈️</span>2泊3日に短縮することもできます</h4>
         <ul>
-          <li>1/31（日）の<strong>午前のホエールスイムまで参加して、夕方に解散</strong>するかたちです</li>
+          <li>1/31（日）の<strong>午前のホエールスイムまで参加して、午後に解散</strong>するかたちです。上の1/31の欄に、2泊3日の方の流れを分けて書いています</li>
           <li><strong>ホエールスイムは同じ半日コース×2本のまま。</strong>減るのは宿1泊と、3日目午後の島内観光です</li>
           <li>参加費は<strong>税込121,000円</strong>（税別110,000円）。3泊4日は税込143,000円です</li>
           <li>1/31の夕方の便でお帰りになる方に。お申し込みのときにお知らせください → <a href="#flights">03 奄美へのフライト</a></li>
