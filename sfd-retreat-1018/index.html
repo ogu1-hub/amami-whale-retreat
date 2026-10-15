@@ -92,8 +92,27 @@ section.panel{padding-bottom:40px}
 .tag{font-size:11px;padding:2px 7px;border-radius:999px;background:var(--chip);color:var(--chip-fg);
   white-space:nowrap;max-width:100%;overflow-wrap:anywhere}
 .tag.use{white-space:normal}
-.yen{font-family:var(--disp);font-weight:700;font-size:12.5px;color:var(--navy);
-  background:var(--chip);border-radius:999px;padding:2px 9px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.row.buyrow{display:block;cursor:default;padding:12px 14px}
+.row.buyrow .hit{display:flex;gap:11px;align-items:flex-start;cursor:pointer}
+.edit{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:9px 0 0 32px}
+.fld{display:inline-flex;align-items:center;gap:3px;font-size:12px;color:var(--muted);white-space:nowrap}
+.edit input{appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--fg);
+  border-radius:7px;padding:6px 7px;font:600 14px var(--disp);font-variant-numeric:tabular-nums;
+  text-align:right;-moz-appearance:textfield}
+.edit input::-webkit-outer-spin-button,.edit input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.edit input.p{width:72px}
+.edit input.q{width:52px}
+.edit input:focus{outline:2px solid var(--sky);outline-offset:1px;border-color:var(--sky)}
+.edit .x{color:var(--muted);font-size:13px}
+.edit .st{font-size:13px;color:var(--muted);margin-left:auto;white-space:nowrap}
+.edit .st b{font-family:var(--disp);font-size:15px;color:var(--brown);font-variant-numeric:tabular-nums}
+.memo{display:block;width:calc(100% - 32px);margin:8px 0 0 32px;appearance:none;
+  border:1px solid var(--line);background:var(--surface-2);color:var(--fg);
+  border-radius:7px;padding:7px 9px;font:400 13px var(--body)}
+.memo:focus{outline:2px solid var(--sky);outline-offset:1px;background:var(--surface)}
+.row.buyrow.done .edit input,.row.buyrow.done .memo{opacity:.75}
+.bbar{margin:10px 0 2px}
+.brow i{font-style:normal;color:var(--muted);font-weight:400;font-size:12.5px}
 .grp.budget>h2{color:var(--brown)}
 .bbody{padding:4px 14px 10px}
 .brow{display:flex;justify-content:space-between;gap:12px;align-items:baseline;
@@ -255,68 +274,68 @@ const RECIPE=[["栗ごはん", "米（白米4合＋もち米1合）", "5合", ""
 ["ブランマンジェ", "ミント", "1パック", ""],
 ["ドリンク", "お茶（麦茶・ほうじ茶等）", "4L", "在庫あり"],
 ["ドリンク", "水", "2L×3", "在庫あり"]];
-const SHOP=[["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "セロリ", "2本（目安）", "セロリとにんじんりんごのピクルス", "数量は目安", 400],
-["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "にんじん", "12本", "キャロットラペ10／ピクルス2", "まとめ買い", 800],
-["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "りんご", "1個（目安）", "セロリとにんじんりんごのピクルス", "数量は目安", 250],
-["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "赤カブなど彩りの野菜", "あれば", "セロリとにんじんりんごのピクルス", "彩り用", 300],
-["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "ローリエ", "2枚", "セロリとにんじんりんごのピクルス", "あれば", 200],
-["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "小ねぎ", "2〜3束", "月見つくね／白いかきたま汁", "まとめ買い", 400],
-["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "柿", "3個", "柿の白和え", "", 450],
-["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "ほうれん草 or 春菊", "1束", "柿の白和え", "", 200],
-["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "むき栗（甘栗 or 生栗むき身）", "500g", "栗ごはん", "お麩との関係を要確認", 1200],
-["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "かぼちゃ", "2個（約2.4kg）", "かぼちゃサラダ", "", 800],
-["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "にんにく", "2片", "からあげ", "", 150],
-["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "里芋", "1.8kg", "ふかし里芋", "", 900],
-["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "ベビーリーフ", "280g", "サラダ", "", 600],
-["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "フリルレタス", "2株", "サラダ", "", 400],
-["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "紅芯大根 or ラディッシュ", "1個／1パック", "サラダ", "ピクルスの赤カブとまとめても", 300],
-["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "ミニトマト", "1パック", "サラダ", "", 300],
-["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "ぶどう or ベリー", "1パック", "ブランマンジェ トッピング", "", 700],
-["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "ミント", "1パック", "ブランマンジェ トッピング", "", 250],
-["10/16(金) 夜 OKストア", "米（白米4合＋もち米1合）", "5合", "栗ごはん", "", 800],
-["10/16(金) 夜 OKストア", "お麩 または 浮き粉", "適量", "栗ごはん", "用途を要確認", 300],
-["10/16(金) 夜 OKストア", "木綿豆腐", "1.5丁（500g）", "柿の白和え", "", 200],
-["10/16(金) 夜 OKストア", "白すりごま", "大さじ4", "柿の白和え", "", 250],
-["10/16(金) 夜 OKストア", "鶏ひき肉（もも）", "600g", "月見つくね", "", 700],
-["10/16(金) 夜 OKストア", "卵", "16個", "月見つくね 卵黄14＋予備2", "卵白は白いかきたま汁へ", 500],
-["10/16(金) 夜 OKストア", "玉ねぎ", "1.5個", "月見つくね1／かぼちゃサラダ1/2", "まとめ買い", 150],
-["10/16(金) 夜 OKストア", "チューブおろし生姜", "1本", "月見つくね", "", 180],
-["10/16(金) 夜 OKストア", "生姜", "1片", "からあげ", "", 150],
-["10/16(金) 夜 OKストア", "鶏ガラスープの素", "1本", "月見つくね／白いかきたま汁", "在庫があれば不要", 350],
-["10/16(金) 夜 OKストア", "ホールコーン", "1缶", "白いかきたま汁", "", 150],
-["10/16(金) 夜 OKストア", "はちみつ", "1本", "キャロットラペ", "在庫があれば不要", 600],
-["10/16(金) 夜 OKストア", "竹串（つくね串）", "18本", "月見つくね", "", 120],
-["10/16(金) 夜 OKストア", "クリームチーズ", "100g", "かぼちゃサラダ", "", 350],
-["10/16(金) 夜 OKストア", "レーズン", "50g", "かぼちゃサラダ", "", 250],
-["10/16(金) 夜 OKストア", "かぼちゃの種（ロースト）", "30g", "かぼちゃサラダ", "", 300],
-["10/16(金) 夜 OKストア", "鶏もも肉", "1.4kg", "からあげ", "", 1600],
-["10/16(金) 夜 OKストア", "揚げ油", "2L", "からあげ", "", 700],
-["10/16(金) 夜 OKストア", "くるみ等ナッツ", "50g", "サラダ", "", 400],
-["10/16(金) 夜 OKストア", "牛乳", "750ml", "ブランマンジェ", "", 250],
-["10/16(金) 夜 OKストア", "生クリーム", "400ml", "ブランマンジェ", "", 700],
-["10/16(金) 夜 OKストア", "グラニュー糖", "100g", "ブランマンジェ", "", 200],
-["10/16(金) 夜 OKストア", "粉ゼラチン", "18g", "ブランマンジェ", "", 300],
-["10/16(金) 夜 OKストア", "バニラ（ビーンズ or エッセンス）", "少量", "ブランマンジェ", "", 350],
-["買わなくてよい（在庫・収穫の確認）", "酒（日本酒）", "大さじ3＋タレ・下味分", "栗ごはん／つくねのタレ／からあげ下味", "", 0],
-["買わなくてよい（在庫・収穫の確認）", "みりん", "適量", "つくねのタレ／味噌だれ", "", 0],
-["買わなくてよい（在庫・収穫の確認）", "醤油（濃口・薄口）", "適量", "白和え／つくねのタレ／からあげ下味", "", 0],
-["買わなくてよい（在庫・収穫の確認）", "砂糖", "130g＋適量", "ピクルス／白和え／タレ／味噌だれ", "", 0],
-["買わなくてよい（在庫・収穫の確認）", "酢", "450ml", "ピクルス", "", 0],
-["買わなくてよい（在庫・収穫の確認）", "塩・こしょう", "適量", "かぼちゃサラダ／ラペ／かきたま汁／サラダ", "", 0],
-["買わなくてよい（在庫・収穫の確認）", "粗塩", "適量", "ふかし里芋", "", 0],
-["買わなくてよい（在庫・収穫の確認）", "ごま塩", "適量", "栗ごはん 黒ごま＋塩の代わり", "", 0],
-["買わなくてよい（在庫・収穫の確認）", "黒粒こしょう", "小さじ1", "ピクルス", "", 0],
-["買わなくてよい（在庫・収穫の確認）", "味噌", "適量", "ふかし里芋 味噌だれ", "", 0],
-["買わなくてよい（在庫・収穫の確認）", "ごま油", "適量", "からあげ下味／白いかきたま汁", "", 0],
-["買わなくてよい（在庫・収穫の確認）", "オリーブ油・ビネガー", "各適量", "サラダのドレッシング／キャロットラペ", "", 0],
-["買わなくてよい（在庫・収穫の確認）", "片栗粉", "大さじ6＋180g＋適量", "月見つくね／からあげ／かきたま汁", "", 0],
-["買わなくてよい（在庫・収穫の確認）", "薄力粉", "100g", "からあげ", "", 0],
-["買わなくてよい（在庫・収穫の確認）", "マヨネーズ", "大さじ3＋180g", "月見つくね／かぼちゃサラダ", "", 0],
-["買わなくてよい（在庫・収穫の確認）", "昆布（10cm角）", "1枚", "栗ごはん", "あるかもしれない→要確認", 0],
-["買わなくてよい（在庫・収穫の確認）", "お茶（麦茶・ほうじ茶等）", "4L", "ドリンク", "", 0],
-["買わなくてよい（在庫・収穫の確認）", "水", "2L×3", "ドリンク", "", 0],
-["買わなくてよい（在庫・収穫の確認）", "レモン", "2個", "からあげ／キャロットラペ", "サニファニになっているものを収穫", 0],
-["買わなくてよい（在庫・収穫の確認）", "柚子", "1個", "ふかし里芋 味噌だれ", "サニファニになっているものを収穫", 0]];
+const SHOP=[["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "セロリ", "2本（目安）", "セロリとにんじんりんごのピクルス", "数量は目安", 200, 2, "本"],
+["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "にんじん", "12本", "キャロットラペ10／ピクルス2", "まとめ買い", 800, 1, "袋"],
+["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "りんご", "1個（目安）", "セロリとにんじんりんごのピクルス", "数量は目安", 250, 1, "個"],
+["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "赤カブなど彩りの野菜", "あれば", "セロリとにんじんりんごのピクルス", "彩り用", 300, 1, "個"],
+["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "ローリエ", "2枚", "セロリとにんじんりんごのピクルス", "あれば", 200, 1, "パック"],
+["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "小ねぎ", "2〜3束", "月見つくね／白いかきたま汁", "まとめ買い", 150, 3, "束"],
+["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "柿", "3個", "柿の白和え", "", 150, 3, "個"],
+["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "ほうれん草 or 春菊", "1束", "柿の白和え", "", 200, 1, "束"],
+["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "むき栗（甘栗 or 生栗むき身）", "500g", "栗ごはん", "お麩との関係を要確認", 1200, 1, "パック"],
+["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "かぼちゃ", "2個（約2.4kg）", "かぼちゃサラダ", "", 400, 2, "個"],
+["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "にんにく", "2片", "からあげ", "", 150, 1, "個"],
+["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "里芋", "1.8kg", "ふかし里芋", "", 450, 2, "袋"],
+["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "ベビーリーフ", "280g", "サラダ", "", 300, 2, "パック"],
+["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "フリルレタス", "2株", "サラダ", "", 200, 2, "株"],
+["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "紅芯大根 or ラディッシュ", "1個／1パック", "サラダ", "ピクルスの赤カブとまとめても", 300, 1, "パック"],
+["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "ミニトマト", "1パック", "サラダ", "", 300, 1, "パック"],
+["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "ぶどう or ベリー", "1パック", "ブランマンジェ トッピング", "", 700, 1, "パック"],
+["10/16(金) 夕方 すかなごっそ（ないものはOKストアで買う）", "ミント", "1パック", "ブランマンジェ トッピング", "", 250, 1, "パック"],
+["10/16(金) 夜 OKストア", "米（白米4合＋もち米1合）", "5合", "栗ごはん", "", 800, 1, "袋"],
+["10/16(金) 夜 OKストア", "お麩 または 浮き粉", "適量", "栗ごはん", "用途を要確認", 300, 1, "袋"],
+["10/16(金) 夜 OKストア", "木綿豆腐", "1.5丁（500g）", "柿の白和え", "", 100, 2, "丁"],
+["10/16(金) 夜 OKストア", "白すりごま", "大さじ4", "柿の白和え", "", 250, 1, "袋"],
+["10/16(金) 夜 OKストア", "鶏ひき肉（もも）", "600g", "月見つくね", "", 700, 1, "パック"],
+["10/16(金) 夜 OKストア", "卵", "16個", "月見つくね 卵黄14＋予備2", "卵白は白いかきたま汁へ", 250, 2, "パック"],
+["10/16(金) 夜 OKストア", "玉ねぎ", "1.5個", "月見つくね1／かぼちゃサラダ1/2", "まとめ買い", 150, 1, "袋"],
+["10/16(金) 夜 OKストア", "チューブおろし生姜", "1本", "月見つくね", "", 180, 1, "本"],
+["10/16(金) 夜 OKストア", "生姜", "1片", "からあげ", "", 150, 1, "パック"],
+["10/16(金) 夜 OKストア", "鶏ガラスープの素", "1本", "月見つくね／白いかきたま汁", "在庫があれば不要", 350, 1, "個"],
+["10/16(金) 夜 OKストア", "ホールコーン", "1缶", "白いかきたま汁", "", 150, 1, "缶"],
+["10/16(金) 夜 OKストア", "はちみつ", "1本", "キャロットラペ", "在庫があれば不要", 600, 1, "本"],
+["10/16(金) 夜 OKストア", "竹串（つくね串）", "18本", "月見つくね", "", 120, 1, "袋"],
+["10/16(金) 夜 OKストア", "クリームチーズ", "100g", "かぼちゃサラダ", "", 350, 1, "個"],
+["10/16(金) 夜 OKストア", "レーズン", "50g", "かぼちゃサラダ", "", 250, 1, "袋"],
+["10/16(金) 夜 OKストア", "かぼちゃの種（ロースト）", "30g", "かぼちゃサラダ", "", 300, 1, "袋"],
+["10/16(金) 夜 OKストア", "鶏もも肉", "1.4kg", "からあげ", "", 800, 2, "パック"],
+["10/16(金) 夜 OKストア", "揚げ油", "2L", "からあげ", "", 700, 1, "本"],
+["10/16(金) 夜 OKストア", "くるみ等ナッツ", "50g", "サラダ", "", 400, 1, "袋"],
+["10/16(金) 夜 OKストア", "牛乳", "750ml", "ブランマンジェ", "", 250, 1, "本"],
+["10/16(金) 夜 OKストア", "生クリーム", "400ml", "ブランマンジェ", "", 350, 2, "個"],
+["10/16(金) 夜 OKストア", "グラニュー糖", "100g", "ブランマンジェ", "", 200, 1, "袋"],
+["10/16(金) 夜 OKストア", "粉ゼラチン", "18g", "ブランマンジェ", "", 300, 1, "箱"],
+["10/16(金) 夜 OKストア", "バニラ（ビーンズ or エッセンス）", "少量", "ブランマンジェ", "", 350, 1, "本"],
+["買わなくてよい（在庫・収穫の確認）", "酒（日本酒）", "大さじ3＋タレ・下味分", "栗ごはん／つくねのタレ／からあげ下味", "", 0, 0, ""],
+["買わなくてよい（在庫・収穫の確認）", "みりん", "適量", "つくねのタレ／味噌だれ", "", 0, 0, ""],
+["買わなくてよい（在庫・収穫の確認）", "醤油（濃口・薄口）", "適量", "白和え／つくねのタレ／からあげ下味", "", 0, 0, ""],
+["買わなくてよい（在庫・収穫の確認）", "砂糖", "130g＋適量", "ピクルス／白和え／タレ／味噌だれ", "", 0, 0, ""],
+["買わなくてよい（在庫・収穫の確認）", "酢", "450ml", "ピクルス", "", 0, 0, ""],
+["買わなくてよい（在庫・収穫の確認）", "塩・こしょう", "適量", "かぼちゃサラダ／ラペ／かきたま汁／サラダ", "", 0, 0, ""],
+["買わなくてよい（在庫・収穫の確認）", "粗塩", "適量", "ふかし里芋", "", 0, 0, ""],
+["買わなくてよい（在庫・収穫の確認）", "ごま塩", "適量", "栗ごはん 黒ごま＋塩の代わり", "", 0, 0, ""],
+["買わなくてよい（在庫・収穫の確認）", "黒粒こしょう", "小さじ1", "ピクルス", "", 0, 0, ""],
+["買わなくてよい（在庫・収穫の確認）", "味噌", "適量", "ふかし里芋 味噌だれ", "", 0, 0, ""],
+["買わなくてよい（在庫・収穫の確認）", "ごま油", "適量", "からあげ下味／白いかきたま汁", "", 0, 0, ""],
+["買わなくてよい（在庫・収穫の確認）", "オリーブ油・ビネガー", "各適量", "サラダのドレッシング／キャロットラペ", "", 0, 0, ""],
+["買わなくてよい（在庫・収穫の確認）", "片栗粉", "大さじ6＋180g＋適量", "月見つくね／からあげ／かきたま汁", "", 0, 0, ""],
+["買わなくてよい（在庫・収穫の確認）", "薄力粉", "100g", "からあげ", "", 0, 0, ""],
+["買わなくてよい（在庫・収穫の確認）", "マヨネーズ", "大さじ3＋180g", "月見つくね／かぼちゃサラダ", "", 0, 0, ""],
+["買わなくてよい（在庫・収穫の確認）", "昆布（10cm角）", "1枚", "栗ごはん", "あるかもしれない→要確認", 0, 0, ""],
+["買わなくてよい（在庫・収穫の確認）", "お茶（麦茶・ほうじ茶等）", "4L", "ドリンク", "", 0, 0, ""],
+["買わなくてよい（在庫・収穫の確認）", "水", "2L×3", "ドリンク", "", 0, 0, ""],
+["買わなくてよい（在庫・収穫の確認）", "レモン", "2個", "からあげ／キャロットラペ", "サニファニになっているものを収穫", 0, 0, ""],
+["買わなくてよい（在庫・収穫の確認）", "柚子", "1個", "ふかし里芋 味噌だれ", "サニファニになっているものを収穫", 0, 0, ""]];
 const GOODS=[["器・卓上", "大皿（ワンプレート用）", "14枚＋予備2", "在庫確認", 0],
 ["器・卓上", "小鉢（白和え用）", "14個＋予備2", "在庫確認", 0],
 ["器・卓上", "小鉢（ピクルス用）", "14個＋予備2", "在庫確認", 0],
@@ -409,14 +428,16 @@ const STAFF=[["Tazuko", ""],
 const GROUPNOTE={"買わなくてよい（在庫・収穫の確認）": "買わなくてよいけれど、当日あるかを確認してチェック", "10/16(金) 夜 OKストア": "20:00の受付締切で人数が変わっていたら、ここで数量を調整して買う"};
 
 const KEY="sfd-retreat-20261018-check";
-let state={};
+let state={}, edits={};
 try{state=JSON.parse(localStorage.getItem(KEY)||"{}")||{}}catch(e){state={}}
+try{edits=JSON.parse(localStorage.getItem(KEY+"-edit")||"{}")||{}}catch(e){edits={}}
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}};
+const saveEd=()=>{try{localStorage.setItem(KEY+"-edit",JSON.stringify(edits))}catch(e){}};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
 const items={
   ppl:GUESTS.map((r,i)=>({id:"u"+i,no:i+1,grp:"ゲスト",nm:r[0],kana:r[1],cnt:r[2],hist:r[3],first:!!r[4]})),
-  buy:SHOP.map((r,i)=>({id:"h"+i,grp:r[0],nm:r[1],qty:r[2],use:r[3],note:r[4],price:r[5]||0})),
+  buy:SHOP.map((r,i)=>({id:"h"+i,grp:r[0],nm:r[1],qty:r[2],use:r[3],note:r[4],price:r[5]||0,cnt:r[6]||0,unit:r[7]||""})),
   goods:GOODS.map((r,i)=>({id:"g"+i,grp:r[0],nm:r[1],qty:r[2],prep:r[3],pri:!!r[4]})),
   prep:PREP.map((r,i)=>({id:"p"+i,grp:r[0],when:r[1],task:r[2],info:!!r[3]}))
 };
@@ -441,15 +462,28 @@ function pplHTML(it){
     (bits.length?'<span class="sub" style="margin-left:calc(1.5em + 7px)">'+bits.join("")+'</span>':'')+
     '</span></label>';
 }
-const yen=n=>"約"+Number(n).toLocaleString("ja-JP")+"円";
+const yen=n=>Number(Math.round(n)).toLocaleString("ja-JP")+"円";
+const BUDGET=18000;
+const ed=id=>edits[id]||{};
+const P=it=>{const e=ed(it.id); return e.p===undefined?it.price:(+e.p||0)};
+const Q=it=>{const e=ed(it.id); return e.q===undefined?it.cnt:(+e.q||0)};
+const SUB=it=>P(it)*Q(it);
 function buyHTML(it){
-  const on=!!state[it.id], bits=['<span class="qty">'+esc(it.qty)+'</span>'];
-  if(it.price) bits.push('<span class="yen">'+yen(it.price)+'</span>');
+  const on=!!state[it.id], e=ed(it.id), bits=['<span class="qty">必要量 '+esc(it.qty)+'</span>'];
   if(it.use) bits.push('<span class="tag use">'+esc(it.use)+'</span>');
   if(it.note) bits.push('<span class="tag pri">'+esc(it.note)+'</span>');
-  return '<label class="row'+(on?' done':'')+'" data-id="'+it.id+'">'+
-    '<input type="checkbox" id="c-'+it.id+'"'+(on?' checked':'')+'>'+
-    '<span class="txt"><span class="nm">'+esc(it.nm)+'</span><span class="sub">'+bits.join("")+'</span></span></label>';
+  const buy=!!it.unit;
+  return '<div class="row buyrow'+(on?' done':'')+'" data-id="'+it.id+'">'+
+    '<label class="hit"><input type="checkbox" id="c-'+it.id+'"'+(on?' checked':'')+'>'+
+    '<span class="txt"><span class="nm">'+esc(it.nm)+'</span><span class="sub">'+bits.join("")+'</span></span></label>'+
+    (buy?('<div class="edit">'+
+      '<span class="fld">単価<input class="p" type="number" inputmode="numeric" min="0" step="10" value="'+P(it)+'">円</span>'+
+      '<span class="x">×</span>'+
+      '<span class="fld"><input class="q" type="number" inputmode="numeric" min="0" step="1" value="'+Q(it)+'">'+esc(it.unit)+'</span>'+
+      '<span class="st">= <b>'+yen(SUB(it))+'</b></span>'+
+      '</div>'+
+      '<input class="memo" type="text" placeholder="備考（値段・サイズ・お店など）" value="'+esc(e.m||"")+'">'):'')+
+    '</div>';
 }
 function goodsHTML(it){
   const on=!!state[it.id], bits=['<span class="qty">'+esc(it.qty)+'</span>'];
@@ -485,17 +519,28 @@ function recipeHTML(){
   return h;
 }
 function budgetHTML(){
-  const by={};
-  for(const it of items.buy){ if(it.price) by[it.grp]=(by[it.grp]||0)+it.price; }
-  const total=Object.values(by).reduce((a,b)=>a+b,0);
-  if(!total) return "";
+  const byP={}, byD={};
+  let plan=0, done=0;
+  for(const it of items.buy){
+    if(!it.unit) continue;
+    const s=SUB(it); plan+=s;
+    byP[it.grp]=(byP[it.grp]||0)+s;
+    if(state[it.id]){ done+=s; byD[it.grp]=(byD[it.grp]||0)+s; }
+  }
+  if(!plan) return "";
   let rows="";
-  for(const g in by) rows+='<div class="brow"><span>'+esc(g.replace(/（.*$/,""))+'</span><span>'+yen(by[g])+'</span></div>';
-  rows+='<div class="brow tot"><span>合計</span><span>'+yen(total)+'</span></div>';
-  rows+='<div class="brow sub"><span>1人あたり（14名分）</span><span>'+yen(Math.round(total/14))+'</span></div>';
-  return '<div class="grp budget"><h2>買い出しの予算（目安）</h2>'+
+  for(const g in byP) rows+='<div class="brow"><span>'+esc(g.replace(/（.*$/,""))+'</span>'+
+    '<span><b>'+yen(byD[g]||0)+'</b> <i>/ '+yen(byP[g])+'</i></span></div>';
+  const pct=Math.min(100,Math.round(done/BUDGET*100));
+  const left=BUDGET-done;
+  rows+='<div class="brow tot"><span>買った分の合計</span><span>'+yen(done)+'</span></div>'+
+   '<div class="bar bbar"><i style="width:'+pct+'%'+(done>BUDGET?';background:#C0392B':'')+'"></i></div>'+
+   '<div class="brow sub"><span>予算 '+yen(BUDGET)+'（お客様9名 × 約2,000円）</span><span>'+
+     (left>=0?('残り '+yen(left)):('<b style="color:#C0392B">'+yen(-left)+' 超過</b>'))+'</span></div>'+
+   '<div class="brow sub"><span>全部買った場合の見込み</span><span>'+yen(plan)+'</span></div>';
+  return '<div class="grp budget"><h2>買い出しの予算</h2>'+
     '<div class="bbody">'+rows+'</div>'+
-    '<div class="gnote">金額は一般的な小売価格からの概算です。実際の価格は店舗や時期で変わります。お店の在庫・収穫ぶんは0円で計算しています。</div></div>';
+    '<div class="gnote">お店で実際の値段と個数を書き換えてください。<strong>チェックを入れたものだけ</strong>が「買った分の合計」に入ります。入力はこの端末に保存されます。</div></div>';
 }
 function render(){
   for(const t of tabs){
@@ -514,7 +559,7 @@ function render(){
         const all=items[t].filter(it=>it.grp===g&&!it.info);
         const cls=/在庫/.test(g)?"stock":(/これから/.test(g)?"todo":"");
         let cnt=all.filter(it=>state[it.id]).length+" / "+all.length;
-        if(t==="buy"){const sub=all.reduce((s,it)=>s+(it.price||0),0); if(sub) cnt+="　"+yen(sub);}
+        if(t==="buy"){const sub=all.reduce((s,it)=>s+(state[it.id]?SUB(it):0),0); if(sub) cnt+="　"+yen(sub);}
         h+=card(cls,g,cnt,arr.map(rf).join(""));
       }
     }
@@ -535,7 +580,36 @@ function render(){
   }else bar.style.width="0%";
   document.getElementById("onlyLeft").hidden=!checkable[cur];
 }
+document.addEventListener("input",e=>{
+  const row=e.target.closest(".buyrow"); if(!row) return;
+  const id=row.dataset.id, it=items.buy.find(x=>x.id===id); if(!it) return;
+  const o=edits[id]||(edits[id]={});
+  if(e.target.classList.contains("p")) o.p=e.target.value;
+  else if(e.target.classList.contains("q")) o.q=e.target.value;
+  else if(e.target.classList.contains("memo")) o.m=e.target.value;
+  else return;
+  saveEd();
+  const st=row.querySelector(".st b"); if(st) st.textContent=yen(SUB(it));
+  refreshBudget();
+});
+function refreshBudget(){
+  if(cur!=="buy") return;
+  const el=document.getElementById("p-buy"), old=el.querySelector(".grp.budget");
+  if(!old) return;
+  const tmp=document.createElement("div"); tmp.innerHTML=budgetHTML();
+  old.replaceWith(tmp.firstChild);
+  for(const [g,arr] of groupBy(items.buy,it=>it.grp)){
+    const sub=arr.reduce((s,it)=>s+(state[it.id]?SUB(it):0),0);
+    for(const h2 of el.querySelectorAll(".grp:not(.budget) > h2")){
+      if(h2.textContent.replace(/\s*\d+ \/ \d+.*$/,"")===g){
+        const c=h2.querySelector(".c");
+        if(c) c.textContent=arr.filter(it=>state[it.id]).length+" / "+arr.length+(sub?"　"+yen(sub):"");
+      }
+    }
+  }
+}
 document.addEventListener("change",e=>{
+  if(e.target.type!=="checkbox") return;
   const lab=e.target.closest("[data-id]"); if(!lab) return;
   const id=lab.dataset.id;
   if(e.target.checked) state[id]=1; else delete state[id];
@@ -546,11 +620,14 @@ document.addEventListener("change",e=>{
     const t=cur, dn=live(t).filter(it=>state[it.id]).length;
     document.getElementById("n-"+t).textContent=dn+"/"+live(t).length;
     document.getElementById("pbar").style.width=Math.round(dn/live(t).length*100)+"%";
-    const h2=lab.closest(".grp").querySelector("h2 .c");
-    if(h2){
-      const g=h2.closest("h2").textContent.replace(/\s*\d+ \/ \d+$/,"");
-      const sel=items[t].filter(i=>i.grp===g&&!i.info);
-      if(sel.length) h2.textContent=sel.filter(i=>state[i.id]).length+" / "+sel.length;
+    if(t==="buy"){ refreshBudget(); }
+    else{
+      const h2=lab.closest(".grp").querySelector("h2 .c");
+      if(h2){
+        const g=h2.closest("h2").textContent.replace(/\s*\d+ \/ \d+$/,"");
+        const sel=items[t].filter(i=>i.grp===g&&!i.info);
+        if(sel.length) h2.textContent=sel.filter(i=>state[i.id]).length+" / "+sel.length;
+      }
     }
   }
 });
@@ -558,7 +635,7 @@ for(const t of tabs) document.getElementById("t-"+t).addEventListener("click",()
 document.getElementById("onlyLeft").addEventListener("click",e=>{onlyLeft=!onlyLeft;e.currentTarget.setAttribute("aria-pressed",String(onlyLeft));render()});
 document.getElementById("resetBtn").addEventListener("click",()=>{document.getElementById("resetAsk").hidden=false});
 document.getElementById("resetNo").addEventListener("click",()=>{document.getElementById("resetAsk").hidden=true});
-document.getElementById("resetYes").addEventListener("click",()=>{state={};save();document.getElementById("resetAsk").hidden=true;render()});
+document.getElementById("resetYes").addEventListener("click",()=>{state={};edits={};save();saveEd();document.getElementById("resetAsk").hidden=true;render()});
 render();
 </script>
 
