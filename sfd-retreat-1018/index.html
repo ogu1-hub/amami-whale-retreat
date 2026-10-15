@@ -79,12 +79,12 @@ section.panel{padding-bottom:40px}
 
 .row{display:flex;gap:11px;align-items:flex-start;padding:11px 14px;border-top:1px solid var(--line);cursor:pointer}
 .grp .row:first-of-type{border-top:0}
-.row input{appearance:none;flex:0 0 auto;width:21px;height:21px;margin:1px 0 0;border:1.5px solid var(--muted);border-radius:6px;
-  background:var(--surface);cursor:pointer;position:relative}
-.row input:checked{background:var(--green);border-color:var(--green)}
-.row input:checked::after{content:"";position:absolute;left:6px;top:2.5px;width:6px;height:11px;
+.row input[type="checkbox"]{appearance:none;flex:0 0 auto;width:21px;height:21px;margin:1px 0 0;
+  border:1.5px solid var(--muted);border-radius:6px;background:var(--surface);cursor:pointer;position:relative}
+.row input[type="checkbox"]:checked{background:var(--green);border-color:var(--green)}
+.row input[type="checkbox"]:checked::after{content:"";position:absolute;left:6px;top:2.5px;width:6px;height:11px;
   border:2.5px solid #fff;border-top:0;border-left:0;transform:rotate(42deg)}
-.row input:focus-visible{outline:2px solid var(--sky);outline-offset:2px}
+.row input[type="checkbox"]:focus-visible{outline:2px solid var(--sky);outline-offset:2px}
 .row .txt{min-width:0;flex:1 1 auto}
 .row .nm{font-size:14.5px;line-height:1.45;word-break:break-word}
 .row .sub{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:4px}
@@ -106,13 +106,17 @@ section.panel{padding-bottom:40px}
 .edit .x{color:var(--muted);font-size:13px}
 .edit .st{font-size:13px;color:var(--muted);margin-left:auto;white-space:nowrap}
 .edit .st b{font-family:var(--disp);font-size:15px;color:var(--brown);font-variant-numeric:tabular-nums}
-.memo{display:block;width:calc(100% - 32px);margin:8px 0 0 32px;appearance:none;
+.memowrap{display:flex;align-items:center;gap:7px;margin:9px 0 0 32px}
+.memowrap .lb{font-size:12px;color:var(--muted);white-space:nowrap}
+.memo{flex:1 1 auto;min-width:0;width:auto;height:auto;appearance:none;
   border:1px solid var(--line);background:var(--surface-2);color:var(--fg);
-  border-radius:7px;padding:7px 9px;font:400 13px var(--body)}
+  border-radius:7px;padding:8px 10px;font:400 13px var(--body);box-sizing:border-box}
 .memo:focus{outline:2px solid var(--sky);outline-offset:1px;background:var(--surface)}
 .row.buyrow.done .edit input,.row.buyrow.done .memo{opacity:.75}
 .bbar{margin:10px 0 2px}
 .brow i{font-style:normal;color:var(--muted);font-weight:400;font-size:12.5px}
+.sync{display:inline-block;margin-left:8px;font-size:11px;color:var(--sky);
+  background:var(--chip);border-radius:999px;padding:2px 8px;white-space:nowrap}
 .grp.budget>h2{color:var(--brown)}
 .bbody{padding:4px 14px 10px}
 .brow{display:flex;justify-content:space-between;gap:12px;align-items:baseline;
@@ -433,6 +437,49 @@ try{state=JSON.parse(localStorage.getItem(KEY)||"{}")||{}}catch(e){state={}}
 try{edits=JSON.parse(localStorage.getItem(KEY+"-edit")||"{}")||{}}catch(e){edits={}}
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}};
 const saveEd=()=>{try{localStorage.setItem(KEY+"-edit",JSON.stringify(edits))}catch(e){}};
+
+/* ===== 買い出しの共有（GAS） ===== */
+const SYNC_URL="https://script.google.com/macros/s/AKfycbxAFdJz89Vsq3miu5902GPoDOt4WGQjvum4Hgl4n0ut43OQonhrKhcDYefx1y6FqCyt/exec";
+const isBuy=id=>/^h\d+$/.test(id);
+let pending={}, pushTimer=null, syncState="", lastSync=0;
+function setSync(s){ syncState=s; const el=document.getElementById("syncnote"); if(el) el.textContent=s; }
+function touch(id){
+  if(!isBuy(id)) return;
+  const e=edits[id]||(edits[id]={});
+  e.t=Date.now(); e.c=state[id]?1:0;
+  pending[id]={c:e.c,p:e.p,q:e.q,m:e.m,t:e.t};
+  saveEd();
+  clearTimeout(pushTimer); pushTimer=setTimeout(push,700);
+}
+async function push(){
+  if(!SYNC_URL||!Object.keys(pending).length) return;
+  const body=JSON.stringify({items:pending}); pending={};
+  setSync("保存中…");
+  try{
+    await fetch(SYNC_URL,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:body});
+    setSync("保存しました"); setTimeout(pull,800);
+  }catch(err){ setSync("保存できませんでした（通信を確認）"); }
+}
+async function pull(){
+  if(!SYNC_URL) return;
+  try{
+    const r=await fetch(SYNC_URL+"?_="+Date.now(),{cache:"no-store"});
+    const d=await r.json();
+    let changed=false;
+    for(const id in (d.items||{})){
+      if(!isBuy(id)) continue;
+      const s=d.items[id], l=edits[id]||{};
+      if((s.t||0)<=(l.t||0)) continue;
+      edits[id]={c:s.c,p:s.p,q:s.q,m:s.m,t:s.t};
+      if(s.c) state[id]=1; else delete state[id];
+      changed=true;
+    }
+    if(changed){ save(); saveEd(); if(cur==="buy"&&!document.activeElement.closest(".buyrow")) render(); else refreshBudget(); }
+    lastSync=Date.now(); setSync("同期済み "+new Date().toLocaleTimeString("ja-JP",{hour:"2-digit",minute:"2-digit"}));
+  }catch(err){ setSync("同期できていません（通信を確認）"); }
+}
+setInterval(()=>{ if(!document.hidden) pull(); },5000);
+document.addEventListener("visibilitychange",()=>{ if(!document.hidden) pull(); });
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
 const items={
@@ -482,7 +529,8 @@ function buyHTML(it){
       '<span class="fld"><input class="q" type="number" inputmode="numeric" min="0" step="1" value="'+Q(it)+'">'+esc(it.unit)+'</span>'+
       '<span class="st">= <b>'+yen(SUB(it))+'</b></span>'+
       '</div>'+
-      '<input class="memo" type="text" placeholder="備考（値段・サイズ・お店など）" value="'+esc(e.m||"")+'">'):'')+
+      '<div class="memowrap"><span class="lb">備考</span>'+
+      '<input class="memo" type="text" placeholder="サイズ・お店・気づいたことなど" value="'+esc(e.m||"")+'"></div>'):'')+
     '</div>';
 }
 function goodsHTML(it){
@@ -540,7 +588,9 @@ function budgetHTML(){
    '<div class="brow sub"><span>全部買った場合の見込み</span><span>'+yen(plan)+'</span></div>';
   return '<div class="grp budget"><h2>買い出しの予算</h2>'+
     '<div class="bbody">'+rows+'</div>'+
-    '<div class="gnote">お店で実際の値段と個数を書き換えてください。<strong>チェックを入れたものだけ</strong>が「買った分の合計」に入ります。入力はこの端末に保存されます。</div></div>';
+    '<div class="gnote">お店で実際の値段と個数を書き換えてください。<strong>チェックを入れたものだけ</strong>が「買った分の合計」に入ります。'+
+    '<br><strong>この画面は全員で共有されています。</strong>別の端末の入力も数秒で反映されます。'+
+    '<span class="sync" id="syncnote">'+esc(syncState||"同期中…")+'</span></div></div>';
 }
 function render(){
   for(const t of tabs){
@@ -588,7 +638,7 @@ document.addEventListener("input",e=>{
   else if(e.target.classList.contains("q")) o.q=e.target.value;
   else if(e.target.classList.contains("memo")) o.m=e.target.value;
   else return;
-  saveEd();
+  saveEd(); touch(id);
   const st=row.querySelector(".st b"); if(st) st.textContent=yen(SUB(it));
   refreshBudget();
 });
@@ -613,7 +663,7 @@ document.addEventListener("change",e=>{
   const lab=e.target.closest("[data-id]"); if(!lab) return;
   const id=lab.dataset.id;
   if(e.target.checked) state[id]=1; else delete state[id];
-  save();
+  save(); touch(id);
   if(onlyLeft) render();
   else{
     lab.classList.toggle("done",!!state[id]);
@@ -637,6 +687,7 @@ document.getElementById("resetBtn").addEventListener("click",()=>{document.getEl
 document.getElementById("resetNo").addEventListener("click",()=>{document.getElementById("resetAsk").hidden=true});
 document.getElementById("resetYes").addEventListener("click",()=>{state={};edits={};save();saveEd();document.getElementById("resetAsk").hidden=true;render()});
 render();
+pull();
 </script>
 
 </body>
