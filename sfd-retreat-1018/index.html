@@ -126,7 +126,16 @@ section.panel{padding-bottom:40px}
 .sync{display:inline-block;margin-left:8px;font-size:11px;color:var(--sky);
   background:var(--chip);border-radius:999px;padding:2px 8px;white-space:nowrap}
 .grp.budget>h2{color:var(--brown)}
-.imgcard img.poster{display:block;width:100%;height:auto;background:var(--surface-2)}
+.imgcard img.poster{display:block;width:100%;height:auto;background:var(--surface-2);cursor:zoom-in}
+.zoomo{position:fixed;inset:0;z-index:200;background:rgba(6,12,20,.94);overflow:auto;
+  -webkit-overflow-scrolling:touch;touch-action:pinch-zoom;padding:0 0 40px}
+.zoomo img{display:block;width:1200px;max-width:none;height:auto;margin:0 auto;cursor:zoom-out}
+.zclose{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);right:12px;z-index:201;
+  appearance:none;border:0;background:rgba(0,0,0,.6);color:#fff;width:44px;height:44px;
+  border-radius:50%;font-size:24px;line-height:1;cursor:pointer}
+.zhint{position:fixed;left:50%;transform:translateX(-50%);
+  bottom:calc(env(safe-area-inset-bottom,0px) + 14px);z-index:201;
+  background:rgba(0,0,0,.6);color:#fff;font-size:12px;padding:6px 14px;border-radius:999px;white-space:nowrap}
 .bbody{padding:4px 14px 10px}
 .brow{display:flex;justify-content:space-between;gap:12px;align-items:baseline;
   padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
@@ -623,8 +632,8 @@ function imgHTML(kind){
   const o=kind==="poster"
     ? {t:"当日のスケジュール", s:IMG_POSTER, n:"A4縦で印刷する場合は、フォルダの「リトリートスケジュール20261018_本日のスケジュール.pdf」を使ってください。"}
     : {t:"Today's Dinner Menu", s:IMG_MENU, n:"A4縦で印刷する場合は、フォルダの「リトリートメニュー20261018.pdf」を使ってください。"};
-  return '<div class="grp imgcard"><h2>'+esc(o.t)+'</h2>'+
-    '<img class="poster" src="'+o.s+'" alt="'+esc(o.t)+'">'+
+  return '<div class="grp imgcard"><h2>'+esc(o.t)+'<span class="c">タップで拡大</span></h2>'+
+    '<img class="poster" src="'+o.s+'" alt="'+esc(o.t)+'" data-zoom="'+kind+'">'+
     '<div class="gnote">'+esc(o.n)+'</div></div>';
 }
 function render(){
@@ -671,7 +680,26 @@ function render(){
   }else bar.style.width="0%";
   document.getElementById("onlyLeft").hidden=!checkable[cur];
 }
+function openZoom(kind){
+  const src=(kind==="poster")?IMG_POSTER:IMG_MENU;
+  const o=document.createElement("div");
+  o.className="zoomo";
+  o.innerHTML='<button class="zclose" type="button" aria-label="閉じる">×</button>'+
+    '<img src="'+src+'" alt="">'+
+    '<div class="zhint">タップで閉じる・指で広げるとさらに拡大</div>';
+  document.body.appendChild(o);
+  const prev=document.body.style.overflow;
+  document.body.style.overflow="hidden";
+  const close=()=>{ o.remove(); document.body.style.overflow=prev;
+    document.removeEventListener("keydown",onKey); };
+  const onKey=ev=>{ if(ev.key==="Escape") close(); };
+  o.addEventListener("click",close);
+  document.addEventListener("keydown",onKey);
+  o.scrollLeft=(1200-o.clientWidth)/2;
+}
 document.addEventListener("click",e=>{
+  const z=e.target.closest("[data-zoom]");
+  if(z){ openZoom(z.dataset.zoom); return; }
   const del=e.target.closest("[data-del]"), un=e.target.closest("[data-undel]");
   if(!del&&!un) return;
   const id=del?del.dataset.del:un.dataset.undel;
