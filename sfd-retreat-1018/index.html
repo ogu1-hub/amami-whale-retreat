@@ -113,6 +113,14 @@ section.panel{padding-bottom:40px}
   border-radius:7px;padding:8px 10px;font:400 13px var(--body);box-sizing:border-box}
 .memo:focus{outline:2px solid var(--sky);outline-offset:1px;background:var(--surface)}
 .row.buyrow.done .edit input,.row.buyrow.done .memo{opacity:.75}
+.row.goodsrow{display:flex;align-items:flex-start;gap:8px;cursor:default}
+.row.goodsrow .hit{display:flex;gap:11px;align-items:flex-start;flex:1 1 auto;min-width:0;cursor:pointer}
+.del{flex:0 0 auto;appearance:none;border:1px solid var(--line);background:var(--surface);
+  color:var(--muted);width:30px;height:30px;border-radius:8px;font-size:17px;line-height:1;cursor:pointer}
+.del:focus-visible{outline:2px solid var(--sky);outline-offset:2px}
+.undo{appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--sky);
+  font-family:var(--disp);font-weight:700;font-size:12px;padding:5px 12px;border-radius:7px;cursor:pointer;margin-left:auto}
+.grp.todo .srow .nm{color:var(--muted);text-decoration:line-through;text-decoration-thickness:1px}
 .bbar{margin:10px 0 2px}
 .brow i{font-style:normal;color:var(--muted);font-weight:400;font-size:12.5px}
 .sync{display:inline-block;margin-left:8px;font-size:11px;color:var(--sky);
@@ -441,13 +449,15 @@ const saveEd=()=>{try{localStorage.setItem(KEY+"-edit",JSON.stringify(edits))}ca
 /* ===== 買い出しの共有（GAS） ===== */
 const SYNC_URL="https://script.google.com/macros/s/AKfycbxAFdJz89Vsq3miu5902GPoDOt4WGQjvum4Hgl4n0ut43OQonhrKhcDYefx1y6FqCyt/exec";
 const isBuy=id=>/^h\d+$/.test(id);
+const isSync=id=>/^[hg]\d+$/.test(id);
+const gone=id=>!!(edits[id]&&edits[id].d);
 let pending={}, pushTimer=null, syncState="", lastSync=0;
 function setSync(s){ syncState=s; const el=document.getElementById("syncnote"); if(el) el.textContent=s; }
 function touch(id){
-  if(!isBuy(id)) return;
+  if(!isSync(id)) return;
   const e=edits[id]||(edits[id]={});
   e.t=Date.now(); e.c=state[id]?1:0;
-  pending[id]={c:e.c,p:e.p,q:e.q,m:e.m,t:e.t};
+  pending[id]={c:e.c,p:e.p,q:e.q,m:e.m,d:e.d?1:0,t:e.t};
   saveEd();
   clearTimeout(pushTimer); pushTimer=setTimeout(push,700);
 }
@@ -467,14 +477,16 @@ async function pull(){
     const d=await r.json();
     let changed=false;
     for(const id in (d.items||{})){
-      if(!isBuy(id)) continue;
+      if(!isSync(id)) continue;
       const s=d.items[id], l=edits[id]||{};
       if((s.t||0)<=(l.t||0)) continue;
-      edits[id]={c:s.c,p:s.p,q:s.q,m:s.m,t:s.t};
+      edits[id]={c:s.c,p:s.p,q:s.q,m:s.m,d:s.d?1:0,t:s.t};
       if(s.c) state[id]=1; else delete state[id];
       changed=true;
     }
-    if(changed){ save(); saveEd(); if(cur==="buy"&&!document.activeElement.closest(".buyrow")) render(); else refreshBudget(); }
+    if(changed){ save(); saveEd();
+      const typing=document.activeElement&&document.activeElement.closest&&document.activeElement.closest(".buyrow");
+      if(typing) refreshBudget(); else render(); }
     lastSync=Date.now(); setSync("同期済み "+new Date().toLocaleTimeString("ja-JP",{hour:"2-digit",minute:"2-digit"}));
   }catch(err){ setSync("同期できていません（通信を確認）"); }
 }
@@ -536,9 +548,17 @@ function buyHTML(it){
 function goodsHTML(it){
   const on=!!state[it.id], bits=['<span class="qty">'+esc(it.qty)+'</span>'];
   if(it.prep) bits.push('<span class="tag'+(it.pri?' pri':'')+'">'+esc(it.prep)+'</span>');
-  return '<label class="row'+(on?' done':'')+'" data-id="'+it.id+'">'+
-    '<input type="checkbox" id="c-'+it.id+'"'+(on?' checked':'')+'>'+
-    '<span class="txt"><span class="nm">'+esc(it.nm)+'</span><span class="sub">'+bits.join("")+'</span></span></label>';
+  return '<div class="row goodsrow'+(on?' done':'')+'" data-id="'+it.id+'">'+
+    '<label class="hit"><input type="checkbox" id="c-'+it.id+'"'+(on?' checked':'')+'>'+
+    '<span class="txt"><span class="nm">'+esc(it.nm)+'</span><span class="sub">'+bits.join("")+'</span></span></label>'+
+    '<button class="del" type="button" data-del="'+it.id+'" aria-label="この項目を削除">×</button></div>';
+}
+function trashHTML(){
+  const d=items.goods.filter(it=>gone(it.id));
+  if(!d.length) return "";
+  return card("todo","削除した備品",String(d.length),
+    d.map(it=>'<div class="srow"><span class="nm">'+esc(it.nm)+'</span>'+
+      '<button class="undo" type="button" data-undel="'+it.id+'">戻す</button></div>').join(""));
 }
 function tlHTML(it){
   const ev=/^【/.test(it.task);
@@ -599,6 +619,7 @@ function render(){
     if(t!==cur) continue;
     if(t==="recipe"){el.innerHTML=recipeHTML();continue}
     let list=items[t];
+    if(t==="goods") list=list.filter(it=>!gone(it.id));
     if(onlyLeft) list=list.filter(it=>!state[it.id]);
     const rf={ppl:pplHTML,buy:buyHTML,goods:goodsHTML,prep:tlHTML}[t];
     let h="";
@@ -606,7 +627,7 @@ function render(){
       h=card("",cur==="ppl"?"ゲスト":"","",'<div class="empty">このタブは全部チェック済みです。</div>');
     }else{
       for(const [g,arr] of groupBy(list,it=>it.grp)){
-        const all=items[t].filter(it=>it.grp===g&&!it.info);
+        const all=items[t].filter(it=>it.grp===g&&!it.info&&!(t==="goods"&&gone(it.id)));
         const cls=/在庫/.test(g)?"stock":(/これから/.test(g)?"todo":"");
         let cnt=all.filter(it=>state[it.id]).length+" / "+all.length;
         if(t==="buy"){const sub=all.reduce((s,it)=>s+(state[it.id]?SUB(it):0),0); if(sub) cnt+="　"+yen(sub);}
@@ -614,22 +635,35 @@ function render(){
       }
     }
     if(t==="ppl") h+=staffHTML();
+    if(t==="goods") h+=trashHTML();
     if(t==="buy") h=budgetHTML()+h;
     el.innerHTML=h;
   }
   for(const t of tabs){
     const b=document.getElementById("t-"+t);
     b.setAttribute("aria-selected",String(t===cur));
-    if(checkable[t]) document.getElementById("n-"+t).textContent=
-      live(t).filter(it=>state[it.id]).length+"/"+live(t).length;
+    if(checkable[t]){
+      const ls=live(t).filter(it=>!(t==="goods"&&gone(it.id)));
+      document.getElementById("n-"+t).textContent=ls.filter(it=>state[it.id]).length+"/"+ls.length;
+    }
   }
   const bar=document.getElementById("pbar");
   if(checkable[cur]){
-    const d=live(cur).filter(it=>state[it.id]).length, n=live(cur).length;
+    const ls=live(cur).filter(it=>!(cur==="goods"&&gone(it.id)));
+    const d=ls.filter(it=>state[it.id]).length, n=ls.length;
     bar.style.width=(n?Math.round(d/n*100):0)+"%";
   }else bar.style.width="0%";
   document.getElementById("onlyLeft").hidden=!checkable[cur];
 }
+document.addEventListener("click",e=>{
+  const del=e.target.closest("[data-del]"), un=e.target.closest("[data-undel]");
+  if(!del&&!un) return;
+  const id=del?del.dataset.del:un.dataset.undel;
+  const o=edits[id]||(edits[id]={});
+  o.d=del?1:0; o.c=state[id]?1:0; o.t=Date.now();
+  if(del) delete state[id];
+  save(); saveEd(); touch(id); render();
+});
 document.addEventListener("input",e=>{
   const row=e.target.closest(".buyrow"); if(!row) return;
   const id=row.dataset.id, it=items.buy.find(x=>x.id===id); if(!it) return;
