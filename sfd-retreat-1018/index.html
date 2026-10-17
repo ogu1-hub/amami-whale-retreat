@@ -127,19 +127,23 @@ section.panel{padding-bottom:40px}
   background:var(--chip);border-radius:999px;padding:2px 8px;white-space:nowrap}
 .grp.budget>h2{color:var(--brown)}
 .imgcard img.poster{display:block;width:100%;height:auto;background:var(--surface-2);cursor:zoom-in}
-.zoomo{position:fixed;inset:0;z-index:200;background:rgba(6,12,20,.94);overflow:auto;
-  -webkit-overflow-scrolling:touch;touch-action:pinch-zoom;padding:0 0 40px}
-.zoomo img{display:block;width:1600px;max-width:none;height:auto;margin:0 auto;cursor:zoom-out}
+.zoomo{position:fixed;inset:0;z-index:200;background:rgba(6,12,20,.95)}
+.zpane{position:absolute;inset:0;overflow:auto;-webkit-overflow-scrolling:touch;
+  touch-action:pinch-zoom;display:flex;align-items:center;justify-content:center;padding:10px}
+.zpane img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;
+  margin:auto;cursor:zoom-in;border-radius:2px}
+.zpane.z img{max-width:none;max-height:none;cursor:zoom-out;border-radius:0}
 @media (min-width:901px){
-  .zoomo{display:flex;align-items:flex-start;justify-content:center;padding:20px 20px 40px}
-  .zoomo img{width:min(1600px,94vw);margin:0}
+  .zpane{align-items:flex-start;padding:20px 20px 56px}
+  .zpane img{max-width:none;max-height:none;width:min(1600px,94vw);margin:0 auto}
 }
-.zclose{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);right:12px;z-index:201;
-  appearance:none;border:0;background:rgba(0,0,0,.6);color:#fff;width:44px;height:44px;
+.zclose{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);right:12px;z-index:202;
+  appearance:none;border:0;background:rgba(0,0,0,.62);color:#fff;width:44px;height:44px;
   border-radius:50%;font-size:24px;line-height:1;cursor:pointer}
 .zhint{position:fixed;left:50%;transform:translateX(-50%);
   bottom:calc(env(safe-area-inset-bottom,0px) + 14px);z-index:201;
-  background:rgba(0,0,0,.6);color:#fff;font-size:12px;padding:6px 14px;border-radius:999px;white-space:nowrap}
+  background:rgba(0,0,0,.62);color:#fff;font-size:12px;padding:7px 15px;border-radius:999px;
+  white-space:nowrap;pointer-events:none}
 .bbody{padding:4px 14px 10px}
 .brow{display:flex;justify-content:space-between;gap:12px;align-items:baseline;
   padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
@@ -690,17 +694,38 @@ function openZoom(kind){
   const o=document.createElement("div");
   o.className="zoomo";
   o.innerHTML='<button class="zclose" type="button" aria-label="閉じる">×</button>'+
-    '<img src="'+src+'" alt="">'+
-    '<div class="zhint">タップで閉じる｜指で広げるとさらに拡大</div>';
+    '<div class="zpane"><img src="'+src+'" alt=""></div>'+
+    '<div class="zhint"></div>';
   document.body.appendChild(o);
+  const pane=o.querySelector(".zpane"), img=o.querySelector("img"), hint=o.querySelector(".zhint");
   const prev=document.body.style.overflow;
   document.body.style.overflow="hidden";
-  const close=()=>{ o.remove(); document.body.style.overflow=prev;
-    document.removeEventListener("keydown",onKey); };
+  const small=window.matchMedia("(max-width:900px)").matches;
+  const steps=[0,1.8,3];           // 0＝全体表示
+  let i=0;
+  function apply(){
+    if(!small){ hint.textContent="背景をタップで閉じる"; return; }
+    const f=steps[i];
+    if(f===0){ pane.classList.remove("z"); img.style.width=""; }
+    else{
+      pane.classList.add("z");
+      img.style.width=Math.round(pane.clientWidth*f)+"px";
+      requestAnimationFrame(()=>{
+        pane.scrollLeft=(pane.scrollWidth-pane.clientWidth)/2;
+        pane.scrollTop=0;
+      });
+    }
+    hint.textContent=(f===0?"画像をタップで拡大":"画像をタップでさらに拡大（"+f+"倍）")+"　｜　×で閉じる";
+  }
+  function close(){ o.remove(); document.body.style.overflow=prev;
+    document.removeEventListener("keydown",onKey); }
   const onKey=ev=>{ if(ev.key==="Escape") close(); };
-  o.addEventListener("click",close);
+  img.addEventListener("click",ev=>{ ev.stopPropagation(); if(!small){ close(); return; }
+    i=(i+1)%steps.length; apply(); });
+  pane.addEventListener("click",close);
+  o.querySelector(".zclose").addEventListener("click",close);
   document.addEventListener("keydown",onKey);
-  o.scrollLeft=Math.max(0,(o.scrollWidth-o.clientWidth)/2);
+  apply();
 }
 document.addEventListener("click",e=>{
   const z=e.target.closest("[data-zoom]");
