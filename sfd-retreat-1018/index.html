@@ -162,6 +162,24 @@ section.panel{padding-bottom:40px}
 .badge{font-family:var(--disp);font-weight:700;font-size:12px;color:var(--navy);background:var(--chip);border-radius:999px;padding:2px 9px;white-space:nowrap}
 .badge.first{background:var(--orange);color:#3A2300}
 .hist{font-size:12px;color:var(--muted);letter-spacing:.02em}
+.row.pplrow{display:block;cursor:default;padding:13px 14px}
+.row.pplrow .txt{display:block}
+.row.pplrow .nm{display:block}
+.row.pplrow .kana,.row.pplrow .sub{margin-left:calc(1.5em + 7px)}
+.pills{display:flex;gap:8px;margin:10px 0 0 calc(1.5em + 7px)}
+.pill{display:inline-flex;align-items:center;gap:7px;cursor:pointer;
+  border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 14px 7px 11px;
+  font-family:var(--disp);font-weight:700;font-size:13px;color:var(--muted);user-select:none}
+.pill input{appearance:none;width:17px;height:17px;margin:0;border:1.5px solid var(--muted);
+  border-radius:5px;background:var(--surface);position:relative;flex:0 0 auto}
+.pill.on{border-color:transparent}
+.pill.on.ok{background:var(--done-bg);color:var(--green)}
+.pill.on.pay{background:#FFF1DB;color:#9A6A14}
+.pill.on input{border-color:currentColor;background:currentColor}
+.pill.on input::after{content:"";position:absolute;left:5px;top:2px;width:4px;height:9px;
+  border:2px solid #fff;border-top:0;border-left:0;transform:rotate(42deg)}
+.pill input:focus-visible{outline:2px solid var(--sky);outline-offset:2px}
+.row.pplrow.done .nm{text-decoration:none;color:var(--fg)}
 
 /* チェックなしの行（レシピの材料・スタッフ） */
 .srow{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;padding:10px 14px;border-top:1px solid var(--line)}
@@ -474,7 +492,7 @@ const saveEd=()=>{try{localStorage.setItem(KEY+"-edit",JSON.stringify(edits))}ca
 /* ===== 買い出しの共有（GAS） ===== */
 const SYNC_URL="https://script.google.com/macros/s/AKfycbxAFdJz89Vsq3miu5902GPoDOt4WGQjvum4Hgl4n0ut43OQonhrKhcDYefx1y6FqCyt/exec";
 const isBuy=id=>/^h\d+$/.test(id);
-const isSync=id=>/^[hg]\d+$/.test(id);
+const isSync=id=>/^[hguk]\d+$/.test(id);
 const gone=id=>!!(edits[id]&&edits[id].d);
 let pending={}, pushTimer=null, syncState="", lastSync=0;
 function setSync(s){ syncState=s; const el=document.getElementById("syncnote"); if(el) el.textContent=s; }
@@ -520,7 +538,7 @@ document.addEventListener("visibilitychange",()=>{ if(!document.hidden) pull(); 
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
 const items={
-  ppl:GUESTS.map((r,i)=>({id:"u"+i,no:i+1,grp:"ゲスト",nm:r[0],kana:r[1],cnt:r[2],hist:r[3],first:!!r[4]})),
+  ppl:GUESTS.map((r,i)=>({id:"u"+i,pay:"k"+i,no:i+1,grp:"ゲスト",nm:r[0],kana:r[1],cnt:r[2],hist:r[3],first:!!r[4]})),
   buy:SHOP.map((r,i)=>({id:"h"+i,grp:r[0],nm:r[1],qty:r[2],use:r[3],note:r[4],price:r[5]||0,cnt:r[6]||0,unit:r[7]||""})),
   goods:GOODS.map((r,i)=>({id:"g"+i,grp:r[0],nm:r[1],qty:r[2],prep:r[3],pri:!!r[4]})),
   prep:PREP.map((r,i)=>({id:"p"+i,grp:r[0],when:r[1],task:r[2],info:!!r[3]}))
@@ -536,15 +554,18 @@ function card(cls,title,count,inner){
   return '<div class="grp'+(cls?" "+cls:"")+'"><h2>'+esc(title)+(count?'<span class="c">'+esc(count)+'</span>':'')+'</h2>'+gn+inner+'</div>';
 }
 function pplHTML(it){
-  const on=!!state[it.id], bits=[];
+  const on=!!state[it.id], paid=!!state[it.pay], bits=[];
   if(it.cnt) bits.push('<span class="badge'+(it.first?' first':'')+'">'+esc(it.cnt)+'</span>');
   if(it.hist) bits.push('<span class="hist">これまで '+esc(it.hist)+'</span>');
-  return '<label class="row'+(on?' done':'')+'" data-id="'+it.id+'">'+
-    '<input type="checkbox" id="c-'+it.id+'"'+(on?' checked':'')+'>'+
+  const pill=(id,label,v,cls)=>
+    '<label class="pill'+(v?" on "+cls:"")+'"><input type="checkbox" data-chk="'+id+'"'+(v?' checked':'')+'>'+
+    '<span>'+esc(label)+'</span></label>';
+  return '<div class="row pplrow'+(on?' done':'')+'">'+
     '<span class="txt"><span class="nm"><span class="no">'+it.no+'</span>'+esc(it.nm)+'</span>'+
     (it.kana?'<span class="kana">'+esc(it.kana)+'</span>':'')+
-    (bits.length?'<span class="sub" style="margin-left:calc(1.5em + 7px)">'+bits.join("")+'</span>':'')+
-    '</span></label>';
+    (bits.length?'<span class="sub">'+bits.join("")+'</span>':'')+
+    '<span class="pills">'+pill(it.id,"受付",on,"ok")+pill(it.pay,"会計済み",paid,"pay")+'</span>'+
+    '</span></div>';
 }
 const yen=n=>Number(Math.round(n)).toLocaleString("ja-JP")+"円";
 const BUDGET=18000;
@@ -664,6 +685,8 @@ function render(){
         const all=items[t].filter(it=>it.grp===g&&!it.info&&!(t==="goods"&&gone(it.id)));
         const cls=/在庫/.test(g)?"stock":(/これから/.test(g)?"todo":"");
         let cnt=all.filter(it=>state[it.id]).length+" / "+all.length;
+        if(t==="ppl") cnt="受付 "+all.filter(it=>state[it.id]).length+"/"+all.length+
+          "　会計 "+all.filter(it=>state[it.pay]).length+"/"+all.length;
         if(t==="buy"){const sub=all.reduce((s,it)=>s+(state[it.id]?SUB(it):0),0); if(sub) cnt+="　"+yen(sub);}
         h+=card(cls,g,cnt,arr.map(rf).join(""));
       }
@@ -768,6 +791,11 @@ function refreshBudget(){
 }
 document.addEventListener("change",e=>{
   if(e.target.type!=="checkbox") return;
+  if(e.target.dataset.chk){
+    const id=e.target.dataset.chk;
+    if(e.target.checked) state[id]=1; else delete state[id];
+    save(); touch(id); render(); return;
+  }
   const lab=e.target.closest("[data-id]"); if(!lab) return;
   const id=lab.dataset.id;
   if(e.target.checked) state[id]=1; else delete state[id];
