@@ -861,15 +861,15 @@ a{color:var(--turq-d)}
 /* 大きなタブ */
 .tiles{background:var(--cream,#fbf7ef);padding:26px 0 30px;border-bottom:1px solid var(--line)}
 .tiles .lead{font-size:.8rem;letter-spacing:.12em;color:var(--ink-soft);margin-bottom:12px;text-align:center}
-.tbig{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.tbig{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
 .tbig a{word-break:keep-all;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-decoration:none;
-  background:linear-gradient(135deg,var(--deep),var(--ocean));color:#fff;border-radius:16px;padding:20px 8px;min-height:118px;
+  background:linear-gradient(135deg,var(--deep),var(--ocean));color:#fff;border-radius:16px;padding:18px 4px;min-height:118px;
   box-shadow:0 6px 18px rgba(4,40,70,.16);transition:transform .15s}
 .tbig a:hover,.tbig a:focus-visible{transform:translateY(-2px)}
 .tbig .ti{font-size:2rem;line-height:1}
-.tbig b{font-size:.92rem;letter-spacing:.02em;white-space:nowrap}
+.tbig b{font-size:.86rem;letter-spacing:0;white-space:nowrap}
 .tbig small{word-break:keep-all;font-size:.64rem;opacity:.85;letter-spacing:.04em;text-align:center}
-.tsm{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.tsm{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:10px}
 .tsm a{display:flex;align-items:center;gap:8px;text-decoration:none;background:#fff;border:1px solid var(--line);
   border-radius:12px;padding:11px 10px;color:var(--ink);font-size:.8rem;font-weight:700;letter-spacing:.02em;line-height:1.4}
 .tsm a span{font-size:1.15rem}
