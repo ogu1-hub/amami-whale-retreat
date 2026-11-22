@@ -834,6 +834,19 @@ a{color:var(--turq-d)}
   .arr{font-size:.82rem}.arr b{font-size:.94rem}
   .foot-links a{font-size:.86rem}
 }
+
+/* ザトウクジラを知る */
+.tbl.beh td:last-child{text-align:left;font-weight:400;color:var(--ink-soft);white-space:normal}
+.tbl.beh td:first-child{font-weight:700;color:var(--deep);white-space:nowrap}
+.tbl.beh td:first-child small{font-weight:400}
+.tbl.beh td{vertical-align:top;line-height:1.85}
+.year4{display:grid;gap:10px;margin-top:8px}
+@media(min-width:768px){ .year4{grid-template-columns:repeat(4,1fr)} }
+.yr{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.yr .s{display:block;font-size:.72rem;font-weight:700;letter-spacing:.08em;color:var(--turq-d);margin-bottom:4px}
+.yr b{display:block;font-size:.95rem;color:var(--ink);margin-bottom:4px}
+.yr p{font-size:.82rem;line-height:1.9;color:var(--ink-soft)}
+.yr.here{border-color:var(--orange);box-shadow:0 0 0 2px rgba(243,155,0,.18)}
 </style>
 </head>
 <body>
@@ -844,6 +857,7 @@ a{color:var(--turq-d)}
     <a href="#schedule">スケジュール</a>
     <a href="#flights">航空便</a>
     <a href="#stay">宿</a>
+    <a href="#whale">クジラ</a>
     <a href="#flow">当日の流れ</a>
     <a href="#packing">持ち物</a>
     <a href="#cancel">キャンセル規定</a>
@@ -862,15 +876,16 @@ a{color:var(--turq-d)}
   <a href="#flights">03 ｜ 奄美へのフライト</a>
   <a href="#stay">04 ｜ 宿について</a>
   <a href="#island">05 ｜ 島で立ち寄る場所</a>
-  <a href="#flow">06 ｜ ホエールスイム当日の流れ</a>
-  <a href="#rules">07 ｜ ルールと注意事項</a>
-  <a href="#clothes">08 ｜ 船上の服装・防寒</a>
-  <a href="#packing">09 ｜ 持ち物リスト</a>
-  <a href="#rental">10 ｜ 器材レンタル料金</a>
-  <a href="#fee">11 ｜ 参加費に含まれるもの</a>
-  <a href="#cancel">12 ｜ キャンセル規定</a>
-  <a href="#faq">13 ｜ よくあるご質問</a>
-  <a href="#album">14 ｜ 奄美アルバム</a>
+  <a href="#whale">06 ｜ ザトウクジラを知る</a>
+  <a href="#flow">07 ｜ ホエールスイム当日の流れ</a>
+  <a href="#rules">08 ｜ ルールと注意事項</a>
+  <a href="#clothes">09 ｜ 船上の服装・防寒</a>
+  <a href="#packing">10 ｜ 持ち物リスト</a>
+  <a href="#rental">11 ｜ 器材レンタル料金</a>
+  <a href="#fee">12 ｜ 参加費に含まれるもの</a>
+  <a href="#cancel">13 ｜ キャンセル規定</a>
+  <a href="#faq">14 ｜ よくあるご質問</a>
+  <a href="#album">15 ｜ 奄美アルバム</a>
   <a href="index.html" class="d-back">募集ページへ戻る</a>
 </div>
 
@@ -899,6 +914,7 @@ a{color:var(--turq-d)}
     <a href="#flights">航空便</a>
     <a href="#stay">宿</a>
     <a href="#island">立ち寄る場所</a>
+    <a href="#whale">クジラを知る</a>
     <a href="#flow">当日の流れ</a>
     <a href="#rules">注意事項</a>
     <a href="#clothes">服装・防寒</a>
@@ -1674,11 +1690,98 @@ a{color:var(--turq-d)}
   </div>
 </section>
 
-<!-- 06 当日の流れ -->
+<!-- 06 ザトウクジラを知る -->
+<section class="pad" id="whale">
+  <div class="wrap">
+    <div class="shead">
+      <span class="no">06 ／ HUMPBACK WHALES</span>
+      <h2>ザトウクジラを知る</h2>
+      <p>海で出会うのは、ザトウクジラです。どんな暮らしをしていて、水面でどんな動きを見せるのかを知っておくと、船の上での待ち時間も、出会えた瞬間も、ずっと楽しくなります。<br />※ ここに書いているのは一般的な生態です。クジラは一頭ずつ性格も動きも違います。</p>
+    </div>
+
+    <h3 class="sub">一年のくらし — なぜ冬の奄美に来るのか</h3>
+    <div class="year4">
+      <div class="yr"><span class="s">夏</span><b>北の海で食べる</b><p>ベーリング海やロシア沿岸など、冷たく栄養の多い海で、オキアミや小魚をたっぷり食べて脂肪をたくわえます</p></div>
+      <div class="yr"><span class="s">秋〜初冬</span><b>南へ旅をする</b><p>数千kmを泳いで、奄美・沖縄・小笠原などの暖かい海へ向かいます</p></div>
+      <div class="yr here"><span class="s">冬〜春 ／ いまの奄美</span><b>出産・子育て・恋の季節</b><p>暖かい海で子どもを産んで育て、次の相手を探します。<strong>この間はほとんど何も食べません</strong>。奄美では12月中旬〜5月上旬に見られます</p></div>
+      <div class="yr"><span class="s">春</span><b>北の海へ帰る</b><p>大きく育った子どもを連れて、ふたたび北の海へ戻っていきます</p></div>
+    </div>
+
+    <h3 class="sub">からだの特徴</h3>
+    <div class="cards">
+      <div class="card">
+        <h4><span class="ic">🪽</span>とても長い胸びれ</h4>
+        <ul>
+          <li>胸びれは<strong>体長の約3分の1、4〜5m</strong>にもなります</li>
+          <li>学名の <i>Megaptera</i> は「大きな翼」という意味。水中では胸びれが白く光って見えることがあります</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4><span class="ic">🐾</span>尾びれの模様は一頭ずつ違う</h4>
+        <ul>
+          <li>尾びれの裏側の白黒の模様と、縁のギザギザは<strong>人の指紋のように一頭ずつ違います</strong></li>
+          <li>研究者はこの模様で個体を見分けています。尾びれを上げて潜る瞬間が、撮影のチャンスです</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4><span class="ic">💨</span>息つぎと「ブロー」</h4>
+        <ul>
+          <li>鼻の穴（噴気孔）は頭のてっぺんに2つ。水面で勢いよく息を吐くと、<strong>高さ3〜5mほどの白い霧の柱（ブロー）</strong>が立ちます</li>
+          <li>遠くからでもクジラを見つける、いちばんの手がかりです</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4><span class="ic">⏱</span>潜っている時間</h4>
+        <ul>
+          <li>ふだんは<strong>5〜15分ほど</strong>潜って、また浮かんできます。休んでいるときは20分を超えることもあります</li>
+          <li>船の上で待つ時間が長いのはこのためです。ソナーで位置を追いながら、浮かんでくるのを待ちます</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="sub">よく見られる行動と、そのときの動き方</h3>
+    <div class="scroll-x">
+      <table class="tbl beh">
+        <thead><tr><th>行動</th><th>どんな動き</th><th>そのとき私たちは</th></tr></thead>
+        <tbody>
+          <tr><td>ブロー<small>噴気</small></td><td>水面で息を吐く。白い霧の柱が立つ</td><td>クジラ発見の合図。船長が位置と動きを確かめます</td></tr>
+          <tr><td>フルークアップ<small>尾びれを上げて潜る</small></td><td>背中を丸め、尾びれを高く上げて深く潜る</td><td><strong>しばらく浮かんでこない合図</strong>。次に浮かぶ場所を予想して待ちます</td></tr>
+          <tr><td>ロギング<small>水面で休む</small></td><td>水面近くで丸太のように浮かび、ゆっくり呼吸する</td><td>ホエールスイムのチャンス。ガイドの合図で静かに入水し、水面で待ちます</td></tr>
+          <tr><td>親子の休息</td><td>母クジラが水中でじっと休み、子クジラが数分おきに息つぎに上がってくる</td><td>出会いやすい場面のひとつ。<strong>子クジラには近づかず、エントリーは2回まで</strong></td></tr>
+          <tr><td>スパイホップ</td><td>頭を水面から垂直に出して、まわりを見る</td><td>周囲を確かめている、好奇心のしるしとも言われます。船上から観察</td></tr>
+          <tr><td>ブリーチ<small>ジャンプ</small></td><td>体の大部分を水面から出して、豪快に落ちる</td><td>近くでは入水しません。<strong>船上からの観察</strong>になります</td></tr>
+          <tr><td>ペックスラップ／テールスラップ</td><td>胸びれや尾びれで、水面を何度もたたく</td><td>ひれの近くは危険です。入水するかは船長・ガイドが判断します</td></tr>
+          <tr><td>競争グループ<small>ヒートラン</small></td><td>1頭のメスを数頭のオスが激しく追いかける。泳ぐ速さもかなり速い</td><td>速くて危険なため、<strong>入水しないのが基本</strong>。船上から見守ります</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="cards" style="margin-top:22px">
+      <div class="card ok">
+        <h4><span class="ic">🎵</span>ザトウクジラの歌</h4>
+        <ul>
+          <li>冬の繁殖の海で、<strong>オスは長い「歌」をくり返し歌います</strong>。1曲は10〜20分ほどで、何時間も歌い続けることがあります</li>
+          <li>同じ海にいるオスは同じ歌を歌い、歌は年ごとに少しずつ変わっていきます</li>
+          <li>水中で耳を澄ますと、<strong>体にひびくように聞こえる</strong>ことがあります。入水したら、ぜひ耳も使ってみてください</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4><span class="ic">🍼</span>子クジラのこと</h4>
+        <ul>
+          <li>生まれたときの体長は<strong>4〜5mほど</strong>。母乳で育ち、北へ帰るまでにぐんぐん大きくなります</li>
+          <li>まだ長く息を止められないので、<strong>数分おきに水面へ上がってきます</strong></li>
+          <li>母クジラはとても神経質になっています。近づき方は <a href="#rules">08 ルールと注意事項</a> を必ずお読みください</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 当日の流れ -->
 <section class="pad cream" id="flow">
   <div class="wrap">
     <div class="shead">
-      <span class="no">06 ／ THE DAY</span>
+      <span class="no">07 ／ THE DAY</span>
       <h2>ホエールスイム 当日の流れ</h2>
       <p>マリンスポーツ奄美さんの船を利用します。<strong>第1便は1日コース（9:00〜16:00ごろ・約6時間）</strong>、<strong>第2便は半日コース（9:00〜12:00・約3時間）を2日間</strong>。船にはクジラの位置がわかるソナーが載っていて、「9時の方向、距離35m」のようにアナウンスが入ります。クジラ次第でタイミングは読めないので、いつでも入れる準備をしておくのがコツです。<br />※ 記載の時間はあくまで目安です。海況やクジラの状況で前後します。</p>
     </div>
@@ -1759,6 +1862,49 @@ a{color:var(--turq-d)}
         </ul>
       </div>
     </div>
+
+    <h3 class="sub" style="margin-top:34px">船の上での注意事項</h3>
+    <p class="txt">外洋を走る船の上は、揺れて濡れて滑ります。けがを防ぐための約束です。<strong>その場では、船長・ガイド・スタッフの指示がいちばん優先</strong>です。</p>
+    <div class="cards">
+      <div class="card warn">
+        <h4><span class="ic">🚤</span>船が走っているとき</h4>
+        <ul>
+          <li>走っている間は<strong>座って過ごし、立ち歩かない</strong>でください。動くときは必ず片手で船につかまります</li>
+          <li>船首（へさき）に出たり、船べりから身を乗り出したりしないでください</li>
+          <li>甲板は濡れていて<strong>とても滑ります</strong>。ブーツのまま、走らずに</li>
+          <li>帽子・タオル・ビニール袋など、風で飛ぶものはしまっておきます</li>
+        </ul>
+      </div>
+      <div class="card warn">
+        <h4><span class="ic">🌊</span>海に入るとき・船に上がるとき</h4>
+        <ul>
+          <li><strong>合図があるまで海に入らない</strong>でください。入る場所と入り方は、その都度ガイドが伝えます</li>
+          <li>入水は<strong>飛び込まず、静かに</strong>。水しぶきや音はクジラを驚かせます</li>
+          <li>フィンは入水の直前に履きます。<strong>フィンを履いたまま船上を歩かない</strong>でください</li>
+          <li>船に上がるときは<strong>一人ずつ</strong>。はしごの前でフィンを外して、スタッフに渡します</li>
+          <li>エンジンとスクリューがある<strong>船尾には、エンジン停止の合図まで近づかない</strong>でください</li>
+          <li>入水の前と後に人数を確認します。名前を呼ばれたら返事をお願いします</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4><span class="ic">🎒</span>荷物と器材</h4>
+        <ul>
+          <li>器材は<strong>一か所にまとめ</strong>、いつでもすぐ着けられるように。マスクの曇り止めは出港前に済ませておきます</li>
+          <li>スマホ・財布・薬は<strong>防水バッグ</strong>へ。船上は思った以上に濡れます</li>
+          <li>船のスペースは限られています。乗せる荷物は最小限にしてください</li>
+          <li>ゴミは必ず持ち帰ります。海にものを落とさないよう気をつけてください</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4><span class="ic">🙋</span>体調のこと</h4>
+        <ul>
+          <li>寒い・気持ちが悪い・耳が痛いなど、<strong>少しでも不調を感じたら、すぐスタッフに</strong>。我慢して入水しないでください</li>
+          <li>酔って吐きそうなときは、<strong>風下側の船べり</strong>へ。スタッフが付き添います</li>
+          <li>冬でも汗をかき、潮風で体の水分は奪われます。こまめに水分をとってください</li>
+          <li>見送る判断も大切です。「今回は船から見る」も、立派な楽しみ方です</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1766,7 +1912,7 @@ a{color:var(--turq-d)}
 <section class="pad mint" id="rules">
   <div class="wrap">
     <div class="shead">
-      <span class="no">07 ／ RULES</span>
+      <span class="no">08 ／ RULES</span>
       <h2>ホエールスイムのルールと注意事項</h2>
       <p>ホエールスイムは、追いかけたり潜ったりはできません。クジラを驚かさないよう、水面から静かに観察します。以下は<strong>マリンスポーツ奄美さんおよびホエール協会の決まり</strong>です。ひとりが守れないと参加者全員に影響します。必ずお読みください。</p>
     </div>
@@ -1869,7 +2015,7 @@ a{color:var(--turq-d)}
 <section class="pad" id="clothes">
   <div class="wrap">
     <div class="shead">
-      <span class="no">08 ／ WHAT TO WEAR</span>
+      <span class="no">09 ／ WHAT TO WEAR</span>
       <h2>船上の服装と防寒</h2>
       <p>1月末〜2月初めの奄美は平年で最高17〜18℃・最低12℃前後、水温は20℃前後。ただし冬は曇りがちで北風が強く、船上の体感温度はぐっと下がります。<strong>濡れたまま船上で待つ時間</strong>がいちばん寒く感じます。「肌に密着する暖かいもの → 保温するもの → 風を通さないもの」の3層で考えてください。</p>
     </div>
@@ -1945,9 +2091,9 @@ a{color:var(--turq-d)}
 <section class="pad lemon" id="packing">
   <div class="wrap">
     <div class="shead">
-      <span class="no">09 ／ PACKING LIST</span>
+      <span class="no">10 ／ PACKING LIST</span>
       <h2>持ち物リスト</h2>
-      <p>タップするとチェックできます（このブラウザに保存されるので、荷造りのときにお使いください）。</p>
+      <p>タップするとチェックできます（このブラウザに保存されるので、荷造りのときにお使いください）。「必須」と「防寒」は全員分、「島を歩く日」「その他」「あると便利なもの」は必要に応じてご用意ください。リストの下に、<strong>ホエールスイムの朝に船へ持っていくもの</strong>と<strong>荷造りのコツ</strong>もまとめています。</p>
     </div>
 
     <figure class="phimg reveal">
@@ -2012,6 +2158,47 @@ a{color:var(--turq-d)}
           <li>サングラス</li>
           <li>防水バッグ<small>船上は濡れます</small></li>
           <li>濡れたもの用のビニール袋</li>
+          <li>身分証<small>運転免許証など。飛行機の搭乗やレンタル器材の受け取りに</small></li>
+          <li>航空券の控え<small>便名・時刻がわかるもの（スマホの画面でOK）</small></li>
+          <li>エコバッグ<small>前日の買い出し用（第1便は船内の昼食も）</small></li>
+        </ul>
+      </div>
+      <div class="pk">
+        <h4>あると便利なもの<em>OPTIONAL</em></h4>
+        <ul class="chk">
+          <li>マスクの曇り止め<small>出港前に塗っておくと、クジラが来たときに慌てません</small></li>
+          <li>使い捨てカイロ<small>船上で待つ時間に。貼るタイプはウェットスーツの上の防寒着側へ</small></li>
+          <li>ネックウォーマー<small>首元を温めるだけで体感がかなり変わります</small></li>
+          <li>陸用の手袋<small>船上で待つとき・朝晩の移動に</small></li>
+          <li>速乾タオル・大判のバスタオル<small>船上で体を拭く・羽織る用</small></li>
+          <li>メッシュバッグ<small>濡れた器材をまとめて持ち運べます</small></li>
+          <li>スノーケルキーパー・予備のストラップ<small>器材の小さな部品は、島では手に入りにくいです</small></li>
+          <li>耳栓（水中用）<small>耳が冷えやすい方に</small></li>
+          <li>リップ・保湿クリーム<small>潮風と日差しで乾燥します</small></li>
+        </ul>
+      </div>
+    </div>
+    <div class="cards" style="margin-top:18px">
+      <div class="card ok">
+        <h4><span class="ic">🌅</span>ホエールスイムの朝、船に持っていくもの</h4>
+        <ul>
+          <li>ウェットスーツ・インナー・水着は<strong>宿で着てから</strong>出発します</li>
+          <li>マスク・スノーケル・フィン・フード・グローブ・ブーツ（ブーツは履いて行きます）</li>
+          <li>防寒アウター・ニット帽・タオル・着替え一式・着替えポンチョ</li>
+          <li>保温ボトル・おやつ（<strong>第1便は昼食も</strong>）</li>
+          <li>酔い止め（<strong>乗船30分前</strong>に飲めるように）・常備薬</li>
+          <li>Cカード・1日レジャー保険の加入がわかるもの</li>
+          <li>防水バッグ（スマホ・財布）・濡れたもの用のビニール袋</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4><span class="ic">🧳</span>荷造りのコツ</h4>
+        <ul>
+          <li>器材は預け荷物に。<strong>預け荷物の重さには航空会社ごとの上限</strong>があります（JAL・ANA・スカイマークは普通席で20kgまで無料、Peachは有料）</li>
+          <li>ウェットスーツやブーツは<strong>帰りも濡れたまま</strong>になりがち。大きめのビニール袋で包むと、ほかの荷物が濡れません</li>
+          <li>マスクは割れないよう、ケースに入れて手荷物か衣類の間へ</li>
+          <li>島にはスポーツ用品店がほとんどありません。<strong>忘れると現地では手に入らないもの</strong>が多いので、出発前に上のリストで確認してください</li>
+          <li>レンタルをご希望の方は、「ご出発前のご連絡事項」で<strong>身長・体重・足のサイズ</strong>をお知らせください</li>
         </ul>
       </div>
     </div>
@@ -2023,7 +2210,7 @@ a{color:var(--turq-d)}
 <section class="pad cream" id="rental">
   <div class="wrap">
     <div class="shead">
-      <span class="no">10 ／ RENTAL</span>
+      <span class="no">11 ／ RENTAL</span>
       <h2>器材レンタル<span class="kari">料金は調整中</span></h2>
       <p>ご自身の器材をお持ちでない方はレンタルをご利用いただけます。ご予約の際に、身長・体重・足のサイズ・ウエイト重量をお知らせください。料金は1回のリトリートあたりの金額です。</p>
     </div>
@@ -2056,7 +2243,7 @@ a{color:var(--turq-d)}
 <section class="pad mint" id="fee">
   <div class="wrap">
     <div class="shead">
-      <span class="no">11 ／ WHAT'S INCLUDED</span>
+      <span class="no">12 ／ WHAT'S INCLUDED</span>
       <h2>参加費に含まれるもの</h2>
       <p>各便とも定員5名・<strong>最少催行3名</strong>、インストラクター1名が同行します。往復の航空券は含まれません。</p>
     </div>
@@ -2076,7 +2263,7 @@ a{color:var(--turq-d)}
       <strong>第2便は「3泊4日」が基本です。</strong>お帰りの都合に合わせて、1泊減らして<strong>3日目（1/31）の夕方に解散する2泊3日</strong>もお選びいただけます。
       その場合も<strong>ホエールスイムは同じ半日コース×2本</strong>で、減るのは宿1泊と3日目午後の島内観光です。<br />
       <strong>各便とも最少催行人数は3名です。</strong>ホエールスイムの船（マリンスポーツ奄美さん）が3名様からの催行のため、
-      <strong>お申し込みが2名以下の場合は開催を見合わせることがあります</strong>。その場合は参加費を全額お返しします（→ <a href="#cancel">12 キャンセル規定</a>）。
+      <strong>お申し込みが2名以下の場合は開催を見合わせることがあります</strong>。その場合は参加費を全額お返しします（→ <a href="#cancel">13 キャンセル規定</a>）。
     </p>
     <div class="incl">
       <div class="inc-box yes">
@@ -2128,7 +2315,7 @@ a{color:var(--turq-d)}
 <section class="pad cream" id="cancel">
   <div class="wrap">
     <div class="shead">
-      <span class="no">12 ／ CANCELLATION</span>
+      <span class="no">13 ／ CANCELLATION</span>
       <h2>キャンセル規定</h2>
       <p>この旅は、クジラの船を<strong>団体でチャーター</strong>し、宿もまとめて押さえて成り立っています。少人数の旅ですので、キャンセルが出ると、代わりの方をあらためて募集するのがとても難しくなります。Sunny Funny Days は規模の大きなお店ではありません。どうかご事情をご理解のうえ、<strong>キャンセルは極力お控えいただけますよう</strong>お願いいたします。そのうえで、下記のとおり早めの起算日を設けています。体調をしっかり整えて、最高のリトリートにしましょう。</p>
     </div>
@@ -2215,7 +2402,7 @@ a{color:var(--turq-d)}
 <section class="pad mint" id="faq">
   <div class="wrap">
     <div class="shead">
-      <span class="no">13 ／ FAQ</span>
+      <span class="no">14 ／ FAQ</span>
       <h2>よくあるご質問</h2>
       <p>募集ページでご覧いただいた内容も含め、出発前にもう一度確認しておきたいことをまとめました。ホエールスイムに関する部分は、船を出していただく<a href="https://www.msamami.com/whale2.html" target="_blank" rel="noopener">マリンスポーツ奄美さん</a>のご案内にもとづいています。</p>
     </div>
@@ -2229,14 +2416,14 @@ a{color:var(--turq-d)}
       <div class="wf"><span class="k">シーズン</span><span class="v">12月中旬〜5月上旬<small>スイムの開催は1月初旬〜3月下旬</small></span></div>
     </div>
     <p class="txt" style="margin-top:12px">
-      1月中旬から3月中旬は、出会ったクジラの<strong>6〜8割は一緒に泳げる</strong>時期にあたります（それ以外の時期は4〜5割）。今回の2便は、ちょうどその時期に組んでいます。
+      1月中旬から3月中旬は、出会ったクジラの<strong>6〜8割は一緒に泳げる</strong>時期にあたります（それ以外の時期は4〜5割）。今回の2便は、ちょうどその時期に組んでいます。くらしや行動については <a href="#whale">06 ザトウクジラを知る</a> にまとめました。
     </p>
 
     <h3 class="sub">出発前の準備について</h3>
     <div class="qa">
       <details>
         <summary>Cカードをまだ持っていません。間に合いますか？</summary>
-        <div class="a"><strong>Sunny Funny Days は NAUI の認定施設です。</strong>ツアーまでに「NAUIスキンダイビングコース」を受けていただければ、そのままご参加いただけます。ふだんの海で練習してから奄美へ向かえるので、いちばんおすすめの流れです。日程はご相談のうえ決めますので、お早めにお知らせください。すでにお持ちの方は、<strong>当日Cカードをご持参ください</strong>。→ <a href="#rules">07 ルールと注意事項</a></div>
+        <div class="a"><strong>Sunny Funny Days は NAUI の認定施設です。</strong>ツアーまでに「NAUIスキンダイビングコース」を受けていただければ、そのままご参加いただけます。ふだんの海で練習してから奄美へ向かえるので、いちばんおすすめの流れです。日程はご相談のうえ決めますので、お早めにお知らせください。すでにお持ちの方は、<strong>当日Cカードをご持参ください</strong>。→ <a href="#rules">08 ルールと注意事項</a></div>
       </details>
       <details>
         <summary>泳ぎが得意ではないのですが、大丈夫でしょうか。</summary>
@@ -2244,7 +2431,7 @@ a{color:var(--turq-d)}
       </details>
       <details>
         <summary>器材は借りられますか。決まりはありますか。</summary>
-        <div class="a">ウェットスーツ、マスク＆スノーケル、フィン＆ソックス、ブーツ、フード、グローブ、ウエイトをご用意しています。料金は <a href="#rental">10 器材レンタル料金</a> をご覧ください。器材には決まりがあります。<br />
+        <div class="a">ウェットスーツ、マスク＆スノーケル、フィン＆ソックス、ブーツ、フード、グローブ、ウエイトをご用意しています。料金は <a href="#rental">11 器材レンタル料金</a> をご覧ください。器材には決まりがあります。<br />
         ・<strong>フィンは70cm（ワープフィン）まで。ロングフィンは禁止</strong>です<br />
         ・<strong>ドライスーツは使えません</strong>（冬は5mm以上のウェットスーツを推奨）<br />
         ・GoProなどを取り付ける<strong>棒は30cm以下</strong>。落とすと拾えないのでストラップを必ずお付けください</div>
@@ -2259,7 +2446,7 @@ a{color:var(--turq-d)}
       </details>
       <details>
         <summary>何を持っていけばいいですか。</summary>
-        <div class="a"><a href="#packing">09 持ち物リスト</a> にまとめています。タップでチェックが付き、次に開いたときも残るようになっているので、荷造りにお使いください。船の上は想像以上に寒いので、<strong>ウインドブレーカー・ニット帽などの防寒具</strong>は必ずお持ちください。→ <a href="#clothes">08 船上の服装・防寒</a></div>
+        <div class="a"><a href="#packing">10 持ち物リスト</a> にまとめています。タップでチェックが付き、次に開いたときも残るようになっているので、荷造りにお使いください。船の上は想像以上に寒いので、<strong>ウインドブレーカー・ニット帽などの防寒具</strong>は必ずお持ちください。→ <a href="#clothes">09 船上の服装・防寒</a></div>
       </details>
     </div>
 
@@ -2283,7 +2470,7 @@ a{color:var(--turq-d)}
       </details>
       <details>
         <summary>雨が降っているときはどうなりますか。</summary>
-        <div class="a">運航に支障がない範囲であれば実施します。ただし<strong>雨具は各自でご用意ください</strong>。船が出せない場合の取り扱いは <a href="#cancel">12 キャンセル規定</a> をご覧ください。</div>
+        <div class="a">運航に支障がない範囲であれば実施します。ただし<strong>雨具は各自でご用意ください</strong>。船が出せない場合の取り扱いは <a href="#cancel">13 キャンセル規定</a> をご覧ください。</div>
       </details>
     </div>
 
@@ -2325,7 +2512,7 @@ a{color:var(--turq-d)}
 
       <details>
         <summary>何名から開催されますか？</summary>
-        <div class="a">各便とも<strong>最少催行人数は3名</strong>です。ホエールスイムの船（マリンスポーツ奄美さん）が<strong>3名様からの催行</strong>のため、お申し込みが2名以下の場合は<strong>開催を見合わせることがあります</strong>。その場合は参加費を全額お返しし、もう一方の便への振替もご相談いただけます。開催の可否は、遅くとも出発の2週間前までにご連絡します。<strong>航空券のご手配は、催行決定のご連絡を受けてからをおすすめします。</strong>→ <a href="#cancel">12 キャンセル規定</a></div>
+        <div class="a">各便とも<strong>最少催行人数は3名</strong>です。ホエールスイムの船（マリンスポーツ奄美さん）が<strong>3名様からの催行</strong>のため、お申し込みが2名以下の場合は<strong>開催を見合わせることがあります</strong>。その場合は参加費を全額お返しし、もう一方の便への振替もご相談いただけます。開催の可否は、遅くとも出発の2週間前までにご連絡します。<strong>航空券のご手配は、催行決定のご連絡を受けてからをおすすめします。</strong>→ <a href="#cancel">13 キャンセル規定</a></div>
       </details>
 
       <details>
@@ -2334,20 +2521,20 @@ a{color:var(--turq-d)}
         ・第1便（2泊3日・<strong>1日コース×1本</strong>）… <strong>110,000円</strong>（税別100,000円）<br />
         ・第2便（3泊4日・<strong>半日コース×2本</strong>）… <strong>143,000円</strong>（税別130,000円）<br />
         ・第2便を2泊3日に短縮する場合 … <strong>121,000円</strong>（税別110,000円）<br />
-        往復の航空券は含まれません。→ <a href="#fee">11 参加費に含まれるもの</a></div>
+        往復の航空券は含まれません。→ <a href="#fee">12 参加費に含まれるもの</a></div>
       </details>
 
       <details>
         <summary>支払い方法と期限は？</summary>
-        <div class="a">お店で事前にお支払い（カード・各種電子決済に対応）、または銀行振込をご利用いただけます。お支払い期限は、お申し込み後に個別にご案内します。→ <a href="#fee">11 参加費に含まれるもの</a></div>
+        <div class="a">お店で事前にお支払い（カード・各種電子決済に対応）、または銀行振込をご利用いただけます。お支払い期限は、お申し込み後に個別にご案内します。→ <a href="#fee">12 参加費に含まれるもの</a></div>
       </details>
       <details>
         <summary>参加費に含まれないものは何ですか。</summary>
-        <div class="a">往復の航空券、ご自宅から空港までの交通費、昼食代（朝食・夕食は宿の料金に含まれます）、器材レンタル料、1日レジャー保険・旅行保険、観光施設の入場料、お土産代などです。→ <a href="#fee">11 参加費に含まれるもの</a></div>
+        <div class="a">往復の航空券、ご自宅から空港までの交通費、昼食代（朝食・夕食は宿の料金に含まれます）、器材レンタル料、1日レジャー保険・旅行保険、観光施設の入場料、お土産代などです。→ <a href="#fee">12 参加費に含まれるもの</a></div>
       </details>
       <details>
         <summary>キャンセルしたい場合は？</summary>
-        <div class="a">クジラの船を団体でチャーターし、宿も一棟押さえているため、<strong>61日前まで無料／60日前から段階的にキャンセル料</strong>をいただく規定です。代わりに参加される方がいらっしゃれば<strong>名義変更は無料</strong>です。悪天候で船が出せなかった場合、クジラに会えなかった場合、航空便の欠航で来られない場合など、ケース別の取り扱いとあわせて <a href="#cancel">12 キャンセル規定</a> にまとめています。</div>
+        <div class="a">クジラの船を団体でチャーターし、宿も一棟押さえているため、<strong>61日前まで無料／60日前から段階的にキャンセル料</strong>をいただく規定です。代わりに参加される方がいらっしゃれば<strong>名義変更は無料</strong>です。悪天候で船が出せなかった場合、クジラに会えなかった場合、航空便の欠航で来られない場合など、ケース別の取り扱いとあわせて <a href="#cancel">13 キャンセル規定</a> にまとめています。</div>
       </details>
     </div>
 
@@ -2361,7 +2548,7 @@ a{color:var(--turq-d)}
 <section class="pad" id="album">
   <div class="wrap">
     <div class="shead">
-      <span class="no">14 ／ ALBUM</span>
+      <span class="no">15 ／ ALBUM</span>
       <h2>奄美アルバム</h2>
       <p>下見でめぐったときの写真です。島の空気が少しでも伝わりますように。撮影は2026年7月、夏の奄美です（リトリートは冬なので、海の色や緑の濃さは少し変わります）。</p>
     </div>
