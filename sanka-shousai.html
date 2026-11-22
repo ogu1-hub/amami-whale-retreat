@@ -836,10 +836,14 @@ a{color:var(--turq-d)}
 }
 
 /* ザトウクジラを知る */
-.tbl.beh td:last-child{text-align:left;font-weight:400;color:var(--ink-soft);white-space:normal}
-.tbl.beh td:first-child{font-weight:700;color:var(--deep);white-space:nowrap}
-.tbl.beh td:first-child small{font-weight:400}
-.tbl.beh td{vertical-align:top;line-height:1.85}
+.behlist{display:grid;gap:10px;margin-top:8px}
+@media(min-width:768px){ .behlist{grid-template-columns:1fr 1fr} }
+.bh{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px}
+.bh-n{font-weight:700;color:var(--deep);font-size:.98rem;margin-bottom:6px;letter-spacing:.03em}
+.bh-n small{font-weight:400;font-size:.74rem;color:var(--ink-soft);margin-left:8px}
+.bh p{font-size:.84rem;line-height:1.9;color:var(--ink-soft);display:flex;gap:10px}
+.bh p span{flex:0 0 auto;font-size:.68rem;font-weight:700;color:var(--turq-d);letter-spacing:.06em;padding-top:.3em;min-width:5.2em}
+.bh p.us{color:var(--ink);margin-top:4px}
 .year4{display:grid;gap:10px;margin-top:8px}
 @media(min-width:768px){ .year4{grid-template-columns:repeat(4,1fr)} }
 .yr{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}
@@ -1740,20 +1744,15 @@ a{color:var(--turq-d)}
     </div>
 
     <h3 class="sub">よく見られる行動と、そのときの動き方</h3>
-    <div class="scroll-x">
-      <table class="tbl beh">
-        <thead><tr><th>行動</th><th>どんな動き</th><th>そのとき私たちは</th></tr></thead>
-        <tbody>
-          <tr><td>ブロー<small>噴気</small></td><td>水面で息を吐く。白い霧の柱が立つ</td><td>クジラ発見の合図。船長が位置と動きを確かめます</td></tr>
-          <tr><td>フルークアップ<small>尾びれを上げて潜る</small></td><td>背中を丸め、尾びれを高く上げて深く潜る</td><td><strong>しばらく浮かんでこない合図</strong>。次に浮かぶ場所を予想して待ちます</td></tr>
-          <tr><td>ロギング<small>水面で休む</small></td><td>水面近くで丸太のように浮かび、ゆっくり呼吸する</td><td>ホエールスイムのチャンス。ガイドの合図で静かに入水し、水面で待ちます</td></tr>
-          <tr><td>親子の休息</td><td>母クジラが水中でじっと休み、子クジラが数分おきに息つぎに上がってくる</td><td>出会いやすい場面のひとつ。<strong>子クジラには近づかず、エントリーは2回まで</strong></td></tr>
-          <tr><td>スパイホップ</td><td>頭を水面から垂直に出して、まわりを見る</td><td>周囲を確かめている、好奇心のしるしとも言われます。船上から観察</td></tr>
-          <tr><td>ブリーチ<small>ジャンプ</small></td><td>体の大部分を水面から出して、豪快に落ちる</td><td>近くでは入水しません。<strong>船上からの観察</strong>になります</td></tr>
-          <tr><td>ペックスラップ／テールスラップ</td><td>胸びれや尾びれで、水面を何度もたたく</td><td>ひれの近くは危険です。入水するかは船長・ガイドが判断します</td></tr>
-          <tr><td>競争グループ<small>ヒートラン</small></td><td>1頭のメスを数頭のオスが激しく追いかける。泳ぐ速さもかなり速い</td><td>速くて危険なため、<strong>入水しないのが基本</strong>。船上から見守ります</td></tr>
-        </tbody>
-      </table>
+    <div class="behlist">
+      <div class="bh"><div class="bh-n">ブロー<small>噴気</small></div><p><span>どんな動き</span>水面で息を吐く。白い霧の柱が立つ</p><p class="us"><span>そのとき</span>クジラ発見の合図。船長が位置と動きを確かめます</p></div>
+      <div class="bh"><div class="bh-n">フルークアップ<small>尾びれを上げて潜る</small></div><p><span>どんな動き</span>背中を丸め、尾びれを高く上げて深く潜る</p><p class="us"><span>そのとき</span><strong>しばらく浮かんでこない合図</strong>。次に浮かぶ場所を予想して待ちます</p></div>
+      <div class="bh"><div class="bh-n">ロギング<small>水面で休む</small></div><p><span>どんな動き</span>水面近くで丸太のように浮かび、ゆっくり呼吸する</p><p class="us"><span>そのとき</span>ホエールスイムのチャンス。ガイドの合図で静かに入水し、水面で待ちます</p></div>
+      <div class="bh"><div class="bh-n">親子の休息</div><p><span>どんな動き</span>母クジラが水中でじっと休み、子クジラが数分おきに息つぎに上がってくる</p><p class="us"><span>そのとき</span>出会いやすい場面のひとつ。<strong>子クジラには近づかず、エントリーは2回まで</strong></p></div>
+      <div class="bh"><div class="bh-n">スパイホップ</div><p><span>どんな動き</span>頭を水面から垂直に出して、まわりを見る</p><p class="us"><span>そのとき</span>周囲を確かめている、好奇心のしるしとも言われます。船上から観察</p></div>
+      <div class="bh"><div class="bh-n">ブリーチ<small>ジャンプ</small></div><p><span>どんな動き</span>体の大部分を水面から出して、豪快に落ちる</p><p class="us"><span>そのとき</span>近くでは入水しません。<strong>船上からの観察</strong>になります</p></div>
+      <div class="bh"><div class="bh-n">ペックスラップ／テールスラップ</div><p><span>どんな動き</span>胸びれや尾びれで、水面を何度もたたく</p><p class="us"><span>そのとき</span>ひれの近くは危険です。入水するかは船長・ガイドが判断します</p></div>
+      <div class="bh"><div class="bh-n">競争グループ<small>ヒートラン</small></div><p><span>どんな動き</span>1頭のメスを数頭のオスが激しく追いかける。泳ぐ速さもかなり速い</p><p class="us"><span>そのとき</span>速くて危険なため、<strong>入水しないのが基本</strong>。船上から見守ります</p></div>
     </div>
 
     <div class="cards" style="margin-top:22px">
