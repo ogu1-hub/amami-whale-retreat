@@ -897,6 +897,21 @@ a{color:var(--turq-d)}
 @media(min-width:768px){ .fyl{grid-template-columns:1fr 1fr} }
 .fyl li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 14px;font-size:.85rem;line-height:1.8}
 .fyl li::before{content:"◇ ";color:var(--orange)}
+
+/* パソコンでは画面いっぱいに広げる */
+@media(min-width:1024px){
+  .wrap{max-width:none;padding:0 clamp(32px,4.5vw,80px)}
+  .credits details{max-width:none;padding:0 clamp(32px,4.5vw,80px)}
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .pack{grid-template-columns:repeat(3,1fr)}
+  .whalefacts{grid-template-columns:repeat(4,1fr)}
+  .tsm{grid-template-columns:repeat(5,1fr)}
+  .behlist{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:1500px){
+  .bgrid{grid-template-columns:repeat(4,1fr);gap:22px 18px}
+  .pack{grid-template-columns:repeat(5,1fr)}
+}
 </style>
 </head>
 <body>
