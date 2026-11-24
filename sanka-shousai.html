@@ -916,6 +916,10 @@ a{color:var(--turq-d)}
 }
 .dlrow{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:12px auto 4px;max-width:640px}
 .dlbtn{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border:1px solid rgba(255,255,255,.55);border-radius:999px;color:#fff;background:rgba(255,255,255,.08);font-size:.72rem;text-decoration:none;line-height:1.4}
+.packsheet{max-width:520px;margin:0 auto 22px;text-align:center}
+.packsheet img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:6px;box-shadow:0 4px 18px rgba(28,43,51,.10);-webkit-touch-callout:default}
+.packsheet figcaption{font-size:.74rem;color:var(--mid);margin-top:10px;line-height:1.7}
+.packsheet figcaption a{color:var(--ocean);border-bottom:1px solid currentColor}
 .dlbtn:hover,.dlbtn:focus-visible{background:rgba(255,255,255,.2);outline:none}
 </style>
 </head>
@@ -970,8 +974,8 @@ a{color:var(--turq-d)}
     <div class="apply">
       <a class="btn btn2" href="https://docs.google.com/forms/d/e/1FAIpQLSctJsMu60_-Uq05yayt6eaLK03Lx6Z9K5ZxodmlGmF-u9AFiQ/viewform" target="_blank" rel="noopener">ご出発前のご連絡事項を送る</a>
       <div class="dlrow">
-        <a class="dlbtn" href="dl/packing-checklist.png" download="持ち物チェックリスト.png">🎒 持ち物チェックリスト（画像）</a>
-        <a class="dlbtn" href="dl/packing-checklist.pdf" download="持ち物チェックリスト.pdf">🖨 印刷用（PDF・A4）</a>
+        <a class="dlbtn" href="#packsheet">🎒 持ち物チェックリスト（画像）</a>
+        <a class="dlbtn" href="dl/packing-checklist.pdf" target="_blank" rel="noopener">🖨 印刷用（PDF・A4）</a>
         <a class="dlbtn" href="https://claude.ai/artifact/AW71qF5MJd5k8g2dcxtQs9" target="_blank" rel="noopener">🖥 事前説明会（Zoom）のスライド</a>
       </div>
       <ul class="apply-note">
@@ -2337,6 +2341,11 @@ a{color:var(--turq-d)}
       <h2>持ち物リスト</h2>
       <p>タップするとチェックできます（このブラウザに保存されるので、荷造りのときにお使いください）。「必須」と「防寒」は全員分、「島を歩く日」「その他」「あると便利なもの」は必要に応じてご用意ください。リストの下に、<strong>ホエールスイムの朝に船へ持っていくもの</strong>と<strong>荷造りのコツ</strong>もまとめています。</p>
     </div>
+
+    <figure id="packsheet" class="packsheet">
+      <a href="dl/packing-checklist.png" target="_blank" rel="noopener"><img src="dl/packing-checklist.png" width="1653" height="2339" alt="持ち物チェックリスト（A4・1枚）。泳ぐときに使うもの、船の上の防寒、忘れがちなもの、レンタル品の欄に□がついている" loading="lazy" /></a>
+      <figcaption>📱 スマホは画像を<strong>長押し →「"写真"に保存」</strong>で保存できます。パソコンは右クリックで保存。印刷する方は <a href="dl/packing-checklist.pdf" target="_blank" rel="noopener">A4のPDF</a> をどうぞ。</figcaption>
+    </figure>
 
     <figure class="phimg reveal">
       <img src="img/e794e5e3816a.jpg" width="1200" height="800" alt="ウェットスーツ、マスク、フィン、防寒着、防水バッグなど主な持ち物" loading="lazy" decoding="async" />
